@@ -44,6 +44,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Grid
 --------------------------------------------------------------*/
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Raleway:300,500");
+/* line 33, sass/variables-site/_colors.scss */
+.red {
+  color: #db654d;
+}
+
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -325,21 +330,44 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
   font-weight: 300;
   letter-spacing: 0.25px;
+  margin: 0;
+  margin-bottom: 1em;
 }
 
-/* line 8, sass/typography/_headings.scss */
+/* line 10, sass/typography/_headings.scss */
 h1 {
   font-size: 3.75em;
-  line-height: 60px;
 }
-/* line 12, sass/typography/_headings.scss */
-h1.page-title {
+
+/* line 14, sass/typography/_headings.scss */
+h2 {
+  font-size: 3.75em;
+  line-height: 60px;
+  margin-bottom: 0.5em;
+}
+/* line 19, sass/typography/_headings.scss */
+h2.page-title {
   font-size: 3em;
 }
 
-/* line 17, sass/typography/_headings.scss */
-h2 {
+/* line 24, sass/typography/_headings.scss */
+h3 {
   font-size: 2.25em;
+}
+
+/* line 28, sass/typography/_headings.scss */
+h4 {
+  font-size: 1.5em;
+}
+
+/* line 32, sass/typography/_headings.scss */
+h5 {
+  font-size: 1.25em;
+}
+
+/* line 36, sass/typography/_headings.scss */
+h6 {
+  font-size: 1.125em;
 }
 
 /* line 1, sass/typography/_copy.scss */
@@ -904,6 +932,16 @@ a.button.green:hover {
   top: -30px;
   z-index: 1;
 }
+/* line 74, sass/site/primary/_posts-and-pages.scss */
+.splash-image .main-video {
+  display: block;
+  margin: 30px 0;
+}
+
+/* line 80, sass/site/primary/_posts-and-pages.scss */
+section:not(.widget) {
+  padding: 60px 0;
+}
 
 /*--------------------------------------------------------------
 ## Asides
@@ -963,7 +1001,7 @@ header .upper-header .fa {
 footer {
   background: #000;
   color: #7d807f;
-  padding: 30px 0;
+  padding: 60px 0;
 }
 /* line 30, sass/site/_header-and-footer.scss */
 footer h2 {
