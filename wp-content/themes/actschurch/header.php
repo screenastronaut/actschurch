@@ -33,11 +33,19 @@
 	<![endif]-->
 </head>
 
+<?php
+if(is_front_page()) {
+	$header_class = 'transparent-header';
+} else {
+	$header_class = 'orange-header';
+}
+?>
+
 <body <?php body_class(); ?>>
 	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'actschurch' ); ?></a>
 
-		<header id="masthead" class="site-header" role="banner">
+		<header id="masthead" class="site-header <?=$header_class?>" role="banner">
 			<div class="container">
 
 				<div class="logo col-lg-3 col-md-3 col-sm-6 col-xs-6">
@@ -46,23 +54,18 @@
 
 				<div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
 					<div class="upper-header col-lg-12 col-md-12">
-						<?php
+						<?php if ( is_active_sidebar( 'header-1' ) ) : ?>
+							<div id="header-widget-area" class="chw-widget-area widget-area" role="complementary">
+							<?php dynamic_sidebar( 'header-1' ); ?>
+							</div>
+						<?php endif; ?>
+					</div>
 
-						if ( is_active_sidebar( 'header-1' ) ) : ?>
-						<div id="header-widget-area" class="chw-widget-area widget-area" role="complementary">
-						<?php dynamic_sidebar( 'header-1' ); ?>
-						</div>
-
-					<?php endif; ?>
-
+					<div class="lower-header col-lg-12 col-md-12">
+						<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
+					</div>
 				</div>
-				<div class="lower-header col-lg-12 col-md-12">
-					<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
-				</div>
-			</div>
-
-
 		</div>
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content container">
+	<!-- <div id="content" class="site-content container"> -->

@@ -858,6 +858,53 @@ a:hover, a:active {
   margin: 0 0 1.5em;
 }
 
+/* line 30, sass/site/primary/_posts-and-pages.scss */
+a.button {
+  border: 2px solid;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 0.75em;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin: 30px;
+  padding: 10px 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* line 42, sass/site/primary/_posts-and-pages.scss */
+a.button.blue {
+  background: #26395a;
+  border-color: #26395a;
+}
+/* line 46, sass/site/primary/_posts-and-pages.scss */
+a.button.blue:hover {
+  background: #fff;
+  border-color: #26395a;
+  color: #26395a;
+}
+/* line 53, sass/site/primary/_posts-and-pages.scss */
+a.button.green {
+  background: #4b8944;
+  border-color: #4b8944;
+}
+/* line 57, sass/site/primary/_posts-and-pages.scss */
+a.button.green:hover {
+  background: #fff;
+  border-color: #4b8944;
+  color: #4b8944;
+}
+
+/* line 65, sass/site/primary/_posts-and-pages.scss */
+.splash-image {
+  background: url("images/placeholder-wide.png");
+  height: 500px;
+  padding: 60px 0;
+  position: relative;
+  text-align: center;
+  top: -30px;
+  z-index: 1;
+}
+
 /*--------------------------------------------------------------
 ## Asides
 --------------------------------------------------------------*/
@@ -883,14 +930,67 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Header
 --------------------------------------------------------------*/
-/* line 1, sass/site/_header.scss */
+/* line 1, sass/site/_header-and-footer.scss */
 header {
-  max-height: 100px;
+  height: 100px;
+  position: relative;
+  z-index: 3;
 }
-/* line 4, sass/site/_header.scss */
+/* line 6, sass/site/_header-and-footer.scss */
+header.transparent-header {
+  background: -moz-linear-gradient(top, white 0%, rgba(255, 255, 255, 0) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, white 0%, rgba(255, 255, 255, 0) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, white 0%, rgba(255, 255, 255, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 );
+  /* IE6-9 */
+}
+/* line 13, sass/site/_header-and-footer.scss */
 header .upper-header {
   font-size: 0.875em;
+  padding-bottom: 10px;
   text-align: right;
+}
+/* line 18, sass/site/_header-and-footer.scss */
+header .upper-header .fa {
+  font-size: 1.25em;
+  margin-right: 10px;
+}
+
+/* line 25, sass/site/_header-and-footer.scss */
+footer {
+  background: #000;
+  color: #7d807f;
+  padding: 30px 0;
+}
+/* line 30, sass/site/_header-and-footer.scss */
+footer h2 {
+  color: #7d807f;
+}
+/* line 34, sass/site/_header-and-footer.scss */
+footer a {
+  color: #fff;
+  font-size: 0.75em;
+  text-decoration: none;
+}
+/* line 39, sass/site/_header-and-footer.scss */
+footer a:hover {
+  color: #e7a13d;
+  text-decoration: underline;
+}
+/* line 45, sass/site/_header-and-footer.scss */
+footer .site-copyright {
+  font-size: 0.6875em;
+  padding-top: 60px;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* line 51, sass/site/_header-and-footer.scss */
+footer .site-copyright .fa {
+  font-size: 0.5625em;
+  margin: 0 20px;
 }
 
 /*--------------------------------------------------------------

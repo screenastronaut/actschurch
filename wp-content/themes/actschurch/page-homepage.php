@@ -9,29 +9,37 @@
 
 get_header(); ?>
 
+<div class="splash-image">
+	<h1>A Place For all</h1>
+	<a href="#time-and-locations" class="button green">Time & Locations</a>
+	<a href="what-to-expect" class="button blue">What to Expect</a>
+</div>
 
-<div id="primary" class="content-area col-lg-12 col-md-12 col-sm-12 col-xs-12">
-	<main id="main" class="site-main" role="main">
 
-		<?php
-		if ( have_posts() ) :
+<div id="content" class="site-content container">
 
-			/* Start the Loop */
-		while ( have_posts() ) : the_post();
-		get_template_part( 'template-parts/post/content', get_post_format() );
+	<div id="primary" class="content-area col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<main id="main" class="site-main" role="main">
 
-		endwhile;
+			<?php
+			if ( have_posts() ) :
 
-		the_posts_pagination();
+				/* Start the Loop */
+			while ( have_posts() ) : the_post();
+			get_template_part( 'template-parts/post/content', get_post_format() );
 
-		else :
+			endwhile;
 
-			get_template_part( 'template-parts/post/content', 'none' );
+			the_posts_pagination();
 
-		endif;
-		?>
+			else :
 
-	</main><!-- #main -->
-</div><!-- #primary -->
+				get_template_part( 'template-parts/post/content', 'none' );
 
-<?php get_footer();
+			endif;
+			?>
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+	<?php get_footer();

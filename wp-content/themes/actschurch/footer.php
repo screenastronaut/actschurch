@@ -8,17 +8,22 @@
  *
  * @package actschurch
  */
-
+// TODO: fix sitemap columns
 ?>
 
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'actschurch' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'actschurch' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'actschurch' ), 'actschurch', '<a href="https://automattic.com/" rel="designer">Underscores.me</a>' ); ?>
+		<div class="site-info container">
+			<?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
+				<div id="footer-widget-area" class="chw-widget-area widget-area" role="complementary">
+				<?php dynamic_sidebar( 'footer-1' ); ?>
+				</div>
+			<?php endif; ?>
 		</div><!-- .site-info -->
+		<div class="site-copyright container">
+			<span><i class="fa fa-circle" aria-hidden="true"></i>copyright &copy; <?php echo date('Y');?> Acts Church. All Rights Reserved. <i class="fa fa-circle" aria-hidden="true"></i></span>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

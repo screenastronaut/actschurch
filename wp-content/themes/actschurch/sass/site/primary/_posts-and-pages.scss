@@ -26,3 +26,48 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+a.button {
+	border: 2px solid;
+	border-radius: 50px;
+	color: $color__white;
+	font-size: 0.75em;
+	font-weight: 700;
+	letter-spacing: 3px;
+	margin: 30px;
+	padding: 10px 30px;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	&.blue {
+		background: $color__blue;
+		border-color: $color__blue;
+
+		&:hover {
+			background: $color__white;
+			border-color: $color__blue;
+			color: $color__blue;
+		}
+	}
+
+	&.green {
+		background: $color__green;
+		border-color: $color__green;
+
+		&:hover {
+			background: $color__white;
+			border-color: $color__green;
+			color: $color__green;
+		}
+	}
+}
+
+.splash-image {
+	background: url('images/placeholder-wide.png');
+	height: 500px;
+	padding: 60px 0;
+	position: relative;
+	text-align: center;
+	top: -30px;
+	z-index: 1;
+}
