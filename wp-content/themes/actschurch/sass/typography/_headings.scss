@@ -9,6 +9,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
 	font-size: 3.75em;
+	margin-bottom: 0.5em;
 }
 
 h2 {
@@ -26,13 +27,16 @@ h3 {
 }
 
 h4 {
+	font-family: $font__main;
 	font-size: 1.5em;
 }
 
 h5 {
+	font-family: $font__main;
 	font-size: 1.25em;
 }
 
 h6 {
+	font-family: $font__main;
 	font-size: 1.125em;
 }

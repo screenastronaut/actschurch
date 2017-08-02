@@ -31,8 +31,9 @@ a.button {
 	border: 2px solid;
 	border-radius: 50px;
 	color: $color__white;
+	display: inline-block;
 	font-size: 0.75em;
-	font-weight: 700;
+	// font-weight: 700;
 	letter-spacing: 3px;
 	margin: 30px;
 	padding: 10px 30px;
@@ -60,23 +61,46 @@ a.button {
 			color: $color__green;
 		}
 	}
-}
 
-.splash-image {
-	background: url('images/placeholder-wide.png');
-	height: 500px;
-	padding: 60px 0;
-	position: relative;
-	text-align: center;
-	top: -30px;
-	z-index: 1;
+	&.red {
+		background: $color__red;
+		border-color: $color__red;
 
-	.main-video {
-		display: block;
-		margin: 30px 0;
+		&:hover {
+			background: $color__white;
+			border-color: $color__red;
+			color: $color__red;
+		}
+	}
+
+	&.white {
+		background: $color__white;
+		border-color: $color__white;
+		color: $color__red;
+
+		&:hover {
+			background: transparent;
+			border-color: $color__white;
+			color: $color__white;
+		}
+	}
+
+	&.black {
+		background: $color__black;
+		border-color: $color__black;
+		color: $color__white;
+
+		&:hover {
+			background: transparent;
+			border-color: $color__black;
+			color: $color__black;
+		}
 	}
 }
 
 section:not(.widget) {
+	display: block;
+	overflow: auto;
 	padding: 60px 0;
+	text-align: center;
 }
