@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Page Homepage
+ * Template Name: Homepage
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *

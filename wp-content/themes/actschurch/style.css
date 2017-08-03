@@ -354,21 +354,22 @@ h2.page-title {
 /* line 25, sass/typography/_headings.scss */
 h3 {
   font-size: 2.25em;
+  margin-bottom: 0.5em;
 }
 
-/* line 29, sass/typography/_headings.scss */
+/* line 30, sass/typography/_headings.scss */
 h4 {
   font-family: "Montserrat", sans-serif;
   font-size: 1.5em;
 }
 
-/* line 34, sass/typography/_headings.scss */
+/* line 35, sass/typography/_headings.scss */
 h5 {
   font-family: "Montserrat", sans-serif;
   font-size: 1.25em;
 }
 
-/* line 39, sass/typography/_headings.scss */
+/* line 40, sass/typography/_headings.scss */
 h6 {
   font-family: "Montserrat", sans-serif;
   font-size: 1.125em;
@@ -606,10 +607,6 @@ textarea {
 /* line 1, sass/navigation/_links.scss */
 a {
   color: royalblue;
-}
-/* line 4, sass/navigation/_links.scss */
-a:visited {
-  color: purple;
 }
 /* line 7, sass/navigation/_links.scss */
 a:hover, a:focus, a:active {
@@ -995,6 +992,82 @@ a:hover, a:active {
 }
 
 /*--------------------------------------------------------------
+## Visit
+--------------------------------------------------------------*/
+/* line 1, sass/site/primary/_visit.scss */
+.welcome-message {
+  text-align: left !important;
+}
+
+/* line 5, sass/site/primary/_visit.scss */
+.what-to-expect {
+  background: #f5f3f4;
+}
+/* line 8, sass/site/primary/_visit.scss */
+.what-to-expect .expect-box {
+  margin: 50px 0;
+}
+/* line 11, sass/site/primary/_visit.scss */
+.what-to-expect .expect-box h4 {
+  text-transform: uppercase;
+}
+/* line 15, sass/site/primary/_visit.scss */
+.what-to-expect .expect-box .expect-icon {
+  margin-bottom: 30px;
+  width: 100px;
+}
+
+/* line 22, sass/site/primary/_visit.scss */
+.faqs {
+  background: #7d807f;
+  color: #fff;
+}
+/* line 26, sass/site/primary/_visit.scss */
+.faqs h2 {
+  margin-bottom: 1em;
+}
+/* line 30, sass/site/primary/_visit.scss */
+.faqs .question {
+  border-bottom: 1px solid #fff;
+  cursor: pointer;
+  margin: 30px 0;
+  position: relative;
+  text-align: left;
+}
+/* line 37, sass/site/primary/_visit.scss */
+.faqs .question h3 {
+  display: inline-block;
+}
+/* line 41, sass/site/primary/_visit.scss */
+.faqs .question .triangle {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 30%;
+}
+/* line 48, sass/site/primary/_visit.scss */
+.faqs .question .triangle-down {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px 10px 0 10px;
+  border-color: #ffffff transparent transparent transparent;
+}
+/* line 56, sass/site/primary/_visit.scss */
+.faqs .question .triangle-up {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 15px 10px;
+  border-color: transparent transparent #ffffff transparent;
+}
+/* line 65, sass/site/primary/_visit.scss */
+.faqs .answer {
+  display: none;
+  text-align: left;
+}
+
+/*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
 /* line 1, sass/site/primary/_posts-and-pages.scss */
@@ -1111,6 +1184,16 @@ section:not(.widget) {
   text-align: center;
 }
 
+/* line 108, sass/site/primary/_posts-and-pages.scss */
+.cover-photo {
+  height: 400px;
+}
+/* line 111, sass/site/primary/_posts-and-pages.scss */
+.cover-photo h1 {
+  padding-top: 60px;
+  text-align: center;
+}
+
 /*--------------------------------------------------------------
 ## Asides
 --------------------------------------------------------------*/
@@ -1154,46 +1237,63 @@ header.transparent-header {
   /* IE6-9 */
 }
 /* line 13, sass/site/_header-and-footer.scss */
+header.orange-header {
+  background: #db654d;
+}
+/* line 16, sass/site/_header-and-footer.scss */
+header.orange-header a {
+  color: #fff;
+}
+/* line 19, sass/site/_header-and-footer.scss */
+header.orange-header a:hover {
+  color: #fff;
+  text-transform: underline;
+}
+/* line 26, sass/site/_header-and-footer.scss */
 header .upper-header {
   font-size: 0.875em;
   padding-bottom: 10px;
   text-align: right;
 }
-/* line 18, sass/site/_header-and-footer.scss */
+/* line 31, sass/site/_header-and-footer.scss */
 header .upper-header .fa {
   font-size: 1.25em;
   margin-right: 10px;
 }
 
-/* line 25, sass/site/_header-and-footer.scss */
+/* line 38, sass/site/_header-and-footer.scss */
 footer {
   background: #000;
   color: #7d807f;
   padding: 60px 0;
 }
-/* line 30, sass/site/_header-and-footer.scss */
+/* line 43, sass/site/_header-and-footer.scss */
 footer h2 {
   color: #7d807f;
 }
-/* line 34, sass/site/_header-and-footer.scss */
+/* line 47, sass/site/_header-and-footer.scss */
 footer a {
   color: #fff;
   font-size: 0.75em;
   text-decoration: none;
 }
-/* line 39, sass/site/_header-and-footer.scss */
+/* line 52, sass/site/_header-and-footer.scss */
 footer a:hover {
   color: #e7a13d;
   text-decoration: underline;
 }
-/* line 45, sass/site/_header-and-footer.scss */
+/* line 57, sass/site/_header-and-footer.scss */
+footer a:visited {
+  color: #fff;
+}
+/* line 62, sass/site/_header-and-footer.scss */
 footer .site-copyright {
   font-size: 0.6875em;
   padding-top: 60px;
   text-align: center;
   text-transform: uppercase;
 }
-/* line 51, sass/site/_header-and-footer.scss */
+/* line 68, sass/site/_header-and-footer.scss */
 footer .site-copyright .fa {
   font-size: 0.5625em;
   margin: 0 20px;

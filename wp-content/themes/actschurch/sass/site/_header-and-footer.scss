@@ -10,6 +10,19 @@ header {
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
 	}
 
+	&.orange-header {
+		background: $color__red;
+
+		a {
+			color: $color__white;
+
+			&:hover {
+				color: $color__white;
+				text-transform: underline;
+			}
+		}
+	}
+
 	.upper-header {
 		font-size: 0.875em;
 		padding-bottom: 10px;
@@ -39,6 +52,10 @@ footer {
 		&:hover {
 			color: $color__yellow;
 			text-decoration: underline;
+		}
+
+		&:visited {
+			color: $color__white;
 		}
 	}
 

@@ -8,35 +8,36 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 3.75em;
+	font-size: 3.75em; //60px
 	margin-bottom: 0.5em;
 }
 
 h2 {
-	font-size: 3.75em;
+	font-size: 3.75em; //60px
 	line-height: 60px;
 	margin-bottom: 0.5em;
 
 	&.page-title {
-		font-size: 3em;
+		font-size: 3em; //48px
 	}
 }
 
 h3 {
-	font-size: 2.25em;
+	font-size: 2.25em; //36px
+	margin-bottom: 0.5em;
 }
 
 h4 {
 	font-family: $font__main;
-	font-size: 1.5em;
+	font-size: 1.5em; //24px
 }
 
 h5 {
 	font-family: $font__main;
-	font-size: 1.25em;
+	font-size: 1.25em; //20px
 }
 
 h6 {
 	font-family: $font__main;
-	font-size: 1.125em;
+	font-size: 1.125em; //18px
 }
