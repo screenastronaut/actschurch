@@ -12,4 +12,10 @@ $(document).ready(function() {
 			$('.t-' + id).addClass('triangle-up');
 		}
 	});
+
+	$('.sub-menu-item').on('click', function() {
+		var id = $(this).attr('id');
+		$('.container-fluid > div').hide();
+		$('.' + id).show();
+	});
 });

@@ -478,32 +478,36 @@ hr {
 
 /* line 1, sass/elements/_lists.scss */
 ul, ol {
-  margin: 0 0 1.5em 3em;
+  margin: 0;
 }
 
-/* line 5, sass/elements/_lists.scss */
+/* line 6, sass/elements/_lists.scss */
 ul {
   list-style: disc;
 }
 
-/* line 9, sass/elements/_lists.scss */
+/* line 10, sass/elements/_lists.scss */
 ol {
   list-style: decimal;
 }
-
 /* line 13, sass/elements/_lists.scss */
+ol li {
+  margin-bottom: 1em;
+}
+
+/* line 18, sass/elements/_lists.scss */
 li > ul,
 li > ol {
   margin-bottom: 0;
   margin-left: 1.5em;
 }
 
-/* line 19, sass/elements/_lists.scss */
+/* line 24, sass/elements/_lists.scss */
 dt {
   font-weight: bold;
 }
 
-/* line 23, sass/elements/_lists.scss */
+/* line 28, sass/elements/_lists.scss */
 dd {
   margin: 0 1.5em 1.5em;
 }
@@ -1065,6 +1069,43 @@ a:hover, a:active {
 .faqs .answer {
   display: none;
   text-align: left;
+}
+
+/* line 71, sass/site/primary/_visit.scss */
+.sub-menu {
+  align-items: flex-start;
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+/* line 77, sass/site/primary/_visit.scss */
+.sub-menu span {
+  cursor: pointer;
+  margin: 0 20px;
+}
+/* line 81, sass/site/primary/_visit.scss */
+.sub-menu span:hover {
+  text-decoration: underline;
+}
+
+/* line 87, sass/site/primary/_visit.scss */
+.mission, .purpose, .sof {
+  display: none;
+}
+
+/* line 91, sass/site/primary/_visit.scss */
+.believe-text {
+  background: #f5f3f4;
+  color: #7d807f;
+  padding: 50px !important;
+}
+
+/* line 98, sass/site/primary/_visit.scss */
+.believe-pic img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 
 /*--------------------------------------------------------------
@@ -2530,6 +2571,25 @@ object {
 .container-fluid:after,
 .row:after {
   clear: both;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 105, sass/grid/_grid.scss */
+  .is-table-row {
+    display: table;
+  }
+
+  /* line 108, sass/grid/_grid.scss */
+  .is-table-row [class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+  }
+}
+/* line 115, sass/grid/_grid.scss */
+.no-padding {
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 /*--------------------------------------------------------------
