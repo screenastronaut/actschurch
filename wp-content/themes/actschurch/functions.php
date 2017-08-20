@@ -220,7 +220,7 @@ function leaders_cpt() {
 		'label'                 => __( 'Leader', 'text_domain' ),
 		'description'           => __( 'Custom Post Type for Leaders', 'text_domain' ),
 		'labels'                => $labels,
-		'supports'              => array(''),
+		'supports'              => array('title'),
 		'taxonomies'            => array(''),
 		'hierarchical'          => false,
 		'public'                => true,

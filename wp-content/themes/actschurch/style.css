@@ -1108,6 +1108,11 @@ a:hover, a:active {
   overflow: hidden;
 }
 
+/* line 106, sass/site/primary/_visit.scss */
+.kenneth-chin {
+  margin-top: 60px;
+}
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
