@@ -36,7 +36,66 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 						<?php endwhile; ?>
 					</div>
 				</div>
-				<?php get_template_part( 'template-parts/page/content', 'leaders' ); ?>
+
+				<div class="clear"></div>
+				<h3 class="center-text">Pastoral Team</h3>
+				<?php
+				$args = array(
+					'post_type' => 'leaders',
+					'posts_per_page' => -1,
+					'meta_key' => 'category',
+					'meta_value' => 'pastors',
+					);
+				$the_query = new WP_Query( $args );
+				while ( $the_query->have_posts() ) : $the_query->the_post();
+					get_template_part( 'template-parts/page/content', 'leaders' ); 
+				endwhile;
+				?>
+
+				<div class="clear"></div>
+				<h3 class="center-text">Elders</h3>
+				<?php
+				$args = array(
+					'post_type' => 'leaders',
+					'posts_per_page' => -1,
+					'meta_key' => 'category',
+					'meta_value' => 'elders',
+					);
+				$the_query = new WP_Query( $args );
+				while ( $the_query->have_posts() ) : $the_query->the_post();
+					get_template_part( 'template-parts/page/content', 'leaders' ); 
+				endwhile;
+				?>
+
+				<div class="clear"></div>
+				<h3 class="center-text">Local Service Plant Coordinators</h3>
+				<?php
+				$args = array(
+					'post_type' => 'leaders',
+					'posts_per_page' => -1,
+					'meta_key' => 'category',
+					'meta_value' => 'local',
+					);
+				$the_query = new WP_Query( $args );
+				while ( $the_query->have_posts() ) : $the_query->the_post();
+					get_template_part( 'template-parts/page/content', 'leaders' ); 
+				endwhile;
+				?>
+
+				<div class="clear"></div>
+				<h3 class="center-text">International Service Plant Coordinators</h3>
+				<?php
+				$args = array(
+					'post_type' => 'leaders',
+					'posts_per_page' => -1,
+					'meta_key' => 'category',
+					'meta_value' => 'international',
+					);
+				$the_query = new WP_Query( $args );
+				while ( $the_query->have_posts() ) : $the_query->the_post();
+					get_template_part( 'template-parts/page/content', 'leaders' ); 
+				endwhile;
+				?>
 			</div>
 
 		</main><!-- #main -->

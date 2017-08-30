@@ -437,6 +437,12 @@ big {
   font-size: 125%;
 }
 
+/* line 53, sass/typography/_copy.scss */
+.center-text {
+  margin: 1em 0 !important;
+  text-align: center;
+}
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -1110,7 +1116,46 @@ a:hover, a:active {
 
 /* line 106, sass/site/primary/_visit.scss */
 .kenneth-chin {
-  margin-top: 60px;
+  margin: 60px 0;
+}
+
+/* line 110, sass/site/primary/_visit.scss */
+.profile {
+  border: 1px solid #fff;
+  padding: 0 !important;
+}
+/* line 114, sass/site/primary/_visit.scss */
+.profile .pic {
+  height: 300px;
+  width: 100%;
+}
+/* line 119, sass/site/primary/_visit.scss */
+.profile .short-bio {
+  background: #db654d;
+  color: #fff;
+  padding: 20px;
+}
+/* line 124, sass/site/primary/_visit.scss */
+.profile .short-bio h4 {
+  margin: 0;
+  text-transform: uppercase;
+}
+/* line 129, sass/site/primary/_visit.scss */
+.profile .short-bio h5 {
+  margin-bottom: 15px;
+}
+/* line 133, sass/site/primary/_visit.scss */
+.profile .short-bio i {
+  margin-right: 15px;
+}
+/* line 137, sass/site/primary/_visit.scss */
+.profile .short-bio a {
+  color: #fff;
+  text-decoration: none;
+}
+/* line 141, sass/site/primary/_visit.scss */
+.profile .short-bio a:hover {
+  text-decoration: underline;
 }
 
 /*--------------------------------------------------------------
@@ -1309,7 +1354,7 @@ header .upper-header .fa {
 
 /* line 38, sass/site/_header-and-footer.scss */
 footer {
-  background: #000;
+  background: #242424;
   color: #7d807f;
   padding: 60px 0;
 }
@@ -1320,26 +1365,28 @@ footer h2 {
 /* line 47, sass/site/_header-and-footer.scss */
 footer a {
   color: #fff;
+  display: block;
   font-size: 0.75em;
+  line-height: 2em;
   text-decoration: none;
 }
-/* line 52, sass/site/_header-and-footer.scss */
+/* line 54, sass/site/_header-and-footer.scss */
 footer a:hover {
   color: #e7a13d;
   text-decoration: underline;
 }
-/* line 57, sass/site/_header-and-footer.scss */
+/* line 59, sass/site/_header-and-footer.scss */
 footer a:visited {
   color: #fff;
 }
-/* line 62, sass/site/_header-and-footer.scss */
+/* line 64, sass/site/_header-and-footer.scss */
 footer .site-copyright {
   font-size: 0.6875em;
   padding-top: 60px;
   text-align: center;
   text-transform: uppercase;
 }
-/* line 68, sass/site/_header-and-footer.scss */
+/* line 70, sass/site/_header-and-footer.scss */
 footer .site-copyright .fa {
   font-size: 0.5625em;
   margin: 0 20px;

@@ -104,5 +104,43 @@
 }
 
 .kenneth-chin {
-	margin-top: 60px;
+	margin: 60px 0;
+}
+
+.profile {
+	border: 1px solid $color__white;
+	padding: 0 !important;
+
+	.pic {
+		height: 300px;
+		width: 100%;
+	}
+
+	.short-bio {
+		background: $color__red;
+		color: $color__white;
+		padding: 20px;
+
+		h4 {
+			margin: 0;
+			text-transform: uppercase;
+		}
+
+		h5 {
+			margin-bottom: 15px;
+		}
+
+		i {
+			margin-right: 15px;
+		} 
+
+		a {
+			color: $color__white;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
 }
