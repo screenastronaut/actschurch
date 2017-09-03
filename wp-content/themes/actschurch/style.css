@@ -44,7 +44,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Grid
 --------------------------------------------------------------*/
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Raleway:300,500");
-/* line 34, sass/variables-site/_colors.scss */
+/* line 35, sass/variables-site/_colors.scss */
 .red {
   color: #db654d;
 }
@@ -1131,29 +1131,34 @@ a:hover, a:active {
 }
 /* line 119, sass/site/primary/_visit.scss */
 .profile .short-bio {
-  background: #db654d;
+  background: #242424;
   color: #fff;
   padding: 20px;
 }
 /* line 124, sass/site/primary/_visit.scss */
-.profile .short-bio h4 {
-  margin: 0;
+.profile .short-bio .leader-name {
+  font-size: 1.3em;
   text-transform: uppercase;
 }
 /* line 129, sass/site/primary/_visit.scss */
-.profile .short-bio h5 {
-  margin-bottom: 15px;
+.profile .short-bio .leader-title {
+  font-size: 1.0625em;
 }
 /* line 133, sass/site/primary/_visit.scss */
-.profile .short-bio i {
-  margin-right: 15px;
+.profile .short-bio .facts {
+  margin-top: 15px;
 }
 /* line 137, sass/site/primary/_visit.scss */
+.profile .short-bio i {
+  font-size: 1.5em;
+  margin-right: 5px;
+}
+/* line 142, sass/site/primary/_visit.scss */
 .profile .short-bio a {
   color: #fff;
   text-decoration: none;
 }
-/* line 141, sass/site/primary/_visit.scss */
+/* line 146, sass/site/primary/_visit.scss */
 .profile .short-bio a:hover {
   text-decoration: underline;
 }
@@ -1285,6 +1290,38 @@ section:not(.widget) {
   text-align: center;
 }
 
+/* line 117, sass/site/primary/_posts-and-pages.scss */
+.multi-tab {
+  background: #f5f3f4;
+  padding: 20px 0;
+}
+/* line 121, sass/site/primary/_posts-and-pages.scss */
+.multi-tab .container {
+  display: flex;
+  justify-content: space-evenly;
+}
+/* line 126, sass/site/primary/_posts-and-pages.scss */
+.multi-tab .tab-link {
+  cursor: pointer;
+  font-size: 0.9375em;
+  padding-right: 30px;
+  text-transform: uppercase;
+}
+/* line 132, sass/site/primary/_posts-and-pages.scss */
+.multi-tab .tab-link:hover, .multi-tab .tab-link.current-link {
+  text-shadow: 1px 0px 0px black;
+}
+
+/* line 139, sass/site/primary/_posts-and-pages.scss */
+.tab-content {
+  display: none;
+}
+
+/* line 143, sass/site/primary/_posts-and-pages.scss */
+.current-tab {
+  display: block;
+}
+
 /*--------------------------------------------------------------
 ## Asides
 --------------------------------------------------------------*/
@@ -1343,7 +1380,6 @@ header.orange-header a:hover {
 /* line 26, sass/site/_header-and-footer.scss */
 header .upper-header {
   font-size: 0.875em;
-  padding-bottom: 10px;
   text-align: right;
 }
 /* line 31, sass/site/_header-and-footer.scss */

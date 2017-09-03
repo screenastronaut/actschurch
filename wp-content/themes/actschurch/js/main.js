@@ -18,4 +18,22 @@ $(document).ready(function() {
 		$('.container-fluid > div').hide();
 		$('.' + id).show();
 	});
+
+	$('.tab-link').on('click', function() {
+		var id = $(this).data('tab');
+
+		var tablink = $('.tab-link');
+		tablink.each(function() {
+			tablink.removeClass('current-link');
+		});
+
+		$(this).addClass('current-link');
+
+		var tabcontent = $('.tab-content');
+		tabcontent.each(function() {
+			tabcontent.removeClass('current-tab');
+		});
+
+		$('#' + id).addClass('current-tab');
+	});
 });

@@ -117,21 +117,26 @@
 	}
 
 	.short-bio {
-		background: $color__red;
+		background: $color__dark-grey;
 		color: $color__white;
 		padding: 20px;
 
-		h4 {
-			margin: 0;
+		.leader-name {
+			font-size: 1.3em;
 			text-transform: uppercase;
 		}
 
-		h5 {
-			margin-bottom: 15px;
+		.leader-title {
+			font-size: 1.0625em;
+		}
+
+		.facts {
+			margin-top: 15px;
 		}
 
 		i {
-			margin-right: 15px;
+			font-size: 1.5em;
+			margin-right: 5px;
 		} 
 
 		a {

@@ -25,7 +25,7 @@ header {
 
 	.upper-header {
 		font-size: 0.875em;
-		padding-bottom: 10px;
+		// padding-bottom: 10px;
 		text-align: right;
 
 		.fa {
@@ -36,7 +36,7 @@ header {
 }
 
 footer {
-	background: #242424;
+	background: $color__dark-grey;
 	color: $color__grey;
 	padding: 60px 0;
 

@@ -113,3 +113,33 @@ section:not(.widget) {
 		text-align: center;
 	}
 }
+
+.multi-tab {
+	background: $color__light-grey;
+	padding: 20px 0;
+
+	.container {		
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	.tab-link {
+		cursor: pointer;
+		font-size: 0.9375em;
+		padding-right: 30px;
+		text-transform: uppercase;
+
+		&:hover,
+		&.current-link {
+			text-shadow: 1px 0px 0px black;
+		}
+	}
+}
+
+.tab-content {
+	display: none;
+}
+
+.current-tab {
+	display: block;
+}
