@@ -34,6 +34,7 @@
 </head>
 
 <?php
+// TODO: change header colours according to category
 if(is_front_page()) {
 	$header_class = 'transparent-header';
 } else {

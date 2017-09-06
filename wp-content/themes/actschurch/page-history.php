@@ -21,6 +21,7 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 		<main id="main" class="site-main" role="main">
 
 			<div class="container">
+			<!-- TODO: history page -->
 			</div>
 
 		</main><!-- #main -->

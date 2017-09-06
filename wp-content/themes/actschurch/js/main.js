@@ -36,4 +36,16 @@ $(document).ready(function() {
 
 		$('#' + id).addClass('current-tab');
 	});
+
+	$('#homes-city').change(function() {
+		var rex = new RegExp($('#homes-city').val());
+		if(rex =="/All/") {
+			$('tr').show();
+		} else{
+			$('tr:not(.table-header)').hide();
+			$('tr:not(.table-header)').filter(function() {
+				return rex.test($(this).text());
+			}).show();
+		}
+	});
 });

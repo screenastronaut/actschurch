@@ -1,0 +1,48 @@
+.what-is-homes {
+	.left-text {
+		text-align: left;
+	}
+
+	.right-text {
+		text-align: right;
+	}
+}
+
+#homes-city {
+	margin-bottom: 30px;
+}
+
+.homes-table {
+
+	.table-header {
+		background: $color__green;
+		color: $color__white;
+		text-transform: uppercase;
+
+		td {
+			padding: 10px 0;
+		}
+	}
+
+	tr:not(.table-header) {
+		border-bottom: 2px solid $color__green;
+
+		td {
+			padding: 10px 0;
+		}
+	}
+}
+
+.contact {
+
+	.contact-form {
+		background: $color__green;
+		color: $color__white;
+		min-height: 700px;
+		padding: 2em 0;
+	}
+
+	.contact-image {
+		min-height: 700px;
+	}
+}

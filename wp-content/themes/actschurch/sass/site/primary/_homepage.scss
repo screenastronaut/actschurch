@@ -30,6 +30,38 @@
 		justify-content: center;
 	}
 
+	.grid-half {
+		height: 200px;
+		line-height: 200px;
+		width: 100%;
+
+		&.grid-pic-up {
+			&:after, &:before {
+				top: 40%;
+				left: 50%;
+				border: solid transparent;
+				content: " ";
+				height: 0;
+				width: 0;
+				position: absolute;
+				pointer-events: none;
+			}
+
+			&:after {
+				border-color: rgba(255, 255, 255, 0);
+				border-bottom-color: #ffffff;
+				border-width: 20px;
+				margin-left: -20px;
+			}
+			&:before {
+				border-color: rgba(255, 255, 255, 0);
+				border-bottom-color: #ffffff;
+				border-width: 21px;
+				margin-left: -21px;
+			}
+		}
+	}
+
 	.grid-pic-up {
 		&:after, &:before {
 			top: 90%;
@@ -111,6 +143,10 @@
 	.featured-sermon {
 		background: url('images/placeholder-narrow.png');
 		background-size: contain;
+	}
+
+	.grey {
+		background: $color__light-grey;
 	}
 }
 
