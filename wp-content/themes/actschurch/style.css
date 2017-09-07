@@ -1239,7 +1239,7 @@ a:hover, a:active {
   background: #4b8944;
   color: #fff;
   min-height: 700px;
-  padding: 2em 0;
+  padding: 2em 3em;
 }
 /* line 45, sass/site/primary/_connect.scss */
 .contact .contact-image {
