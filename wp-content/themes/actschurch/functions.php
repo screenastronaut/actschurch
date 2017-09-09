@@ -149,6 +149,8 @@ function actschurch_scripts() {
 
 	wp_enqueue_script( 'actschurch-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
+	wp_enqueue_script( 'google-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyB7pYySi9L0peixxr-Le2__2f2TCo5Kdag' );
+
 	wp_enqueue_script( 'actschurch-mainjs', get_template_directory_uri() . '/js/main.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'font-awesome', 'https://use.fontawesome.com/4edce0012c.js', array(), '20170719', true );
@@ -303,6 +305,16 @@ function stories_cpt() {
 
 }
 add_action( 'init', 'stories_cpt', 0 );
+
+function my_acf_google_map_api( $api ){
+	
+	$api['key'] = 'AIzaSyB7pYySi9L0peixxr-Le2__2f2TCo5Kdag';
+	
+	return $api;
+	
+}
+
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 
 add_action('wp_ajax_story_form_process', 'story_form_process');
 add_action('wp_ajax_nopriv_story_form_process', 'story_form_process');

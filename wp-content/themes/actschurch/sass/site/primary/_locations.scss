@@ -1,0 +1,39 @@
+.locations-page {
+	margin-top: 60px;
+
+	h3 {
+		text-align: center;
+	}
+}
+
+.services {
+	margin: 30px 0;
+
+	.service {
+		float: left;
+		margin-bottom: 15px;
+		width: 50%;
+	}
+
+	h5 {
+		font-weight: 500;
+		letter-spacing: 3px;
+		margin: 0;
+		text-transform: uppercase;
+	}
+
+	a {
+		color: $color__red;
+		font-size: 0.75em;
+		text-transform: uppercase;
+	}
+}
+
+.locations-map {
+	height: 400px;
+
+	#map {
+		height: 400px;
+		width: 100%;
+	}
+}
