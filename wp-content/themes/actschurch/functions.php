@@ -46,7 +46,7 @@ function actschurch_setup() {
 	register_nav_menus( array(
 		'menu-1' => esc_html__( 'Primary', 'actschurch' ),
 		'footer-menu' => __( 'Footer Menu', 'actschurch' ),
-	) );
+		) );
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -58,7 +58,7 @@ function actschurch_setup() {
 		'comment-list',
 		'gallery',
 		'caption',
-	) );
+		) );
 
 	/*
 	 * Enable support for Post Formats.
@@ -73,13 +73,13 @@ function actschurch_setup() {
 		'link',
 		'gallery',
 		'audio',
-	) );
+		) );
 
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'actschurch_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
-	) ) );
+		) ) );
 
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
@@ -123,7 +123,7 @@ function actschurch_widgets_init() {
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
-	) );
+		) );
 
 	register_sidebar( array(
 		'name'          => esc_html__( 'Footer', 'actschurch' ),
@@ -133,7 +133,7 @@ function actschurch_widgets_init() {
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
-	) );
+		) );
 }
 add_action( 'widgets_init', 'actschurch_widgets_init' );
 
@@ -156,6 +156,12 @@ function actschurch_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	wp_localize_script( "actschurch-mainjs", 'storysearch1',
+		array(
+            'ajaxUrl' => admin_url( 'admin-ajax.php' ), //url for php file that process ajax request to WP
+            )
+		);
 }
 add_action( 'wp_enqueue_scripts', 'actschurch_scripts' );
 
@@ -184,7 +190,7 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
-// Register Custom Post Type
+// Register Leaders Custom Post Type
 function leaders_cpt() {
 
 	$labels = array(
@@ -215,7 +221,7 @@ function leaders_cpt() {
 		'items_list'            => __( 'Leaders list', 'text_domain' ),
 		'items_list_navigation' => __( 'Leaders list navigation', 'text_domain' ),
 		'filter_items_list'     => __( 'Filter leaders list', 'text_domain' ),
-	);
+		);
 	$args = array(
 		'label'                 => __( 'Leader', 'text_domain' ),
 		'description'           => __( 'Custom Post Type for Leaders', 'text_domain' ),
@@ -235,8 +241,127 @@ function leaders_cpt() {
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
-	);
+		);
 	register_post_type( 'leaders', $args );
 
 }
 add_action( 'init', 'leaders_cpt', 0 );
+
+// Register Stories Custom Post Type
+function stories_cpt() {
+
+	$labels = array(
+		'name'                  => _x( 'Stories', 'Post Type General Name', 'text_domain' ),
+		'singular_name'         => _x( 'Story', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'             => __( 'Stories', 'text_domain' ),
+		'name_admin_bar'        => __( 'Story', 'text_domain' ),
+		'archives'              => __( 'Item Archives', 'text_domain' ),
+		'attributes'            => __( 'Item Attributes', 'text_domain' ),
+		'parent_item_colon'     => __( 'Parent Story:', 'text_domain' ),
+		'all_items'             => __( 'All Stories', 'text_domain' ),
+		'add_new_item'          => __( 'Add New Story', 'text_domain' ),
+		'add_new'               => __( 'Add New', 'text_domain' ),
+		'new_item'              => __( 'New Story', 'text_domain' ),
+		'edit_item'             => __( 'Edit Story', 'text_domain' ),
+		'update_item'           => __( 'Update Story', 'text_domain' ),
+		'view_item'             => __( 'View Story', 'text_domain' ),
+		'view_items'            => __( 'View Stories', 'text_domain' ),
+		'search_items'          => __( 'Search Story', 'text_domain' ),
+		'not_found'             => __( 'Not found', 'text_domain' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
+		'featured_image'        => __( 'Featured Image', 'text_domain' ),
+		'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
+		'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
+		'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
+		'insert_into_item'      => __( 'Insert into Story', 'text_domain' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this Story', 'text_domain' ),
+		'items_list'            => __( 'Stories list', 'text_domain' ),
+		'items_list_navigation' => __( 'Stories list navigation', 'text_domain' ),
+		'filter_items_list'     => __( 'Filter stories list', 'text_domain' ),
+		);
+	$args = array(
+		'label'                 => __( 'Story', 'text_domain' ),
+		'description'           => __( 'Custom Post Type for Stories', 'text_domain' ),
+		'labels'                => $labels,
+		'supports'              => array('title'),
+		'taxonomies'            => array(''),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'menu_icon'             => 'dashicons-media-document',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,		
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+		);
+	register_post_type( 'stories', $args );
+
+}
+add_action( 'init', 'stories_cpt', 0 );
+
+add_action('wp_ajax_story_form_process', 'story_form_process');
+add_action('wp_ajax_nopriv_story_form_process', 'story_form_process');
+function story_form_process() {
+		// TODO: fix search functions for stories
+	$storysearch = $_POST['keywords'];
+	$storydate = $_POST['date'];
+	$storycat = $_POST['category'];
+	$args = array(
+		'post_type' => 'stories',
+		'posts_per_page' => -1,
+		);
+	$meta_array = array();
+	$keyword_array = array('relation' => 'OR');
+	$hasmetaquery = false;
+	$haskeywords = false;
+	// if($keywords !== '') {
+	// 	array_push($keyword_array, array(
+	// 		'key' => 'initiative_name',
+	// 		'value' => $keywords,
+	// 		'compare' => 'LIKE',
+	// 		));
+	// 	array_push($keyword_array, array(
+	// 		'key' => 'organisation_name',
+	// 		'value' => $keywords,
+	// 		'compare' => 'LIKE',
+	// 		));
+	// 	array_push($keyword_array, array(
+	// 		'key' => 'initiative_description',
+	// 		'value' => $keywords,
+	// 		'compare' => 'LIKE',
+	// 		));
+	// 	$haskeywords = true;
+	// }
+	if($storycat !== 'All') {
+		array_push($meta_array, array(
+			'key' => 'category',
+			'value' => $storycat,
+			'compare' => '=',
+			));
+		$hasmetaquery = true;
+	}
+	if($haskeywords && $hasmetaquery) { //has keywords and filters
+		$args['meta_query'] = array(
+			$keyword_array,
+			'relation' => 'AND',
+			$meta_array
+			);
+	} else if(!$haskeywords && $hasmetaquery) {	//no keywords but has filters
+		$args['meta_query'] = array(
+			'relation' => 'AND',
+			$meta_array
+			);
+	} else if ($haskeywords && !$hasmetaquery) { //has keywords but no filters
+		$args['meta_query'] = $keyword_array;
+	}
+	$the_query = new WP_Query( $args );
+	if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post();
+	get_template_part( 'template-parts/page/content', 'stories' );
+	endwhile;endif;
+	wp_die();
+}

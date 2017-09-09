@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Our Leadership Page
+ * Template Name: Stories Page
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -9,10 +9,7 @@
 
 get_header(); 
 
-$introduction_photo = get_field('introduction_photo');
-$introduction_text = get_field('introduction_text');
-
-get_template_part( 'template-parts/page/content', 'cover-photo' );
+$featured_story = get_field('featured_story');
 ?>
 
 <div id="content" class="site-content">
@@ -20,101 +17,77 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<div class="container">
-				<div class="kenneth-chin row">
-					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-						<?php if (has_post_thumbnail( $post->ID ) ): ?>
-							<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-							<img src="<?php echo $image[0]; ?>" title="Reverend Kenneth Chin" alt="Reverend Kenneth Chin">
-						<?php endif; ?>
+			<div class="container featured-story">
+				<?php 
+				if($featured_story): 
+					foreach($featured_story as $post) : setup_postdata($post);
+				?>
+				<div class="featured-left col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					<h2><?php echo get_the_title(); ?></h2>
+					<?php echo get_field('excerpt'); ?>
+					<div class="by-person"><?php echo get_field('name'); ?></div>
+					<div class="category">Category: 
+						<?php 
+						$category = get_field('category');
+						if($category) {
+							foreach($category as $cat) {
+								echo $cat.', ';
+							}
+						}
+						?>
 					</div>
-					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-						<?php while ( have_posts() ) : the_post(); ?>
-							<div class="entry-content-page">
-								<?php the_content(); ?> <!-- Page Content -->
-							</div><!-- .entry-content-page -->
-						<?php endwhile; ?>
-					</div>
+					<a href="<?php the_permalink(); ?>" class="read-more">Read More</a>
 				</div>
+				<div class="featured-right col-lg-6 col-md-6 col-sm-12 col-xs-12"">
+					<img src="<?php echo get_field('photo'); ?>" alt="">
+				</div>
+			<?php endforeach; endif; ?>
+		</div>
+
+		<hr>
+
+		<div class="container stories-container">
+			<div class="search-stories col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<form id="storysearchform">
+					<input type="text" name="storysearch" id="storysearch" placeholder="Search">
+					<label for="storydate">Date: </label><input type="month" name="storydate" id="storydate">
+					<label for="storycat">Category: </label>
+					<?php
+					$allcats = get_field_object('category');
+					if( $allcats )
+					{
+						echo '<select name="' . $allcats['key'] . '" name="storycat" id="storycat">';
+						echo '<option default value="All">All</option>';
+						foreach( $allcats['choices'] as $k => $v )
+						{
+							echo '<option value="' . $k . '">' . $v . '</option>';
+						}
+						echo '</select>';
+					}
+					?>
+					<input type="submit" name="submit" id="submit" value="Search">
+				</form>
 			</div>
 
-			<div class="multi-tab">
-				<div class="container">
-					<span class="tab-link current-link" data-tab="pastors">Pastoral Team</span>
-					<span class="tab-link" data-tab="elders">Elders</span>
-					<span class="tab-link" data-tab="local">Local Service Plant Coordinators</span>
-					<span class="tab-link" data-tab="international">International Service Plant Coordinators</span>
-				</div>
+			<div class="all-stories">
+
+				<?php
+
+				$args = array(
+					'post_type' => 'stories',
+					'posts_per_page' => -1,
+					);
+				$the_query = new WP_Query( $args );
+				while ( $the_query->have_posts() ) : $the_query->the_post();
+				get_template_part( 'template-parts/page/content', 'stories' ); 
+				endwhile;
+				?>
 			</div>
 
-			<div class="container">
+			<!-- TODO: load more button -->
+		</div>
 
-			<div class="tab-content current-tab" id="pastors">
-					<h3 class="center-text">Pastoral Team</h3>
-					<?php
-					$args = array(
-						'post_type' => 'leaders',
-						'posts_per_page' => -1,
-						'meta_key' => 'category',
-						'meta_value' => 'pastors',
-						);
-					$the_query = new WP_Query( $args );
-					while ( $the_query->have_posts() ) : $the_query->the_post();
-					get_template_part( 'template-parts/page/content', 'leaders' ); 
-					endwhile;
-					?>
-					<div class="clear"></div>
-				</div>
-				<div class="tab-content" id="elders">
-					<h3 class="center-text">Elders</h3>
-					<?php
-					$args = array(
-						'post_type' => 'leaders',
-						'posts_per_page' => -1,
-						'meta_key' => 'category',
-						'meta_value' => 'elders',
-						);
-					$the_query = new WP_Query( $args );
-					while ( $the_query->have_posts() ) : $the_query->the_post();
-					get_template_part( 'template-parts/page/content', 'leaders' ); 
-					endwhile;
-					?>
-					<div class="clear"></div>
-				</div>
-				<div class="tab-content" id="local">
-					<h3 class="center-text">Local Service Plant Coordinators</h3>
-					<?php
-					$args = array(
-						'post_type' => 'leaders',
-						'posts_per_page' => -1,
-						'meta_key' => 'category',
-						'meta_value' => 'local',
-						);
-					$the_query = new WP_Query( $args );
-					while ( $the_query->have_posts() ) : $the_query->the_post();
-					get_template_part( 'template-parts/page/content', 'leaders' ); 
-					endwhile;
-					?>
-					<div class="clear"></div>
-				</div>
-				<div class="tab-content" id="international">
-					<h3 class="center-text">International Service Plant Coordinators</h3>
-					<?php
-					$args = array(
-						'post_type' => 'leaders',
-						'posts_per_page' => -1,
-						'meta_key' => 'category',
-						'meta_value' => 'international',
-						);
-					$the_query = new WP_Query( $args );
-					while ( $the_query->have_posts() ) : $the_query->the_post();
-					get_template_part( 'template-parts/page/content', 'leaders' ); 
-					endwhile;
-					?>
-				</div>
-			</div>
+	</main><!-- #main -->
+</div><!-- #primary -->
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-	<?php get_footer();
+<?php get_footer();

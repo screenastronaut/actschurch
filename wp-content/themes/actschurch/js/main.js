@@ -48,4 +48,32 @@ $(document).ready(function() {
 			}).show();
 		}
 	});
+
+	$('#storysearchform').on('submit', function(e) {
+		e.preventDefault();
+		var storysearch = $('#storysearch').val();
+		var storydate = $('#storydate').val();
+		var storycat = $('#storycat').val();
+
+		$.ajax({
+			type: 'post',
+			url: storysearch1.ajaxUrl,
+			data: {
+				action: 'story_form_process',
+				keywords: storysearch,
+				date: storydate,
+				category: storycat,
+			},
+			beforeSend: function() {
+				$('.all-stories').html('');
+				// $('.all-stories').append('<img src="/harihasanah/wp-content/themes/hasanah/images/ajax-loader.gif" class="ajax-loading">');
+			},
+			success:function(data){
+				$('.all-stories').html(data);
+			},
+			error: function(errorThrown){
+				console.log(errorThrown);
+			}
+		});
+	});
 });

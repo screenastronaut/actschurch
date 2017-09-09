@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying leadership page content in page.php
+ * Template part for displaying leadership page content
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *

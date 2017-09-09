@@ -37,6 +37,8 @@
 // TODO: change header colours according to category
 if(is_front_page()) {
 	$header_class = 'transparent-header';
+} elseif (is_page('stories')) {
+	$header_class = 'purple-header';
 } else {
 	$header_class = 'orange-header';
 }
@@ -66,6 +68,14 @@ if(is_front_page()) {
 						<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
 					</div>
 				</div>
+
+				<?php 
+				if (is_page('stories')) {
+					echo '<div class="header-title col-lg-12 col-md-12 col-sm-12 col-xs-12">';
+					echo '<h1>Stories</h1>';
+					echo '</div>';
+				}
+				?>
 		</div>
 	</header><!-- #masthead -->
 

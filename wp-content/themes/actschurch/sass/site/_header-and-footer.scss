@@ -1,5 +1,5 @@
 header {
-	height: 100px;
+	// height: 100px;
 	position: relative;
 	z-index: 3;
 
@@ -23,6 +23,20 @@ header {
 		}
 	}
 
+	&.purple-header {
+		background: $color__purple;
+		color: $color__white !important;
+
+		a {
+			color: $color__white !important;
+
+			&:hover {
+				color: $color__white;
+				text-transform: underline;
+			}
+		}
+	}
+
 	.upper-header {
 		font-size: 0.875em;
 		// padding-bottom: 10px;
@@ -32,6 +46,14 @@ header {
 			font-size: 1.25em;
 			margin-right: 10px;
 		}
+	}
+
+	.lower-header {
+		margin-bottom: 30px;
+	}
+
+	.header-title {
+		text-align: center;
 	}
 }
 

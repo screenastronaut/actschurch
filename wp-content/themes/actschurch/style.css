@@ -869,7 +869,6 @@ a:hover, a:active {
   padding: 60px 0;
   position: relative;
   text-align: center;
-  top: -30px;
   z-index: 1;
 }
 /* line 10, sass/site/primary/_homepage.scss */
@@ -1405,6 +1404,52 @@ section:not(.widget) {
   display: block;
 }
 
+/* line 147, sass/site/primary/_posts-and-pages.scss */
+.featured-story {
+  margin-top: 60px;
+}
+/* line 151, sass/site/primary/_posts-and-pages.scss */
+.featured-story .featured-left p {
+  margin-bottom: 10px;
+}
+
+/* line 157, sass/site/primary/_posts-and-pages.scss */
+.stories-container {
+  margin-top: 30px;
+}
+/* line 160, sass/site/primary/_posts-and-pages.scss */
+.stories-container .search-stories {
+  margin-bottom: 30px;
+}
+/* line 163, sass/site/primary/_posts-and-pages.scss */
+.stories-container .search-stories input,
+.stories-container .search-stories select {
+  margin-right: 30px;
+}
+/* line 169, sass/site/primary/_posts-and-pages.scss */
+.stories-container .individual-story {
+  margin-bottom: 30px;
+}
+/* line 172, sass/site/primary/_posts-and-pages.scss */
+.stories-container .individual-story .pic {
+  height: 250px;
+}
+/* line 175, sass/site/primary/_posts-and-pages.scss */
+.stories-container .individual-story .text {
+  background: #f5f3f4;
+  padding: 15px;
+}
+
+/* line 182, sass/site/primary/_posts-and-pages.scss */
+.read-more {
+  color: #6f3d79;
+  display: block;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin: 30px 0;
+  text-transform: uppercase;
+}
+
 /*--------------------------------------------------------------
 ## Asides
 --------------------------------------------------------------*/
@@ -1432,7 +1477,6 @@ section:not(.widget) {
 --------------------------------------------------------------*/
 /* line 1, sass/site/_header-and-footer.scss */
 header {
-  height: 100px;
   position: relative;
   z-index: 3;
 }
@@ -1461,27 +1505,49 @@ header.orange-header a:hover {
   text-transform: underline;
 }
 /* line 26, sass/site/_header-and-footer.scss */
+header.purple-header {
+  background: #6f3d79;
+  color: #fff !important;
+}
+/* line 30, sass/site/_header-and-footer.scss */
+header.purple-header a {
+  color: #fff !important;
+}
+/* line 33, sass/site/_header-and-footer.scss */
+header.purple-header a:hover {
+  color: #fff;
+  text-transform: underline;
+}
+/* line 40, sass/site/_header-and-footer.scss */
 header .upper-header {
   font-size: 0.875em;
   text-align: right;
 }
-/* line 31, sass/site/_header-and-footer.scss */
+/* line 45, sass/site/_header-and-footer.scss */
 header .upper-header .fa {
   font-size: 1.25em;
   margin-right: 10px;
 }
+/* line 51, sass/site/_header-and-footer.scss */
+header .lower-header {
+  margin-bottom: 30px;
+}
+/* line 55, sass/site/_header-and-footer.scss */
+header .header-title {
+  text-align: center;
+}
 
-/* line 38, sass/site/_header-and-footer.scss */
+/* line 60, sass/site/_header-and-footer.scss */
 footer {
   background: #242424;
   color: #7d807f;
   padding: 60px 0;
 }
-/* line 43, sass/site/_header-and-footer.scss */
+/* line 65, sass/site/_header-and-footer.scss */
 footer h2 {
   color: #7d807f;
 }
-/* line 47, sass/site/_header-and-footer.scss */
+/* line 69, sass/site/_header-and-footer.scss */
 footer a {
   color: #fff;
   display: block;
@@ -1489,23 +1555,23 @@ footer a {
   line-height: 2em;
   text-decoration: none;
 }
-/* line 54, sass/site/_header-and-footer.scss */
+/* line 76, sass/site/_header-and-footer.scss */
 footer a:hover {
   color: #e7a13d;
   text-decoration: underline;
 }
-/* line 59, sass/site/_header-and-footer.scss */
+/* line 81, sass/site/_header-and-footer.scss */
 footer a:visited {
   color: #fff;
 }
-/* line 64, sass/site/_header-and-footer.scss */
+/* line 86, sass/site/_header-and-footer.scss */
 footer .site-copyright {
   font-size: 0.6875em;
   padding-top: 60px;
   text-align: center;
   text-transform: uppercase;
 }
-/* line 70, sass/site/_header-and-footer.scss */
+/* line 92, sass/site/_header-and-footer.scss */
 footer .site-copyright .fa {
   font-size: 0.5625em;
   margin: 0 20px;

@@ -143,3 +143,47 @@ section:not(.widget) {
 .current-tab {
 	display: block;
 }
+
+.featured-story {
+	margin-top: 60px;
+
+	.featured-left {
+		p {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.stories-container {
+	margin-top: 30px;
+
+	.search-stories {
+		margin-bottom: 30px;
+
+		input,
+		select {
+			margin-right: 30px;
+		}
+	}
+
+	.individual-story {
+		margin-bottom: 30px;
+
+		.pic {
+			height: 250px;
+		}
+		.text {
+			background: $color__light-grey;
+			padding: 15px;
+		}
+	}
+}
+
+.read-more {
+	color: $color__purple;
+	display: block;
+	font-weight: 700;
+	letter-spacing: 3px;
+	margin: 30px 0;
+	text-transform: uppercase;
+}
