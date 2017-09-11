@@ -1283,12 +1283,62 @@ a:hover, a:active {
 
 /* line 32, sass/site/primary/_locations.scss */
 .locations-map {
-  height: 400px;
+  height: 450px;
 }
 /* line 35, sass/site/primary/_locations.scss */
-.locations-map #map {
-  height: 400px;
+.locations-map #map,
+.locations-map #single-map {
+  height: 450px;
   width: 100%;
+}
+/* line 40, sass/site/primary/_locations.scss */
+.locations-map #map hr,
+.locations-map #single-map hr {
+  background: #db654d;
+  margin-bottom: 1em;
+}
+/* line 45, sass/site/primary/_locations.scss */
+.locations-map #map p,
+.locations-map #single-map p {
+  margin-bottom: 0;
+}
+
+/* line 53, sass/site/primary/_locations.scss */
+.single-location p {
+  margin-bottom: 15px;
+}
+/* line 57, sass/site/primary/_locations.scss */
+.single-location .about {
+  margin-bottom: 60px;
+  margin-top: 60px;
+  text-align: center;
+}
+/* line 63, sass/site/primary/_locations.scss */
+.single-location .service-times {
+  background: #db654d;
+  color: #fff;
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
+
+/* line 72, sass/site/primary/_locations.scss */
+.location-contact .orange-bg,
+.location-contact .grey-bg {
+  padding: 3em 5em;
+}
+/* line 76, sass/site/primary/_locations.scss */
+.location-contact .orange-bg h3,
+.location-contact .grey-bg h3 {
+  font-weight: 400;
+}
+/* line 81, sass/site/primary/_locations.scss */
+.location-contact .orange-bg {
+  background: #db654d;
+  color: #fff;
+}
+/* line 86, sass/site/primary/_locations.scss */
+.location-contact .grey-bg {
+  background: #f5f3f4;
 }
 
 /*--------------------------------------------------------------

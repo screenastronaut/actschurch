@@ -70,6 +70,12 @@ if(is_front_page()) {
 				</div>
 
 				<?php 
+				$body_classes = get_body_class();
+				if(in_array('page-template-page-location', $body_classes)) {
+					echo '<div class="header-title col-lg-12 col-md-12 col-sm-12 col-xs-12">';
+					echo '<h1 style="color:#fff">Visit Acts '.get_the_title().'</h1>';
+					echo '</div>';
+				}
 				if (is_page('stories')) {
 					echo '<div class="header-title col-lg-12 col-md-12 col-sm-12 col-xs-12">';
 					echo '<h1>Stories</h1>';
