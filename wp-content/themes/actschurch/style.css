@@ -1546,6 +1546,12 @@ section:not(.widget) {
   text-transform: uppercase;
 }
 
+/* line 191, sass/site/primary/_posts-and-pages.scss */
+.contact-us {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 /*--------------------------------------------------------------
 ## Asides
 --------------------------------------------------------------*/

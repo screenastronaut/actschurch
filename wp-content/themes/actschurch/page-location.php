@@ -7,6 +7,8 @@
  * @package actschurch
  */
 
+// TODO: contact forms
+
 get_header(); 
 
 ?>
