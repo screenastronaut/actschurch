@@ -169,12 +169,30 @@ section:not(.widget) {
 	.individual-story {
 		margin-bottom: 30px;
 
-		.pic {
-			height: 250px;
+		h4 {
+			margin-bottom: 10px;
+
+			a {
+				color: $color__purple;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
 		}
+
+		.pic {
+			height: 300px;
+		}
+
 		.text {
 			background: $color__light-grey;
 			padding: 15px;
+		}
+
+		.read-more {
+			margin: 10px 0;
 		}
 	}
 }

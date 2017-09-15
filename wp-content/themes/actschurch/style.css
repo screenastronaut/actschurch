@@ -1527,16 +1527,33 @@ section:not(.widget) {
   margin-bottom: 30px;
 }
 /* line 172, sass/site/primary/_posts-and-pages.scss */
-.stories-container .individual-story .pic {
-  height: 250px;
+.stories-container .individual-story h4 {
+  margin-bottom: 10px;
 }
 /* line 175, sass/site/primary/_posts-and-pages.scss */
+.stories-container .individual-story h4 a {
+  color: #6f3d79;
+  text-decoration: none;
+}
+/* line 179, sass/site/primary/_posts-and-pages.scss */
+.stories-container .individual-story h4 a:hover {
+  text-decoration: underline;
+}
+/* line 185, sass/site/primary/_posts-and-pages.scss */
+.stories-container .individual-story .pic {
+  height: 300px;
+}
+/* line 189, sass/site/primary/_posts-and-pages.scss */
 .stories-container .individual-story .text {
   background: #f5f3f4;
   padding: 15px;
 }
+/* line 194, sass/site/primary/_posts-and-pages.scss */
+.stories-container .individual-story .read-more {
+  margin: 10px 0;
+}
 
-/* line 182, sass/site/primary/_posts-and-pages.scss */
+/* line 200, sass/site/primary/_posts-and-pages.scss */
 .read-more {
   color: #6f3d79;
   display: block;
@@ -1546,7 +1563,7 @@ section:not(.widget) {
   text-transform: uppercase;
 }
 
-/* line 191, sass/site/primary/_posts-and-pages.scss */
+/* line 209, sass/site/primary/_posts-and-pages.scss */
 .contact-us {
   padding-top: 60px;
   padding-bottom: 60px;

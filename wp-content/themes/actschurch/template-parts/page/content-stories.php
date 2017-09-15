@@ -13,7 +13,7 @@
 	<div class="pic" style="background:url(<?php echo get_field('photo'); ?>);background-size:cover;background-repeat:no-repeat;"></div>
 	<div class="text">
 		<div class="story-title">
-			<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+			<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 		</div>
 		<div class="story-excerpt">
 			<?php echo get_field('excerpt'); ?>
