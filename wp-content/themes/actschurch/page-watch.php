@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Stories Page
+ * Template Name: Watch Page
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -9,7 +9,7 @@
 
 get_header(); 
 
-$featured_story = get_field('featured_story');
+$featured_video = get_field('featured_video');
 ?>
 
 <div id="content" class="site-content">
@@ -17,37 +17,32 @@ $featured_story = get_field('featured_story');
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<div class="container featured-story">
+			<div class="container featured-video">
 				<?php 
-				if($featured_story): 
-					foreach($featured_story as $post) : setup_postdata($post);
-				?>
-				<div class="featured-left col-lg-6 col-md-6 col-sm-12 col-xs-12">
-					<h2><?php echo get_the_title(); ?></h2>
-					<?php echo get_field('excerpt'); ?>
-					<div class="by-person"><?php echo get_field('name'); ?></div>
-					<!-- <div class="category">Category: 
-						<?php 
-						$category = get_field('category');
-						if($category) {
-							foreach($category as $cat) {
-								echo $cat.', ';
-							}
-						}
+				if($featured_video): 
+					foreach($featured_video as $post) : setup_postdata($post);
 						?>
-					</div> -->
-					<a href="<?php the_permalink(); ?>" class="read-more">Read More</a>
-				</div>
-				<div class="featured-right col-lg-6 col-md-6 col-sm-12 col-xs-12"">
-					<img src="<?php echo get_field('photo'); ?>" alt="">
+						<div class="featured-left col-lg-6 col-md-6 col-sm-12 col-xs-12">
+							<h2><?php echo get_the_title(); ?></h2>
+							<?php echo get_field('description'); ?>
+						</div>
+						<div class="featured-right col-lg-6 col-md-6 col-sm-12 col-xs-12">
+							<div class="embed-responsive embed-responsive-4by3">
+								<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?php echo get_field('video_embed'); ?>?rel=0"></iframe>
+							</div>
+
+					<!-- <a href="<?php echo get_field('url');?>" class="featured-container">
+						<img src="<?php echo get_field('photo'); ?>" alt="" class="featured-photo">
+						<i class="featured-play fa fa-play fa-3x" aria-hidden="true"></i>
+					</a> -->
 				</div>
 			<?php endforeach; endif; ?>
 		</div>
 
 		<hr>
 
-		<div class="container stories-container">
-			<!-- <div class="search-stories col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<div class="container videos-container">
+			<!-- <div class="search-video col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<form id="storysearchform">
 					<input type="text" name="storysearch" id="storysearch" placeholder="Search">
 					<label for="storydate">Date: </label><input type="month" name="storydate" id="storydate">
@@ -69,17 +64,17 @@ $featured_story = get_field('featured_story');
 				</form>
 			</div> -->
 
-			<div class="all-stories">
+			<div class="all-videos">
 
 				<?php
 
 				$args = array(
-					'post_type' => 'stories',
+					'post_type' => 'videos',
 					'posts_per_page' => -1,
-					);
+				);
 				$the_query = new WP_Query( $args );
 				while ( $the_query->have_posts() ) : $the_query->the_post();
-				get_template_part( 'template-parts/page/content', 'stories' ); 
+					get_template_part( 'template-parts/page/content', 'videos' ); 
 				endwhile;
 				?>
 			</div>

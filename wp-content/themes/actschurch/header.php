@@ -39,6 +39,8 @@ if(is_front_page()) {
 	$header_class = 'transparent-header';
 } elseif (is_page('stories')) {
 	$header_class = 'purple-header';
+} elseif (is_page('watch')) {
+	$header_class = 'blue-header';
 } else {
 	$header_class = 'orange-header';
 }
@@ -79,6 +81,11 @@ if(is_front_page()) {
 				if (is_page('stories')) {
 					echo '<div class="header-title col-lg-12 col-md-12 col-sm-12 col-xs-12">';
 					echo '<h1>Stories</h1>';
+					echo '</div>';
+				}
+				if (is_page('watch')) {
+					echo '<div class="header-title col-lg-12 col-md-12 col-sm-12 col-xs-12">';
+					echo '<h1>Watch</h1>';
 					echo '</div>';
 				}
 				?>

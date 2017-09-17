@@ -143,6 +143,8 @@ add_action( 'widgets_init', 'actschurch_widgets_init' );
 function actschurch_scripts() {
 	wp_enqueue_style( 'actschurch-style', get_stylesheet_uri() );
 
+	wp_enqueue_style( 'fancybox-style', get_template_directory_uri() . '/jquery.fancybox.min.css' );
+
 	wp_enqueue_script( 'actschurch-jquery', get_template_directory_uri() . '/js/jquery-3.2.1.min.js', array(), '20170719', true );
 
 	wp_enqueue_script( 'actschurch-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
@@ -150,6 +152,8 @@ function actschurch_scripts() {
 	wp_enqueue_script( 'actschurch-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'google-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyB7pYySi9L0peixxr-Le2__2f2TCo5Kdag' );
+
+	wp_enqueue_script( 'fancybox-jquery', get_template_directory_uri() . '/js/jquery.fancybox.min.js', array(), '20170719', true );
 
 	wp_enqueue_script( 'actschurch-mainjs', get_template_directory_uri() . '/js/main.js', array(), '20151215', true );
 
@@ -296,7 +300,7 @@ function stories_cpt() {
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
-		'has_archive'           => true,		
+		'has_archive'           => false,		
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
@@ -305,6 +309,63 @@ function stories_cpt() {
 
 }
 add_action( 'init', 'stories_cpt', 0 );
+
+// Register Videos Custom Post Type
+function videos_cpt() {
+
+	$labels = array(
+		'name'                  => _x( 'Videos', 'Post Type General Name', 'text_domain' ),
+		'singular_name'         => _x( 'Video', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'             => __( 'Videos', 'text_domain' ),
+		'name_admin_bar'        => __( 'Video', 'text_domain' ),
+		'archives'              => __( 'Item Archives', 'text_domain' ),
+		'attributes'            => __( 'Item Attributes', 'text_domain' ),
+		'parent_item_colon'     => __( 'Parent Video:', 'text_domain' ),
+		'all_items'             => __( 'All Videos', 'text_domain' ),
+		'add_new_item'          => __( 'Add New Video', 'text_domain' ),
+		'add_new'               => __( 'Add New', 'text_domain' ),
+		'new_item'              => __( 'New Video', 'text_domain' ),
+		'edit_item'             => __( 'Edit Video', 'text_domain' ),
+		'update_item'           => __( 'Update Video', 'text_domain' ),
+		'view_item'             => __( 'View Video', 'text_domain' ),
+		'view_items'            => __( 'View Videos', 'text_domain' ),
+		'search_items'          => __( 'Search Video', 'text_domain' ),
+		'not_found'             => __( 'Not found', 'text_domain' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
+		'featured_image'        => __( 'Featured Image', 'text_domain' ),
+		'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
+		'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
+		'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
+		'insert_into_item'      => __( 'Insert into Video', 'text_domain' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this Video', 'text_domain' ),
+		'items_list'            => __( 'Videos list', 'text_domain' ),
+		'items_list_navigation' => __( 'Videos list navigation', 'text_domain' ),
+		'filter_items_list'     => __( 'Filter videos list', 'text_domain' ),
+		);
+	$args = array(
+		'label'                 => __( 'Video', 'text_domain' ),
+		'description'           => __( 'Custom Post Type for Videos', 'text_domain' ),
+		'labels'                => $labels,
+		'supports'              => array('title'),
+		'taxonomies'            => array(''),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'menu_icon'             => 'dashicons-video-alt3',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => false,		
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+		);
+	register_post_type( 'videos', $args );
+
+}
+add_action( 'init', 'videos_cpt', 0 );
 
 function my_acf_google_map_api( $api ){
 	

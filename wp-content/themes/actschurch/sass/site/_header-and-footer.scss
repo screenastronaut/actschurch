@@ -37,6 +37,20 @@ header {
 		}
 	}
 
+	&.blue-header {
+		background: $color__blue;
+		color: $color__white !important;
+
+		a {
+			color: $color__white !important;
+
+			&:hover {
+				color: $color__white;
+				text-transform: underline;
+			}
+		}
+	}
+
 	.upper-header {
 		font-size: 0.875em;
 		// padding-bottom: 10px;

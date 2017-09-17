@@ -144,7 +144,8 @@ section:not(.widget) {
 	display: block;
 }
 
-.featured-story {
+.featured-story,
+.featured-video {
 	margin-top: 60px;
 
 	.featured-left {
@@ -193,6 +194,60 @@ section:not(.widget) {
 
 		.read-more {
 			margin: 10px 0;
+		}
+	}
+}
+
+.videos-container {
+	margin-top: 30px;
+
+	.search-videos {
+		margin-bottom: 30px;
+
+		input,
+		select {
+			margin-right: 30px;
+		}
+	}
+
+	.individual-video {
+		margin-bottom: 30px;
+
+		h4 {
+			margin-bottom: 10px;
+
+			a {
+				color: $color__blue;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		.pic {
+			height: 250px;
+
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+
+		.video-pic {
+			position: relative;
+
+			.play-icon {
+				color: #fff;
+				position: absolute;
+				left: 150px;
+				top: -150px;
+			}
+		}
+
+		.text {
+			background: $color__light-grey;
+			padding: 15px;
 		}
 	}
 }
