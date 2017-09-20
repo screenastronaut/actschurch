@@ -157,6 +157,44 @@
 
 .stories {
 	background: $color__light-grey;
+
+	.real-story {
+		.text {
+			height: 150px;
+			overflow: hidden;
+			padding: 30px 20px;
+			text-align: left;
+
+			a {
+				color: $color__white;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		.text-1 {
+			background: $color__blue;
+		}
+
+		.text-2 {
+			background: $color__purple;
+		}
+
+		.text-3 {
+			background: $color__yellow;
+		}
+
+		.text-4 {
+			background: $color__red;
+		}
+
+		.pic {
+			height: 300px;
+		}
+	}
 }
 
 .locations {

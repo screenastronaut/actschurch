@@ -18,6 +18,7 @@ $calendar_picture = get_field('calendar_picture');
 $calendar_text = get_field('calendar_text');
 $extra_picture = get_field('extra_picture');
 $real_stories_text = get_field('real_stories_text');
+$real_stories = get_field('real_stories');
 
 $watchpage = get_page_by_path('watch');
 $watchID = $watchpage->ID;
@@ -66,28 +67,46 @@ endif;
 
 			<section class="stories">
 				<div class="col-lg-push-2 col-md-push-2 col-lg-8 col-md-8 col-sm-12 col-xs-12">
-					<?php echo get_field('real_stories_text'); ?>
+					<?php echo $real_stories_text; ?>
 					<a href="stories" class="button green">Explore Stories</a>
 				</div>
+				<div class="clear"></div>
 
-				<!-- TODO: featured stories and stories cpt -->
-			</section>
+				<?php
+				$class = 0;
+				if($real_stories): 
+					foreach($real_stories as $post) : setup_postdata($post);
+						$story_title = get_the_title();
+						$story_pic = get_field('photo');
+						$story_url = get_permalink();
+						$class += 1;
+						?>
+						<div class="real-story col-lg-3 col-md-3 col-sm-12 col-xs-12">
+							<div class="text text-<?=$class?>">
+								<div class="story-title">
+									<h4><a href="<?=$story_url?>"><?=$story_title?></a></h4>
+								</div>
+							</div>
+							<div class="pic" style="background:url(<?=$story_pic?>);background-size:cover;background-repeat:no-repeat;"></div>
+						</div>
+					<?php endforeach; endif; ?>
+				</section>
 
-			<section class="locations">
-				<h2>Service Times & Locations</h2>
-				<div>You are invited to one of our <?php ?> church services across <?php ?> countries.</div>
-				<a href="#" class="button red">Local Services</a>
-				<a href="#" class="button white">International Services</a>
+				<section class="locations">
+					<h2>Service Times & Locations</h2>
+					<div>You are invited to one of our <?php ?> church services across <?php ?> countries.</div>
+					<a href="#" class="button red">Local Services</a>
+					<a href="#" class="button white">International Services</a>
 
-				<!-- TODO: locations and locations cpt -->
-			</section>
+					<!-- TODO: locations and locations cpt -->
+				</section>
 
-			<section class="locate-now">
-				<h3>Not sure where to go? Find a service near you.</h3>
-				<a href="locations" class="button black">Locate Now</a>
-			</section>
+				<section class="locate-now">
+					<h3>Not sure where to go? Find a service near you.</h3>
+					<a href="locations" class="button black">Locate Now</a>
+				</section>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+			</main><!-- #main -->
+		</div><!-- #primary -->
 
-	<?php get_footer();
+		<?php get_footer();
