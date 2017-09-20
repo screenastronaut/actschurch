@@ -8,7 +8,6 @@
  *
  * @package actschurch
  */
-// TODO: fix sitemap columns
 ?>
 
 </div><!-- #content -->

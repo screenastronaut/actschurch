@@ -7,11 +7,9 @@
  * @package actschurch
  */
 
-// TODO: get play button image
 get_header(); 
 
 $intro_text = get_field('introduction_text');
-$featured_sermon = get_field('featured_sermon');
 $age_group_picture = get_field('age_group_picture');
 $age_group_text = get_field('age_group_text');
 $small_groups_picture = get_field('small_groups_picture');
@@ -21,13 +19,25 @@ $calendar_text = get_field('calendar_text');
 $extra_picture = get_field('extra_picture');
 $real_stories_text = get_field('real_stories_text');
 
+$watchpage = get_page_by_path('watch');
+$watchID = $watchpage->ID;
+
+$featured_video=get_field('featured_video',$watchID);
+
+if($featured_video): 
+	foreach($featured_video as $post) : setup_postdata($post);
+		$featured_sermon = get_field('photo');
+		$video_link = "https://www.youtube.com/watch?v=".get_field('video_link')."&rel=0";
+	endforeach;
+endif;
+
 ?>
 
 <div class="splash-image">
 	<h1>A Place For all</h1>
 	<a href="#time-and-locations" class="button green">Time & Locations</a>
 	<a href="what-to-expect" class="button blue">What to Expect</a>
-	<i class="main-video fa fa-5x fa-play-circle-o" aria-hidden="true"></i>
+	<!-- <i class="main-video fa fa-5x fa-play-circle-o" aria-hidden="true"></i> -->
 </div>
 
 
@@ -43,8 +53,7 @@ $real_stories_text = get_field('real_stories_text');
 			</section>
 
 			<section class="grid-layout container-fluid">
-				<!-- TODO: featured sermon and sermon cpt -->
-				<div class="grid-box featured-sermon col-lg-6">sermon</div>
+				<a href="<?=$video_link?>" data-fancybox><div class="grid-box featured-sermon col-lg-6" style="background:url('<?=$featured_sermon?>');background-size: cover"><i class="main-video fa fa-3x fa-play-circle-o" aria-hidden="true"></i></div></a>
 				<div class="grid-box grid-pic-up col-lg-3" style="background:url('<?=$small_groups_picture?>');background-size: contain">small group</div>
 				<div class="grid-box col-lg-3">
 					<?=$calendar_text?>

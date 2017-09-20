@@ -380,7 +380,6 @@ add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 add_action('wp_ajax_story_form_process', 'story_form_process');
 add_action('wp_ajax_nopriv_story_form_process', 'story_form_process');
 function story_form_process() {
-		// TODO: fix search functions for stories
 	$storysearch = $_POST['keywords'];
 	$storydate = $_POST['date'];
 	$storycat = $_POST['category'];

@@ -141,8 +141,13 @@
 	}
 
 	.featured-sermon {
-		background: url('images/placeholder-narrow.png');
-		background-size: contain;
+		i {
+			color: $color__white;
+
+			&:hover {
+				color: $color__red;
+			}
+		}
 	}
 
 	.grey {
