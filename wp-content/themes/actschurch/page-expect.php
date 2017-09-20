@@ -55,7 +55,7 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 						$i=0;
 						while(have_rows('faqs')) : the_row();
 							$i++;
-							echo '<div class="question" id="'.$i.'"><h3>'.get_sub_field('question').'</h3><div class="triangle triangle-down t-'.$i.'"></div></div>';
+							echo '<div class="question" id="'.$i.'"><h4>'.get_sub_field('question').'</h4><div class="triangle triangle-down t-'.$i.'"></div></div>';
 							echo '<div class="answer a-'.$i.'">'.get_sub_field('answer').'</div>';
 						endwhile;
 					}
