@@ -189,6 +189,8 @@ section:not(.widget) {
 
 		.text {
 			background: $color__light-grey;
+			height: 300px;
+			overflow: hidden;
 			padding: 15px;
 		}
 
