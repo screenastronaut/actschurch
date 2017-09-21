@@ -9,6 +9,12 @@
 
 	h1 {
 		margin-bottom: 0;
+
+		.special {
+			color: $color__red;
+			font-family: $font__special;
+			font-size: 90px;
+		}
 	}
 
 	.main-video {

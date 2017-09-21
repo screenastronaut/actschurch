@@ -49,6 +49,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   color: #db654d;
 }
 
+@font-face {
+  font-family: 'JustLovely';
+  src: url("fonts/JustLovely.ttf") format("truetype");
+}
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -875,13 +879,19 @@ a:hover, a:active {
 .splash-image h1 {
   margin-bottom: 0;
 }
-/* line 14, sass/site/primary/_homepage.scss */
+/* line 13, sass/site/primary/_homepage.scss */
+.splash-image h1 .special {
+  color: #db654d;
+  font-family: "JustLovely", sans-serif;
+  font-size: 90px;
+}
+/* line 20, sass/site/primary/_homepage.scss */
 .splash-image .main-video {
   display: block;
   margin: 30px 0;
 }
 
-/* line 21, sass/site/primary/_homepage.scss */
+/* line 27, sass/site/primary/_homepage.scss */
 .grid-layout .grid-box {
   height: 400px;
   padding: 20px;
@@ -892,13 +902,13 @@ a:hover, a:active {
   flex-direction: column;
   justify-content: center;
 }
-/* line 33, sass/site/primary/_homepage.scss */
+/* line 39, sass/site/primary/_homepage.scss */
 .grid-layout .grid-half {
   height: 200px;
   line-height: 200px;
   width: 100%;
 }
-/* line 39, sass/site/primary/_homepage.scss */
+/* line 45, sass/site/primary/_homepage.scss */
 .grid-layout .grid-half.grid-pic-up:after, .grid-layout .grid-half.grid-pic-up:before {
   top: 40%;
   left: 50%;
@@ -909,21 +919,21 @@ a:hover, a:active {
   position: absolute;
   pointer-events: none;
 }
-/* line 50, sass/site/primary/_homepage.scss */
+/* line 56, sass/site/primary/_homepage.scss */
 .grid-layout .grid-half.grid-pic-up:after {
   border-color: rgba(255, 255, 255, 0);
   border-bottom-color: #ffffff;
   border-width: 20px;
   margin-left: -20px;
 }
-/* line 56, sass/site/primary/_homepage.scss */
+/* line 62, sass/site/primary/_homepage.scss */
 .grid-layout .grid-half.grid-pic-up:before {
   border-color: rgba(255, 255, 255, 0);
   border-bottom-color: #ffffff;
   border-width: 21px;
   margin-left: -21px;
 }
-/* line 66, sass/site/primary/_homepage.scss */
+/* line 72, sass/site/primary/_homepage.scss */
 .grid-layout .grid-pic-up:after, .grid-layout .grid-pic-up:before {
   top: 90%;
   left: 50%;
@@ -934,21 +944,21 @@ a:hover, a:active {
   position: absolute;
   pointer-events: none;
 }
-/* line 77, sass/site/primary/_homepage.scss */
+/* line 83, sass/site/primary/_homepage.scss */
 .grid-layout .grid-pic-up:after {
   border-color: rgba(255, 255, 255, 0);
   border-bottom-color: #ffffff;
   border-width: 20px;
   margin-left: -20px;
 }
-/* line 83, sass/site/primary/_homepage.scss */
+/* line 89, sass/site/primary/_homepage.scss */
 .grid-layout .grid-pic-up:before {
   border-color: rgba(255, 255, 255, 0);
   border-bottom-color: #ffffff;
   border-width: 21px;
   margin-left: -21px;
 }
-/* line 92, sass/site/primary/_homepage.scss */
+/* line 98, sass/site/primary/_homepage.scss */
 .grid-layout .grid-pic-right:after, .grid-layout .grid-pic-right:before {
   left: 0;
   top: 50%;
@@ -959,21 +969,21 @@ a:hover, a:active {
   position: absolute;
   pointer-events: none;
 }
-/* line 103, sass/site/primary/_homepage.scss */
+/* line 109, sass/site/primary/_homepage.scss */
 .grid-layout .grid-pic-right:after {
   border-color: rgba(255, 255, 255, 0);
   border-left-color: #ffffff;
   border-width: 20px;
   margin-top: -20px;
 }
-/* line 109, sass/site/primary/_homepage.scss */
+/* line 115, sass/site/primary/_homepage.scss */
 .grid-layout .grid-pic-right:before {
   border-color: rgba(255, 255, 255, 0);
   border-left-color: #ffffff;
   border-width: 21px;
   margin-top: -21px;
 }
-/* line 118, sass/site/primary/_homepage.scss */
+/* line 124, sass/site/primary/_homepage.scss */
 .grid-layout .grid-pic-down:after, .grid-layout .grid-pic-down:before {
   top: 0;
   left: 50%;
@@ -984,92 +994,92 @@ a:hover, a:active {
   position: absolute;
   pointer-events: none;
 }
-/* line 129, sass/site/primary/_homepage.scss */
+/* line 135, sass/site/primary/_homepage.scss */
 .grid-layout .grid-pic-down:after {
   border-color: rgba(255, 255, 255, 0);
   border-top-color: #ffffff;
   border-width: 20px;
   margin-left: -20px;
 }
-/* line 135, sass/site/primary/_homepage.scss */
+/* line 141, sass/site/primary/_homepage.scss */
 .grid-layout .grid-pic-down:before {
   border-color: rgba(255, 255, 255, 0);
   border-top-color: #ffffff;
   border-width: 21px;
   margin-left: -21px;
 }
-/* line 144, sass/site/primary/_homepage.scss */
+/* line 150, sass/site/primary/_homepage.scss */
 .grid-layout .featured-sermon i {
   color: #fff;
 }
-/* line 147, sass/site/primary/_homepage.scss */
+/* line 153, sass/site/primary/_homepage.scss */
 .grid-layout .featured-sermon i:hover {
   color: #db654d;
 }
-/* line 153, sass/site/primary/_homepage.scss */
+/* line 159, sass/site/primary/_homepage.scss */
 .grid-layout .grey {
   background: #f5f3f4;
 }
 
-/* line 158, sass/site/primary/_homepage.scss */
+/* line 164, sass/site/primary/_homepage.scss */
 .stories {
   background: #f5f3f4;
 }
-/* line 162, sass/site/primary/_homepage.scss */
+/* line 168, sass/site/primary/_homepage.scss */
 .stories .real-story .text {
   height: 150px;
   overflow: hidden;
   padding: 30px 20px;
   text-align: left;
 }
-/* line 168, sass/site/primary/_homepage.scss */
+/* line 174, sass/site/primary/_homepage.scss */
 .stories .real-story .text a {
   color: #fff;
   text-decoration: none;
 }
-/* line 172, sass/site/primary/_homepage.scss */
+/* line 178, sass/site/primary/_homepage.scss */
 .stories .real-story .text a:hover {
   text-decoration: underline;
 }
-/* line 178, sass/site/primary/_homepage.scss */
+/* line 184, sass/site/primary/_homepage.scss */
 .stories .real-story .text-1 {
   background: #26395a;
 }
-/* line 182, sass/site/primary/_homepage.scss */
+/* line 188, sass/site/primary/_homepage.scss */
 .stories .real-story .text-2 {
   background: #6f3d79;
 }
-/* line 186, sass/site/primary/_homepage.scss */
+/* line 192, sass/site/primary/_homepage.scss */
 .stories .real-story .text-3 {
   background: #e7a13d;
 }
-/* line 190, sass/site/primary/_homepage.scss */
+/* line 196, sass/site/primary/_homepage.scss */
 .stories .real-story .text-4 {
   background: #db654d;
 }
-/* line 194, sass/site/primary/_homepage.scss */
+/* line 200, sass/site/primary/_homepage.scss */
 .stories .real-story .pic {
   height: 300px;
 }
 
-/* line 200, sass/site/primary/_homepage.scss */
+/* line 206, sass/site/primary/_homepage.scss */
 .locations {
   background: #26395a;
   color: #fff;
 }
 
-/* line 205, sass/site/primary/_homepage.scss */
+/* line 211, sass/site/primary/_homepage.scss */
 .locate-now {
   background: #e7a13d;
   padding: 30px 0 !important;
   text-align: left;
 }
-/* line 210, sass/site/primary/_homepage.scss */
+/* line 216, sass/site/primary/_homepage.scss */
 .locate-now h3 {
   display: inline-block;
   margin: 0;
 }
-/* line 215, sass/site/primary/_homepage.scss */
+/* line 221, sass/site/primary/_homepage.scss */
 .locate-now a.button {
   margin: 10px 30px;
 }
@@ -1754,33 +1764,34 @@ header.blue-header a:hover {
 /* line 54, sass/site/_header-and-footer.scss */
 header .upper-header {
   font-size: 0.875em;
+  height: 30px;
   text-align: right;
 }
-/* line 59, sass/site/_header-and-footer.scss */
+/* line 60, sass/site/_header-and-footer.scss */
 header .upper-header .fa {
   font-size: 1.25em;
   margin-right: 10px;
 }
-/* line 65, sass/site/_header-and-footer.scss */
+/* line 66, sass/site/_header-and-footer.scss */
 header .lower-header {
   margin-bottom: 30px;
 }
-/* line 69, sass/site/_header-and-footer.scss */
+/* line 70, sass/site/_header-and-footer.scss */
 header .header-title {
   text-align: center;
 }
 
-/* line 74, sass/site/_header-and-footer.scss */
+/* line 75, sass/site/_header-and-footer.scss */
 footer {
   background: #242424;
   color: #7d807f;
   padding: 60px 0;
 }
-/* line 79, sass/site/_header-and-footer.scss */
+/* line 80, sass/site/_header-and-footer.scss */
 footer h2 {
   color: #7d807f;
 }
-/* line 83, sass/site/_header-and-footer.scss */
+/* line 84, sass/site/_header-and-footer.scss */
 footer a {
   color: #fff;
   display: block;
@@ -1788,23 +1799,23 @@ footer a {
   line-height: 2em;
   text-decoration: none;
 }
-/* line 90, sass/site/_header-and-footer.scss */
+/* line 91, sass/site/_header-and-footer.scss */
 footer a:hover {
   color: #e7a13d;
   text-decoration: underline;
 }
-/* line 95, sass/site/_header-and-footer.scss */
+/* line 96, sass/site/_header-and-footer.scss */
 footer a:visited {
   color: #fff;
 }
-/* line 100, sass/site/_header-and-footer.scss */
+/* line 101, sass/site/_header-and-footer.scss */
 footer .site-copyright {
   font-size: 0.6875em;
   padding-top: 60px;
   text-align: center;
   text-transform: uppercase;
 }
-/* line 106, sass/site/_header-and-footer.scss */
+/* line 107, sass/site/_header-and-footer.scss */
 footer .site-copyright .fa {
   font-size: 0.5625em;
   margin: 0 20px;

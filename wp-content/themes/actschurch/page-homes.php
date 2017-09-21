@@ -62,6 +62,7 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 
 			<section id="find-homes" class="find-homes container">
 				<h2>Find a Homes</h2>
+				<!-- TODO: excel and custom city/state -->
 
 				<label for="city">City/State: </label>
 				<select name="city" id="homes-city" >

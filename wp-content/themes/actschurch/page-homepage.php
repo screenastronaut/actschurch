@@ -30,12 +30,13 @@ if($featured_video):
 		$featured_sermon = get_field('photo');
 		$video_link = "https://www.youtube.com/watch?v=".get_field('video_link')."&rel=0";
 	endforeach;
+	wp_reset_postdata();
 endif;
 
 ?>
 
 <div class="splash-image">
-	<h1>A Place For all</h1>
+	<h1>A Place For <span class="special">all</span></h1>
 	<a href="#time-and-locations" class="button green">Time & Locations</a>
 	<a href="what-to-expect" class="button blue">What to Expect</a>
 	<!-- <i class="main-video fa fa-5x fa-play-circle-o" aria-hidden="true"></i> -->
@@ -55,14 +56,15 @@ endif;
 
 			<section class="grid-layout container-fluid">
 				<a href="<?=$video_link?>" data-fancybox><div class="grid-box featured-sermon col-lg-6" style="background:url('<?=$featured_sermon?>');background-size: cover"><i class="main-video fa fa-3x fa-play-circle-o" aria-hidden="true"></i></div></a>
-				<div class="grid-box grid-pic-up col-lg-3" style="background:url('<?=$small_groups_picture?>');background-size: contain">small group</div>
-				<div class="grid-box col-lg-3">
-					<?=$calendar_text?>
+				<div class="grid-box grid-pic-up col-lg-3" style="background:url('<?=$small_groups_picture?>');background-size: contain"></div>
+				<div class="grid-box col-lg-3" style="padding:0">
+					<div class="grid-half grid-pic-up" style="background:url('<?=$calendar_picture?>');background-size: contain"></div>
+					<div class="grid-half"><?=$calendar_text?></div>
 				</div>
 				<div class="grid-box col-lg-3"><?=$age_group_text?></div>
-				<div class="grid-box grid-pic-right col-lg-3" style="background:url('<?=$age_group_picture?>');background-size: contain">age groups</div>
+				<div class="grid-box grid-pic-right col-lg-3" style="background:url('<?=$age_group_picture?>');background-size: contain"></div>
 				<div class="grid-box col-lg-3"><?=$small_groups_text?></div>
-				<div class="grid-box grid-pic-down col-lg-3" style="background:url('<?=$calendar_picture?>');background-size: contain">calendar</div>
+				<div class="grid-box grid-pic-down col-lg-3" style="background:url('<?=$calendar_picture?>');background-size: contain"></div>
 			</section>
 
 			<section class="stories">
@@ -89,7 +91,7 @@ endif;
 							</div>
 							<div class="pic" style="background:url(<?=$story_pic?>);background-size:cover;background-repeat:no-repeat;"></div>
 						</div>
-					<?php endforeach; endif; ?>
+					<?php endforeach; wp_reset_postdata(); endif; ?>
 				</section>
 
 				<section class="locations">
@@ -98,15 +100,33 @@ endif;
 					<a href="#" class="button red">Local Services</a>
 					<a href="#" class="button white">International Services</a>
 
-					<!-- TODO: locations and locations cpt -->
-				</section>
+					<div class="clear"></div>
 
-				<section class="locate-now">
-					<h3>Not sure where to go? Find a service near you.</h3>
-					<a href="locations" class="button black">Locate Now</a>
-				</section>
+					<?php
+					if(have_rows('local_locations')) :
+						while(have_rows('local_locations')) : the_row();
+							$name = get_sub_field('name');
+							$address = get_sub_field('address');
+							$service_times = get_sub_field('service_times');
+							$waze_link = get_sub_field('waze_link');
+							$google_maps_link = get_sub_field('google_maps_link');
+							$page_link = get_sub_field('page_link'); ?>
+							<h3><?=$name?></h3>
+							<h5><?=$address?></h5>
+							<div><?=$service_times?></div>
+							<a href="<?=$waze_link?>" target="_blank">Waze</a>
+							<a href="<?=$google_maps_link?>" target="_blank">Google Maps</a>
+							<a href="<?=$page_link?>">Find out more</a>
+						<?php endwhile; endif; ?>
 
-			</main><!-- #main -->
-		</div><!-- #primary -->
+					</section>
 
-		<?php get_footer();
+					<section class="locate-now">
+						<h3>Not sure where to go? Find a service near you.</h3>
+						<a href="locations" class="button black">Locate Now</a>
+					</section>
+
+				</main><!-- #main -->
+			</div><!-- #primary -->
+
+			<?php get_footer();
