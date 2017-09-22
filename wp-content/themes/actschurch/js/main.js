@@ -1,4 +1,37 @@
 $(document).ready(function() {
+
+	$('.local-button').on('click', function(e) {
+		e.preventDefault();
+		$(this).addClass('red');
+		$('.international-button').addClass('no-red');
+		$('.international-button').removeClass('red');
+		$('.international-services').hide();
+		$('.local-services').show();
+	});
+
+	$('.international-button').on('click', function(e) {
+		e.preventDefault();
+		$(this).addClass('red');
+		$('.local-button').addClass('no-red');
+		$('.local-button').removeClass('red');
+		$('.local-services').hide();
+		$('.international-services').show();
+	});
+
+	$('.location-name').on('click', function() {
+		var id = $(this).attr('id'); 
+
+		if($('.a-' + id).is(':visible')) {
+			$('.a-' + id).hide();
+			$('.t-' + id).removeClass('triangle-up');
+			$('.t-' + id).addClass('triangle-down');
+		} else {
+			$('.a-' + id).show();
+			$('.t-' + id).removeClass('triangle-down');
+			$('.t-' + id).addClass('triangle-up');
+		}
+	});
+
 	var map, infowindow;
 	var markers = [];
 	var markers_array = [];

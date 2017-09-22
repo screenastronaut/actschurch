@@ -67,9 +67,20 @@ a.button {
 		border-color: $color__red;
 
 		&:hover {
-			background: $color__white;
+			background: transparent;
+			border-color: $color__white;
+			color: $color__white;
+		}
+	}
+
+	&.no-red {
+		// background: $color__red;
+		// border-color: $color__red;
+
+		&:hover {
+			background: $color__red;
 			border-color: $color__red;
-			color: $color__red;
+			color: $color__white;
 		}
 	}
 
