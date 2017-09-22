@@ -26,6 +26,9 @@ $(document).ready(function() {
 			$('.t-' + id).removeClass('triangle-up');
 			$('.t-' + id).addClass('triangle-down');
 		} else {
+			$('.more-info').hide();
+			$('.triangle').removeClass('triangle-up');
+			$('.triangle').addClass('triangle-down');
 			$('.a-' + id).show();
 			$('.t-' + id).removeClass('triangle-down');
 			$('.t-' + id).addClass('triangle-up');

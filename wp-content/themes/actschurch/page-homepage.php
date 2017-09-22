@@ -112,7 +112,7 @@ endif;
 								$address = get_sub_field('address');
 								$service_times = get_sub_field('service_times');
 								$waze_link = get_sub_field('waze_link');
-								$google_maps_link = get_sub_field('google_maps_link');
+								$google_map_links = get_sub_field('google_map_links');
 								$page_link = get_sub_field('page_link'); ?>
 								<div class="location col-lg-offset-1 col-md-offset-1 col-lg-5 col-md-5 col-sm-12 col-xs-12">
 									<div class="location-name" id="<?=$id?>">
@@ -123,7 +123,7 @@ endif;
 										<div><?=$service_times?></div>
 										<div class="links">
 											<a href="<?=$waze_link?>" target="_blank">Waze</a>
-											<a href="<?=$google_maps_link?>" target="_blank">Google Maps</a>
+											<a href="<?=$google_map_links?>" target="_blank">Google Maps</a>
 											<a href="<?=$page_link?>">Find out more</a>
 										</div>
 									</div>
@@ -141,7 +141,7 @@ endif;
 								$address = get_sub_field('address');
 								$service_times = get_sub_field('service_times');
 								$waze_link = get_sub_field('waze_link');
-								$google_maps_link = get_sub_field('google_maps_link');
+								$google_map_links = get_sub_field('google_map_links');
 								$page_link = get_sub_field('page_link'); ?>
 								<div class="location col-lg-offset-1 col-md-offset-1 col-lg-5 col-md-5 col-sm-12 col-xs-12">
 									<div class="location-name" id="<?=$id?>">
@@ -152,7 +152,7 @@ endif;
 										<div><?=$service_times?></div>
 										<div class="links">
 											<a href="<?=$waze_link?>" target="_blank">Waze</a>
-											<a href="<?=$google_maps_link?>" target="_blank">Google Maps</a>
+											<a href="<?=$google_map_links?>" target="_blank">Google Maps</a>
 											<a href="<?=$page_link?>">Find out more</a>
 										</div>
 									</div>
