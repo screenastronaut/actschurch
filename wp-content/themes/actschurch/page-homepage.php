@@ -103,71 +103,80 @@ endif;
 					<div class="clear"></div>
 
 					<div class="local-services container">
-						<?php
-						$id = 0;
-						if(have_rows('local_locations')) :
-							while(have_rows('local_locations')) : the_row();
-								$id++;
-								$name = get_sub_field('name');
-								$address = get_sub_field('address');
-								$service_times = get_sub_field('service_times');
-								$waze_link = get_sub_field('waze_link');
-								$google_map_links = get_sub_field('google_map_links');
-								$page_link = get_sub_field('page_link'); ?>
-								<div class="location col-lg-offset-1 col-md-offset-1 col-lg-5 col-md-5 col-sm-12 col-xs-12">
-									<div class="location-name" id="<?=$id?>">
-										<h3><?=$name?></h3><div class="triangle triangle-down t-<?=$id?>"></div>
-									</div>
-									<div class="more-info a-<?=$id?>">
-										<h5><?=$address?></h5>
-										<div><?=$service_times?></div>
-										<div class="links">
-											<a href="<?=$waze_link?>" target="_blank">Waze</a>
-											<a href="<?=$google_map_links?>" target="_blank">Google Maps</a>
-											<a href="<?=$page_link?>">Find out more</a>
+						<div class="col-lg-offset-1 col-lg-10">
+							<?php
+							$id = 0;
+							if(have_rows('local_locations')) :
+								while(have_rows('local_locations')) : the_row();
+									$id++;
+									$name = get_sub_field('name');
+									$address = get_sub_field('address');
+									$service_times = get_sub_field('service_times');
+									$waze_link = get_sub_field('waze_link');
+									$google_map_links = get_sub_field('google_map_links');
+									$page_link = get_sub_field('page_link'); 
+									if($id % 2 == 0) {
+										echo '<div class="location col-lg-offset-1 col-md-offset-1 col-lg-5 col-md-5 col-sm-12 col-xs-12">';
+									} else {
+										echo '<div class="location col-lg-5 col-md-5 col-sm-12 col-xs-12">';
+									}
+									?>									
+										<div class="location-name" id="<?=$id?>">
+											<h3><?=$name?></h3><div class="triangle triangle-down t-<?=$id?>"></div>
+										</div>
+										<div class="more-info a-<?=$id?>">
+											<h5><?=$address?></h5>
+											<div><?=$service_times?></div>
+											<div class="links">
+												<a href="<?=$waze_link?>" target="_blank">Waze</a>
+												<a href="<?=$google_map_links?>" target="_blank">Google Maps</a>
+												<a href="<?=$page_link?>">Find out more</a>
+											</div>
 										</div>
 									</div>
-								</div>
-							<?php endwhile; endif; ?>
+								<?php endwhile; endif; ?>
+							</div>
 						</div>
 
-					<div class="international-services container">
-						<?php
-						$id = 0;
-						if(have_rows('international_locations')) :
-							while(have_rows('international_locations')) : the_row();
-								$id++;
-								$name = get_sub_field('name');
-								$address = get_sub_field('address');
-								$service_times = get_sub_field('service_times');
-								$waze_link = get_sub_field('waze_link');
-								$google_map_links = get_sub_field('google_map_links');
-								$page_link = get_sub_field('page_link'); ?>
-								<div class="location col-lg-offset-1 col-md-offset-1 col-lg-5 col-md-5 col-sm-12 col-xs-12">
-									<div class="location-name" id="<?=$id?>">
-										<h3><?=$name?></h3><div class="triangle triangle-down t-<?=$id?>"></div>
-									</div>
-									<div class="more-info a-<?=$id?>">
-										<h5><?=$address?></h5>
-										<div><?=$service_times?></div>
-										<div class="links">
-											<a href="<?=$waze_link?>" target="_blank">Waze</a>
-											<a href="<?=$google_map_links?>" target="_blank">Google Maps</a>
-											<a href="<?=$page_link?>">Find out more</a>
+						<div class="international-services container">
+							<div class="col-lg-offset-1 col-lg-10">
+								<?php
+								$id = 0;
+								if(have_rows('international_locations')) :
+									while(have_rows('international_locations')) : the_row();
+										$id++;
+										$name = get_sub_field('name');
+										$address = get_sub_field('address');
+										$service_times = get_sub_field('service_times');
+										$waze_link = get_sub_field('waze_link');
+										$google_map_links = get_sub_field('google_map_links');
+										$page_link = get_sub_field('page_link'); ?>
+										<div class="location col-lg-6 col-md-6 col-sm-12 col-xs-12">
+											<div class="location-name" id="<?=$id?>">
+												<h3><?=$name?></h3><div class="triangle triangle-down t-<?=$id?>"></div>
+											</div>
+											<div class="more-info a-<?=$id?>">
+												<h5><?=$address?></h5>
+												<div><?=$service_times?></div>
+												<div class="links">
+													<a href="<?=$waze_link?>" target="_blank">Waze</a>
+													<a href="<?=$google_map_links?>" target="_blank">Google Maps</a>
+													<a href="<?=$page_link?>">Find out more</a>
+												</div>
+											</div>
 										</div>
-									</div>
+									<?php endwhile; endif; ?>
 								</div>
-							<?php endwhile; endif; ?>
-						</div>
+							</div>
 
-					</section>
+						</section>
 
-					<section class="locate-now">
-						<h3>Not sure where to go? Find a service near you.</h3>
-						<a href="locations" class="button black">Locate Now</a>
-					</section>
+						<section class="locate-now">
+							<h3>Not sure where to go? Find a service near you.</h3>
+							<a href="locations" class="button black">Locate Now</a>
+						</section>
 
-				</main><!-- #main -->
-			</div><!-- #primary -->
+					</main><!-- #main -->
+				</div><!-- #primary -->
 
-			<?php get_footer();
+				<?php get_footer();
