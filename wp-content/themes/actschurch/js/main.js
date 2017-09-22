@@ -1,5 +1,11 @@
 $(document).ready(function() {
 
+	$('.inner-link').on('click', function(e) {
+		e.preventDefault();
+		var hash = this.hash;
+        $('html, body').animate({scrollTop: $(hash).offset().top}, 900);
+	});
+
 	$('.local-button').on('click', function(e) {
 		e.preventDefault();
 		$(this).addClass('red');

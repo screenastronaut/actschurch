@@ -37,7 +37,7 @@ endif;
 
 <div class="splash-image">
 	<h1>A Place For <span class="special">all</span></h1>
-	<a href="#time-and-locations" class="button green">Time & Locations</a>
+	<a href="#time-and-locations" class="inner-link button green">Time & Locations</a>
 	<a href="what-to-expect" class="button blue">What to Expect</a>
 	<!-- <i class="main-video fa fa-5x fa-play-circle-o" aria-hidden="true"></i> -->
 </div>
@@ -94,7 +94,7 @@ endif;
 					<?php endforeach; wp_reset_postdata(); endif; ?>
 				</section>
 
-				<section class="locations">
+				<section class="locations" id="time-and-locations">
 					<h2>Service Times & Locations</h2>
 					<div>You are invited to one of our <?php ?> church services across <?php ?> countries.</div>
 					<a href="#" class="local-button button red">Local Services</a>
