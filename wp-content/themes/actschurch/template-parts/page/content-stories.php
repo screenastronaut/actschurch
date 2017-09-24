@@ -18,6 +18,6 @@
 		<div class="story-excerpt">
 			<?php echo get_field('excerpt'); ?>
 		</div>
-		<a href="<?php the_permalink(); ?>" class="read-more">Read More</a>
+		<!-- <a href="<?php the_permalink(); ?>" class="read-more">Read More</a> -->
 	</div>
 </div>

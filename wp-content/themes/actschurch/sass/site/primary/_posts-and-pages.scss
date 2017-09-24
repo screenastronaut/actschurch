@@ -203,6 +203,12 @@ section:not(.widget) {
 			height: 300px;
 			overflow: hidden;
 			padding: 15px;
+
+			.story-excerpt {
+				height: 180px;
+				overflow: hidden;
+				padding: 15px 0;
+			}
 		}
 
 		.read-more {
@@ -263,6 +269,12 @@ section:not(.widget) {
 			height: 300px;
 			overflow: hidden;
 			padding: 15px;
+
+			.video-excerpt {
+				height: 180px;
+				overflow: hidden;
+				padding: 15px 0;
+			}
 		}
 	}
 }
