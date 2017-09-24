@@ -1177,7 +1177,7 @@ a:hover, a:active {
 /* line 15, sass/site/primary/_visit.scss */
 .what-to-expect .expect-box .expect-icon {
   margin-bottom: 30px;
-  width: 100px;
+  height: 80px;
 }
 
 /* line 22, sass/site/primary/_visit.scss */
