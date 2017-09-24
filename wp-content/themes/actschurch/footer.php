@@ -17,7 +17,6 @@
 		<div class="col-lg-2 col-md-2 hidden-sm hidden-xs">
 			<h6>LINKS</h6>
 			<a href="<?php echo home_url(); ?>/watch/">Watch</a>
-			<a href="<?php echo home_url(); ?>/learn/">Learn</a>
 			<a href="<?php echo home_url(); ?>/stories/">Stories</a>
 			<a href="<?php echo home_url(); ?>/contact/">Contact Us</a>
 			<a href="<?php echo home_url(); ?>/locations/">Locations</a>
@@ -52,6 +51,7 @@
 			<a href="<?php echo home_url(); ?>/cyberjaya/">Cyberjaya</a>
 			<a href="<?php echo home_url(); ?>/nilai/">Nilai</a>
 			<a href="<?php echo home_url(); ?>/semenyih/">Semenyih</a>
+			<a href="<?php echo home_url(); ?>/iskandar/">Iskandar</a>
 
 		</div>
 		<div class="col-lg-2 col-md-2 hidden-sm hidden-xs">
@@ -62,7 +62,7 @@
 			<a href="<?php echo home_url(); ?>/melbourne/">Melbourne</a>
 			<a href="<?php echo home_url(); ?>/london/">London</a>
 			<a href="<?php echo home_url(); ?>/bristol/">Bristol</a>
-			<a href="<?php echo home_url(); ?>/edinburge/">Edinburgh</a>
+			<a href="<?php echo home_url(); ?>/edinburgh/">Edinburgh</a>
 			<a href="<?php echo home_url(); ?>/botswana/">Botswana</a>
 			<a href="<?php echo home_url(); ?>/chiang-mai/">Chiang Mai</a>
 			<a href="<?php echo home_url(); ?>/hamburg/">Hamburg</a>
