@@ -118,7 +118,6 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 				</div>
 				<div class="clear"></div>
 
-
 				<?php
 				$class = 0;
 				if($real_stories): 
@@ -131,7 +130,6 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 				endif; 
 				?>
 			</section>
-
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
