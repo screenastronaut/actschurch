@@ -18,6 +18,7 @@ $photo_4 = get_field('photo_4');
 $photo_5 = get_field('photo_5');
 $contact_form = get_field('contact_form');
 $contact_form_image = get_field('contact_form_image');
+$real_stories = get_field('real_stories');
 
 get_template_part( 'template-parts/page/content', 'cover-photo' );
 
