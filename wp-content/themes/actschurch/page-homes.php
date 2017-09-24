@@ -115,8 +115,20 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 					<?php echo get_field('real_stories_text'); ?>
 					<a href="stories" class="button green">Explore Stories</a>
 				</div>
+				<div class="clear"></div>
 
-				<!-- TODO: featured stories and stories cpt -->
+
+				<?php
+				$class = 0;
+				if($real_stories): 
+					foreach($real_stories as $post) : setup_postdata($post);
+						$class++;
+						set_query_var('class',$class);
+						get_template_part( 'template-parts/post/content', 'featured-stories' );
+					endforeach; 
+					wp_reset_postdata(); 
+				endif; 
+				?>
 			</section>
 
 
