@@ -340,19 +340,19 @@ h1, h2, h3, h4, h5, h6 {
 
 /* line 10, sass/typography/_headings.scss */
 h1 {
-  font-size: 3.75em;
+  font-size: 2.75em;
   margin-bottom: 0.5em;
 }
 
 /* line 15, sass/typography/_headings.scss */
 h2 {
-  font-size: 3.75em;
-  line-height: 60px;
+  font-size: 2.75em;
+  line-height: 44px;
   margin-bottom: 0.5em;
 }
 /* line 20, sass/typography/_headings.scss */
 h2.page-title {
-  font-size: 3em;
+  font-size: 2.5em;
 }
 
 /* line 25, sass/typography/_headings.scss */
