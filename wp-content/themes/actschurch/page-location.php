@@ -57,8 +57,8 @@ get_header();
 					<div class="orange-bg col-lg-6 col-md-6 col-sm-12 col-xs-12">
 						<?php echo get_field('contact_lift') ?>
 					</div>
-					<div class="grey-bg col-lg-6 col-md-6 col-sm-12 col-xs-12">
-						<?php echo get_field('contact_talk') ?>
+					<div class="grey-bg col-lg-6 col-md-6 col-sm-12 col-xs-12 no-padding">
+						<img src="<?php echo get_field('contact_image') ?>">
 					</div>
 				</div>
 			</div>

@@ -1459,6 +1459,13 @@ a:hover, a:active {
 .location-contact .grey-bg {
   background: #f5f3f4;
 }
+/* line 90, sass/site/primary/_locations.scss */
+.location-contact img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
 
 /*--------------------------------------------------------------
 ## Posts and pages

@@ -86,4 +86,11 @@
 	.grey-bg {
 		background: $color__light-grey;
 	}
+
+	img {
+		display: block;
+		height: 100%;
+		width: 100%;
+		overflow: hidden;
+	}
 }

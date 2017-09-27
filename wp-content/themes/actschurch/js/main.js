@@ -146,8 +146,8 @@ $(document).ready(function() {
 
 	function initMap() { 
 
-		// var malaysia = {lat: 3.06043, lng: 101.59327};
-		var userCoords = {lat: userLat, lng: userLng};
+		var userCoords = {lat: 3.0478567, lng: 101.5157253};
+		// var userCoords = {lat: userLat, lng: userLng};
 		map = new google.maps.Map(document.getElementById('map'), {
 			zoom: 11,
 			center: userCoords,
