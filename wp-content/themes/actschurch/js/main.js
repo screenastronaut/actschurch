@@ -134,6 +134,16 @@ $(document).ready(function() {
 		});
 	});
 
+	$('.locate-map').on('click', function(e) {
+		e.preventDefault;
+		var lat = $(this).data('lat');
+		var lng = $(this).data('lng');
+
+		var latlng = new google.maps.LatLng(lat, lng);
+		map.setCenter(latlng);
+		map.setZoom(11);
+	});
+
 	function initMap() { 
 
 		// var malaysia = {lat: 3.06043, lng: 101.59327};

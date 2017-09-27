@@ -33,9 +33,10 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 						<?php
 						if(have_rows('local')) {
 							while(have_rows('local')) : the_row();
+							$marker = get_sub_field('google_map');
 							echo '<div class="service">';
 							echo '<h5>'.get_sub_field('location_name').'</h5>';
-							echo '<a href="#">Find on Map</a> | ';
+							echo '<a href="#locations-map" class="locate-map" data-lat="'.$marker['lat'].'" data-lng="'.$marker['lng'].'">Find on Map</a> | ';
 							echo '<a href="'.get_sub_field('link').'">Visit Page</a>';
 							echo '</div>';
 							endwhile;
@@ -47,9 +48,10 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 						<?php
 						if(have_rows('international')) {
 							while(have_rows('international')) : the_row();
+							$marker = get_sub_field('google_map');
 							echo '<div class="service">';
 							echo '<h5>'.get_sub_field('location_name').'</h5>';
-							echo '<a href="#">Find on Map</a> | ';
+							echo '<a href="#locations-map" class="locate-map" data-lat="'.$marker['lat'].'" data-lng="'.$marker['lng'].'">Find on Map</a> | ';
 							echo '<a href="'.get_sub_field('link').'">Visit Page</a>';
 							echo '</div>';
 							endwhile;
@@ -59,12 +61,19 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 				</div>
 			</div>
 
-			<div class="locations-map container-fluid">
+			<div class="locations-map container-fluid" id="locations-map">
 				<?php 
 				global $location_markers;
 				$location_markers = array();
 				if(have_rows('local')) : 
 					while(have_rows('local')) : the_row(); 
+				$marker = get_sub_field('google_map');
+				$html = get_sub_field('location_name').'<hr>'.$marker['address'];
+				array_push($location_markers, array($marker['address'],$marker['lat'],$marker['lng'],$html));
+				endwhile; endif; 
+
+				if(have_rows('international')) : 
+					while(have_rows('international')) : the_row(); 
 				$marker = get_sub_field('google_map');
 				$html = get_sub_field('location_name').'<hr>'.$marker['address'];
 				array_push($location_markers, array($marker['address'],$marker['lat'],$marker['lng'],$html));
