@@ -1,16 +1,26 @@
 $(document).ready(function() {
+	var map, infowindow;
+	var markers = [];
+	var markers_array = [];
+	var infowindows = [];
+	var userLat, userLng;
+
+	if (navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition(showLocation);
+	} else { 
+		console.log('Geolocation is not supported by this browser. Please upgrade your browser');
+	}
+
+	function showLocation(position) {
+		userLat = position.coords.latitude;
+		userLng = position.coords.longitude;
+	}
 
 	$('a[href*=\\#]').on('click', function(e) {
 		e.preventDefault();
 		var hash = this.hash;
-        $('html, body').animate({scrollTop: $(hash).offset().top}, 900);
+		$('html, body').animate({scrollTop: $(hash).offset().top}, 900);
 	});
-
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showLocation);
-    } else { 
-    	console.log('Geolocation is not supported by this browser. Please upgrade your browser');
-    }
 
 	$('.local-button').on('click', function(e) {
 		e.preventDefault();
@@ -46,11 +56,6 @@ $(document).ready(function() {
 			$('.t-' + id).addClass('triangle-up');
 		}
 	});
-
-	var map, infowindow;
-	var markers = [];
-	var markers_array = [];
-	var infowindows = [];
 
 	$('.question').on('click', function() {
 		var id = $(this).attr('id'); 
@@ -129,12 +134,13 @@ $(document).ready(function() {
 		});
 	});
 
-	function initMap() {
+	function initMap() { 
 
-		var malaysia = {lat: 3.06043, lng: 101.59327};
+		// var malaysia = {lat: 3.06043, lng: 101.59327};
+		var userCoords = {lat: userLat, lng: userLng};
 		map = new google.maps.Map(document.getElementById('map'), {
-			zoom: 12,
-			center: malaysia,
+			zoom: 11,
+			center: userCoords,
 			rotateControl: false,
 			streetViewControl: false,
 			mapTypeControl: false,
@@ -142,6 +148,12 @@ $(document).ready(function() {
 
 		map.mapTypes.set('styled_map', styledMapType);
 		map.setMapTypeId('styled_map');
+
+		marker = new google.maps.Marker({
+			position: userCoords,
+			title: 'Me',
+		});
+		marker.setMap(map);
 		
 		markers = location_markers;
 		addMarkers();
@@ -153,6 +165,7 @@ $(document).ready(function() {
 		for(var i = 0; i < markers.length; i++ ) {
 			var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
 			marker = new google.maps.Marker({
+				icon: '../wp-content/themes/actschurch/images/church-marker.png',
 				position: position,
 				title: markers[i][0],
 			});
@@ -386,32 +399,23 @@ var styledMapType = new google.maps.StyledMapType(
 		]
 	}
 	],
-	{name: 'Styled Map'});
+	{name: 'Styled Map'}
+	);
 
-function showLocation(position) {
-    var latitude = position.coords.latitude;
-    var longitude = position.coords.longitude;
-
-    moveMap(latitude, longitude);
-
-   //  $.ajax({
-   //      type:'POST',
-   //      url:whereyouat.ajaxUrl,
-			// data: {
-			// 	action: 'getlocation',
-			// 	lat: latitude,
-			// 	lng: longitude,
-			// },
-   //      success:function(msg){
-   //          if(msg){
-   //             console.log(msg);
-   //          } else{
-   //          	console.log('error');
-   //          }
-   //      }
-   //  });
-}
-
-function moveMap() {
-	//
-}
+// function showLocation
+// $.ajax({
+// 	type:'POST',
+// 	url:whereyouat.ajaxUrl,
+// 	data: {
+// 		action: 'getlocation',
+// 		lat: latitude,
+// 		lng: longitude,
+// 	},
+// 	success:function(msg){
+// 		if(msg){
+// 			console.log(msg);
+// 		} else{
+// 			console.log('error');
+// 		}
+// 	}
+// });
