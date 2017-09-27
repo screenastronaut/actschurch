@@ -20,8 +20,10 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<div class="container">
-			<!-- TODO: history page -->
+			<div class="container" style="margin-bottom: 30px;">
+				<div class="col-lg-offset-1 col-md-offset-1 col-lg-10 col-md-10 col-sm-12 col-xs-12">
+					<?php echo get_field('text'); ?>
+				</div>
 			</div>
 
 		</main><!-- #main -->

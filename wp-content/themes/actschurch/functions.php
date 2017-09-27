@@ -46,7 +46,7 @@ function actschurch_setup() {
 	register_nav_menus( array(
 		'menu-1' => esc_html__( 'Primary', 'actschurch' ),
 		'footer-menu' => __( 'Footer Menu', 'actschurch' ),
-		) );
+	) );
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -58,7 +58,7 @@ function actschurch_setup() {
 		'comment-list',
 		'gallery',
 		'caption',
-		) );
+	) );
 
 	/*
 	 * Enable support for Post Formats.
@@ -73,13 +73,13 @@ function actschurch_setup() {
 		'link',
 		'gallery',
 		'audio',
-		) );
+	) );
 
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'actschurch_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
-		) ) );
+	) ) );
 
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
@@ -123,7 +123,7 @@ function actschurch_widgets_init() {
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
-		) );
+	) );
 
 	register_sidebar( array(
 		'name'          => esc_html__( 'Footer', 'actschurch' ),
@@ -133,7 +133,7 @@ function actschurch_widgets_init() {
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
-		) );
+	) );
 }
 add_action( 'widgets_init', 'actschurch_widgets_init' );
 
@@ -166,8 +166,14 @@ function actschurch_scripts() {
 	wp_localize_script( "actschurch-mainjs", 'storysearch1',
 		array(
             'ajaxUrl' => admin_url( 'admin-ajax.php' ), //url for php file that process ajax request to WP
-            )
-		);
+        )
+	);
+
+	wp_localize_script( "actschurch-mainjs", 'whereyouat',
+		array(
+            'ajaxUrl' => admin_url( 'admin-ajax.php' ), //url for php file that process ajax request to WP
+        )
+	);
 }
 add_action( 'wp_enqueue_scripts', 'actschurch_scripts' );
 
@@ -227,7 +233,7 @@ function leaders_cpt() {
 		'items_list'            => __( 'Leaders list', 'text_domain' ),
 		'items_list_navigation' => __( 'Leaders list navigation', 'text_domain' ),
 		'filter_items_list'     => __( 'Filter leaders list', 'text_domain' ),
-		);
+	);
 	$args = array(
 		'label'                 => __( 'Leader', 'text_domain' ),
 		'description'           => __( 'Custom Post Type for Leaders', 'text_domain' ),
@@ -247,7 +253,7 @@ function leaders_cpt() {
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
-		);
+	);
 	register_post_type( 'leaders', $args );
 
 }
@@ -284,7 +290,7 @@ function stories_cpt() {
 		'items_list'            => __( 'Stories list', 'text_domain' ),
 		'items_list_navigation' => __( 'Stories list navigation', 'text_domain' ),
 		'filter_items_list'     => __( 'Filter stories list', 'text_domain' ),
-		);
+	);
 	$args = array(
 		'label'                 => __( 'Story', 'text_domain' ),
 		'description'           => __( 'Custom Post Type for Stories', 'text_domain' ),
@@ -304,7 +310,7 @@ function stories_cpt() {
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
-		);
+	);
 	register_post_type( 'stories', $args );
 
 }
@@ -341,7 +347,7 @@ function videos_cpt() {
 		'items_list'            => __( 'Videos list', 'text_domain' ),
 		'items_list_navigation' => __( 'Videos list navigation', 'text_domain' ),
 		'filter_items_list'     => __( 'Filter videos list', 'text_domain' ),
-		);
+	);
 	$args = array(
 		'label'                 => __( 'Video', 'text_domain' ),
 		'description'           => __( 'Custom Post Type for Videos', 'text_domain' ),
@@ -361,7 +367,7 @@ function videos_cpt() {
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
-		);
+	);
 	register_post_type( 'videos', $args );
 
 }
@@ -386,7 +392,7 @@ function story_form_process() {
 	$args = array(
 		'post_type' => 'stories',
 		'posts_per_page' => -1,
-		);
+	);
 	$meta_array = array();
 	$keyword_array = array('relation' => 'OR');
 	$hasmetaquery = false;
@@ -414,7 +420,7 @@ function story_form_process() {
 			'key' => 'category',
 			'value' => $storycat,
 			'compare' => '=',
-			));
+		));
 		$hasmetaquery = true;
 	}
 	if($haskeywords && $hasmetaquery) { //has keywords and filters
@@ -422,18 +428,39 @@ function story_form_process() {
 			$keyword_array,
 			'relation' => 'AND',
 			$meta_array
-			);
+		);
 	} else if(!$haskeywords && $hasmetaquery) {	//no keywords but has filters
 		$args['meta_query'] = array(
 			'relation' => 'AND',
 			$meta_array
-			);
+		);
 	} else if ($haskeywords && !$hasmetaquery) { //has keywords but no filters
 		$args['meta_query'] = $keyword_array;
 	}
 	$the_query = new WP_Query( $args );
 	if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post();
-	get_template_part( 'template-parts/page/content', 'stories' );
+		get_template_part( 'template-parts/page/content', 'stories' );
 	endwhile;endif;
 	wp_die();
+}
+
+add_action('wp_ajax_getlocation', 'getlocation');
+add_action('wp_ajax_nopriv_getlocation', 'getlocation');
+function getlocation() {
+	if(!empty($_POST['lat']) && !empty($_POST['lng'])){
+    //Send request and receive json data by lat and lng
+		$url = 'http://maps.googleapis.com/maps/api/geocode/json?latlng='.trim($_POST['lat']).','.trim($_POST['lng']).'&sensor=false';
+		$json = @file_get_contents($url);
+		$data = json_decode($json);
+		$status = $data->status;
+		if($status=="OK"){
+        //Get address from json data
+			$location = $data->results[0]->formatted_address;
+		}else{
+			$location =  '';
+		}
+    //Print address 
+		echo $location;
+		wp_die();
+	}
 }

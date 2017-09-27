@@ -6,6 +6,12 @@ $(document).ready(function() {
         $('html, body').animate({scrollTop: $(hash).offset().top}, 900);
 	});
 
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showLocation);
+    } else { 
+    	console.log('Geolocation is not supported by this browser. Please upgrade your browser');
+    }
+
 	$('.local-button').on('click', function(e) {
 		e.preventDefault();
 		$(this).addClass('red');
@@ -381,3 +387,31 @@ var styledMapType = new google.maps.StyledMapType(
 	}
 	],
 	{name: 'Styled Map'});
+
+function showLocation(position) {
+    var latitude = position.coords.latitude;
+    var longitude = position.coords.longitude;
+
+    moveMap(latitude, longitude);
+
+   //  $.ajax({
+   //      type:'POST',
+   //      url:whereyouat.ajaxUrl,
+			// data: {
+			// 	action: 'getlocation',
+			// 	lat: latitude,
+			// 	lng: longitude,
+			// },
+   //      success:function(msg){
+   //          if(msg){
+   //             console.log(msg);
+   //          } else{
+   //          	console.log('error');
+   //          }
+   //      }
+   //  });
+}
+
+function moveMap() {
+	//
+}
