@@ -694,14 +694,6 @@ a:hover, a:active {
   color: #db654d;
   text-decoration: underline;
 }
-/* line 68, sass/navigation/_menus.scss */
-.main-navigation a .fa-search {
-  color: #db654d;
-}
-/* line 71, sass/navigation/_menus.scss */
-.main-navigation a .fa-search:hover {
-  color: #000;
-}
 
 /* Small menu. */
 /* line 84, sass/navigation/_menus.scss */
@@ -1820,73 +1812,86 @@ header.orange-header {
   background: #db654d;
 }
 /* line 16, sass/site/_header-and-footer.scss */
-header.orange-header a {
-  color: #fff;
+header.orange-header a.mega-menu-link {
+  color: #fff !important;
 }
 /* line 19, sass/site/_header-and-footer.scss */
-header.orange-header a:hover {
-  color: #fff;
+header.orange-header a.mega-menu-link:hover {
+  color: #fff !important;
   text-transform: underline;
 }
 /* line 26, sass/site/_header-and-footer.scss */
+header.green-header {
+  background: #4b8944;
+}
+/* line 29, sass/site/_header-and-footer.scss */
+header.green-header a.mega-menu-link {
+  color: #fff !important;
+}
+/* line 32, sass/site/_header-and-footer.scss */
+header.green-header a.mega-menu-link:hover {
+  color: #fff !important;
+  text-transform: underline;
+}
+/* line 39, sass/site/_header-and-footer.scss */
 header.purple-header {
   background: #6f3d79;
   color: #fff !important;
 }
-/* line 30, sass/site/_header-and-footer.scss */
-header.purple-header a {
+/* line 43, sass/site/_header-and-footer.scss */
+header.purple-header a.mega-menu-link {
   color: #fff !important;
 }
-/* line 33, sass/site/_header-and-footer.scss */
-header.purple-header a:hover {
-  color: #fff;
+/* line 46, sass/site/_header-and-footer.scss */
+header.purple-header a.mega-menu-link:hover {
+  color: #fff !important;
   text-transform: underline;
 }
-/* line 40, sass/site/_header-and-footer.scss */
+/* line 53, sass/site/_header-and-footer.scss */
 header.blue-header {
   background: #26395a;
   color: #fff !important;
 }
-/* line 44, sass/site/_header-and-footer.scss */
-header.blue-header a {
+/* line 57, sass/site/_header-and-footer.scss */
+header.blue-header a.mega-menu-link {
   color: #fff !important;
 }
-/* line 47, sass/site/_header-and-footer.scss */
-header.blue-header a:hover {
-  color: #fff;
+/* line 60, sass/site/_header-and-footer.scss */
+header.blue-header a.mega-menu-link:hover {
+  color: #fff !important;
   text-transform: underline;
 }
-/* line 54, sass/site/_header-and-footer.scss */
+/* line 67, sass/site/_header-and-footer.scss */
 header .upper-header {
   font-size: 0.875em;
   height: 30px;
   text-align: right;
 }
-/* line 60, sass/site/_header-and-footer.scss */
+/* line 73, sass/site/_header-and-footer.scss */
 header .upper-header .fa {
   font-size: 1.25em;
   margin-right: 10px;
 }
-/* line 66, sass/site/_header-and-footer.scss */
+/* line 79, sass/site/_header-and-footer.scss */
 header .lower-header {
   margin-bottom: 30px;
 }
-/* line 70, sass/site/_header-and-footer.scss */
+/* line 83, sass/site/_header-and-footer.scss */
 header .header-title {
   text-align: center;
 }
 
-/* line 75, sass/site/_header-and-footer.scss */
+/* line 88, sass/site/_header-and-footer.scss */
 footer {
   background: #242424;
   color: #7d807f;
   padding: 60px 0;
 }
-/* line 80, sass/site/_header-and-footer.scss */
+/* line 93, sass/site/_header-and-footer.scss */
 footer h2 {
   color: #7d807f;
 }
-/* line 84, sass/site/_header-and-footer.scss */
+/* line 97, sass/site/_header-and-footer.scss */
 footer a {
   color: #fff;
   display: block;
@@ -1894,23 +1899,23 @@ footer a {
   line-height: 2em;
   text-decoration: none;
 }
-/* line 91, sass/site/_header-and-footer.scss */
+/* line 104, sass/site/_header-and-footer.scss */
 footer a:hover {
   color: #e7a13d;
   text-decoration: underline;
 }
-/* line 96, sass/site/_header-and-footer.scss */
+/* line 109, sass/site/_header-and-footer.scss */
 footer a:visited {
   color: #fff;
 }
-/* line 101, sass/site/_header-and-footer.scss */
+/* line 114, sass/site/_header-and-footer.scss */
 footer .site-copyright {
   font-size: 0.6875em;
   padding-top: 60px;
   text-align: center;
   text-transform: uppercase;
 }
-/* line 107, sass/site/_header-and-footer.scss */
+/* line 120, sass/site/_header-and-footer.scss */
 footer .site-copyright .fa {
   font-size: 0.5625em;
   margin: 0 20px;

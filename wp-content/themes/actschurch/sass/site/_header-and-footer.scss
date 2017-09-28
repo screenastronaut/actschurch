@@ -13,11 +13,24 @@ header {
 	&.orange-header {
 		background: $color__red;
 
-		a {
-			color: $color__white;
+		a.mega-menu-link {
+			color: $color__white !important;
 
 			&:hover {
-				color: $color__white;
+				color: $color__white !important;
+				text-transform: underline;
+			}
+		}
+	}
+
+	&.green-header {
+		background: $color__green;
+
+		a.mega-menu-link {
+			color: $color__white !important;
+
+			&:hover {
+				color: $color__white !important;
 				text-transform: underline;
 			}
 		}
@@ -27,11 +40,11 @@ header {
 		background: $color__purple;
 		color: $color__white !important;
 
-		a {
+		a.mega-menu-link {
 			color: $color__white !important;
 
 			&:hover {
-				color: $color__white;
+				color: $color__white!important;
 				text-transform: underline;
 			}
 		}
@@ -41,11 +54,11 @@ header {
 		background: $color__blue;
 		color: $color__white !important;
 
-		a {
+		a.mega-menu-link {
 			color: $color__white !important;
 
 			&:hover {
-				color: $color__white;
+				color: $color__white !important;
 				text-transform: underline;
 			}
 		}
