@@ -70,7 +70,6 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 				endif; 
 				?>
 
-				<!-- TODO: featured stories and stories cpt -->
 			</section>
 
 			<section class="contact container-fluid">

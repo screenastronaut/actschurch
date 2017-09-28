@@ -1352,8 +1352,39 @@ a:hover, a:active {
   color: #fff;
   min-height: 700px;
   padding: 2em 3em;
+  text-align: left;
 }
 /* line 45, sass/site/primary/_connect.scss */
+.contact .contact-form .wpcf7 {
+  margin-top: 30px;
+}
+/* line 48, sass/site/primary/_connect.scss */
+.contact .contact-form .wpcf7 p {
+  margin-bottom: 15px;
+}
+/* line 52, sass/site/primary/_connect.scss */
+.contact .contact-form .wpcf7 input[type="submit"] {
+  background: #fff;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  box-shadow: none;
+  color: #000;
+  display: inline-block;
+  font-size: 0.75em;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin: 30px;
+  padding: 10px 30px;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: uppercase;
+}
+/* line 68, sass/site/primary/_connect.scss */
+.contact .contact-form .wpcf7 input[type="submit"]:hover {
+  background: transparent;
+  color: #fff;
+}
+/* line 76, sass/site/primary/_connect.scss */
 .contact .contact-image {
   min-height: 700px;
 }

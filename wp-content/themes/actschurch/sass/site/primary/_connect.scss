@@ -40,6 +40,37 @@
 		color: $color__white;
 		min-height: 700px;
 		padding: 2em 3em;
+		text-align: left;
+
+		.wpcf7 {
+			margin-top: 30px;
+
+			p {
+				margin-bottom: 15px;
+			}
+
+			input[type="submit"] {
+				background: $color__white;		
+				border: 2px solid $color__white;
+				border-radius: 50px;
+				box-shadow: none;
+				color: $color__black;
+				display: inline-block;
+				font-size: 0.75em;
+				font-weight: 700;
+				letter-spacing: 3px;
+				margin: 30px;
+				padding: 10px 30px;
+				text-decoration: none;
+				text-shadow: none;
+				text-transform: uppercase;
+
+				&:hover {
+					background: transparent;
+					color: $color__white;
+				}
+			}
+		}
 	}
 
 	.contact-image {
