@@ -46,19 +46,19 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 			</section>
 
 			<section class="grid-layout container-fluid">
-				<div class="grid-box col-lg-6" style="background:url('<?=$photo_1?>');background-size: contain">meals</div>
-				<div class="grid-box grid-pic-up col-lg-3" style="background:url('<?=$photo_2?>');background-size: contain">support</div>
+				<div class="grid-box col-lg-6" style="background:url('<?=$photo_1?>');background-size: contain">MEALS</div>
+				<div class="grid-box grid-pic-up col-lg-3" style="background:url('<?=$photo_2?>');background-size: contain"></div>
 				<div class="grid-box col-lg-3" style="padding:0">
-					<div class="grid-half grid-pic-up" style="background:url('<?=$photo_3?>');background-size: contain">fellowship</div>
-					<div class="grid-half">fellowship</div>
+					<div class="grid-half grid-pic-up" style="background:url('<?=$photo_3?>');background-size: contain"></div>
+					<div class="grid-half">FELLOWSHIP</div>
 				</div>
-				<div class="grid-box grey col-lg-3">worship</div>
-				<div class="grid-box grid-pic-right col-lg-3" style="background:url('<?=$photo_4?>');background-size: contain">worship</div>
+				<div class="grid-box grey col-lg-3">WORSHIP</div>
+				<div class="grid-box grid-pic-right col-lg-3" style="background:url('<?=$photo_4?>');background-size: contain"></div>
 				<div class="grid-box col-lg-3" style="padding:0">
-					<div class="grid-half">support</div>
-					<div class="grid-half grey">word</div>
+					<div class="grid-half">SUPPORT</div>
+					<div class="grid-half grey">WORD</div>
 				</div>
-				<div class="grid-box col-lg-3" style="background:url('<?=$photo_5?>');background-size: contain">word</div>
+				<div class="grid-box col-lg-3" style="background:url('<?=$photo_5?>');background-size: contain"></div>
 			</section>
 
 			<section id="find-homes" class="find-homes container">
@@ -106,7 +106,7 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 					<!-- TODO: homes contact form -->
 					<?=$contact_form?>
 				</div>
-				<div class="contact-image col-lg-6" style="background:url('<?=$contact_form_image?>');background-size: contain">
+				<div class="contact-image col-lg-6" style="background:url('<?=$contact_form_image?>');background-size: cover">
 				</div>
 			</section>
 
