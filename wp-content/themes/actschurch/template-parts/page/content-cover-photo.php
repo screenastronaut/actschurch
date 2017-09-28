@@ -9,6 +9,6 @@
 
 ?>
 
-<div class="cover-photo" style="background:url('<?php echo get_field('cover_photo');?>');background-size: contain">
+<div class="cover-photo" style="background:url('<?php echo get_field('cover_photo');?>');background-size: cover">
 	<?php the_title('<h1>','</h1>'); ?>
 </div>

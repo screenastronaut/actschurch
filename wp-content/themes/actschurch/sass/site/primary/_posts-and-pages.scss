@@ -120,9 +120,16 @@ section:not(.widget) {
 	height: 400px;
 
 	h1 {
+		color: $color__white;
 		padding-top: 60px;
 		text-align: center;
 	}
+}
+
+.slider-img {
+	height: 500px;
+	object-fit: fill;
+	width: 100%;
 }
 
 .multi-tab {

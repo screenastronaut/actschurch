@@ -32,7 +32,6 @@
 </head>
 
 <?php
-// TODO: change header colours according to category
 if(is_front_page()) {
 	$header_class = 'transparent-header';
 } elseif (is_page('homes') || is_page('kids') || is_page('teens') || is_page('campus') || is_page('young-working-adults') || is_page('family') || is_page('calendar')) {

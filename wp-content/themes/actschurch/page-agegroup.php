@@ -28,15 +28,16 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 			<section class="container">
 				<div class="col-lg-push-2 col-lg-8 col-md-12 col-sm-12 col-xs-12">
 					<h1>Acts <?php the_title(); ?></h1>
-					<?=$introduction_text?>
+					<?=$introduction_text?><br>
+					<h5>Follow Us on <a href="<?php echo get_field('facebook_link'); ?>">Facebook</a>!</h5>
 				</div>
 			</section>
 
-			<section class="container-fluid">
+			<section class="container-fluid" style="padding:0">
 				<?php
 				if(have_rows('slider')) {
 					while(have_rows('slider')) : the_row();
-						echo '<img src="'.get_sub_field('posters').'">';
+						echo '<img class="slider-img" src="'.get_sub_field('posters').'" >';
 					endwhile;
 				}
 				?>
