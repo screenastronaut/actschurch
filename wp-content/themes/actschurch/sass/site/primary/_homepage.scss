@@ -209,6 +209,14 @@
 .stories {
 	background: $color__light-grey;
 
+	.real-story-link {
+		&:hover {
+			h4 {
+				text-decoration: underline;
+			}
+		}
+	}
+
 	.real-story {
 		.text {
 			height: 150px;
@@ -216,13 +224,8 @@
 			padding: 30px 20px;
 			text-align: left;
 
-			a {
+			h4 {
 				color: $color__white;
-				text-decoration: none;
-
-				&:hover {
-					text-decoration: underline;
-				}
 			}
 		}
 
