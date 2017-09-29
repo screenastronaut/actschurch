@@ -16,12 +16,6 @@ $(document).ready(function() {
 		userLng = position.coords.longitude;
 	}
 
-	$('a[href*=\\#]').on('click', function(e) {
-		e.preventDefault();
-		var hash = this.hash;
-		$('html, body').animate({scrollTop: $(hash).offset().top}, 900);
-	});
-
 	$('.local-button').on('click', function(e) {
 		e.preventDefault();
 		$(this).addClass('red');
@@ -38,6 +32,12 @@ $(document).ready(function() {
 		$('.local-button').removeClass('red');
 		$('.local-services').hide();
 		$('.international-services').show();
+	});
+
+	$('a[href*=\\#]').on('click', function(e) {
+		e.preventDefault();
+		var hash = this.hash;
+		$('html, body').animate({scrollTop: $(hash).offset().top}, 900);
 	});
 
 	$('.location-name').on('click', function() {
