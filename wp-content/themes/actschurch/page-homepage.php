@@ -35,11 +35,14 @@ endif;
 
 ?>
 
-<div class="splash-image">
-	<h1>A Place For <span class="special">all</span></h1>
-	<a href="#time-and-locations" class="inner-link button green">Time & Locations</a>
-	<a href="what-to-expect" class="button blue">What to Expect</a>
-	<!-- <i class="main-video fa fa-5x fa-play-circle-o" aria-hidden="true"></i> -->
+<div class="splash-image" style="background:url('<?php echo get_field('cover_photo');?>');background-size: cover; background-position: center">
+	<div class="gradient-overlay"></div>
+	<div class="text-overlay">
+		<h1>A Place For <span class="special">all</span></h1>
+		<a href="#time-and-locations" class="inner-link button green">Time & Locations</a>
+		<a href="what-to-expect" class="button blue">What to Expect</a>
+		<!-- <i class="main-video fa fa-5x fa-play-circle-o" aria-hidden="true"></i> -->
+	</div>
 </div>
 
 
