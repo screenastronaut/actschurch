@@ -1868,91 +1868,100 @@ header.transparent-header {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 );
   /* IE6-9 */
 }
-/* line 17, sass/site/_header-and-footer.scss */
+/* line 16, sass/site/_header-and-footer.scss */
+header.transparent-header ul.mega-sub-menu a.mega-menu-link {
+  color: #fff !important;
+}
+/* line 19, sass/site/_header-and-footer.scss */
+header.transparent-header ul.mega-sub-menu a.mega-menu-link:hover {
+  color: #fff !important;
+  text-transform: underline;
+}
+/* line 26, sass/site/_header-and-footer.scss */
 header.orange-header {
   background: #db654d;
 }
-/* line 20, sass/site/_header-and-footer.scss */
+/* line 29, sass/site/_header-and-footer.scss */
 header.orange-header a.mega-menu-link {
   color: #fff !important;
 }
-/* line 23, sass/site/_header-and-footer.scss */
+/* line 32, sass/site/_header-and-footer.scss */
 header.orange-header a.mega-menu-link:hover {
   color: #fff !important;
   text-transform: underline;
 }
-/* line 30, sass/site/_header-and-footer.scss */
+/* line 39, sass/site/_header-and-footer.scss */
 header.green-header {
   background: #4b8944;
 }
-/* line 33, sass/site/_header-and-footer.scss */
+/* line 42, sass/site/_header-and-footer.scss */
 header.green-header a.mega-menu-link {
   color: #fff !important;
 }
-/* line 36, sass/site/_header-and-footer.scss */
+/* line 45, sass/site/_header-and-footer.scss */
 header.green-header a.mega-menu-link:hover {
   color: #fff !important;
   text-transform: underline;
 }
-/* line 43, sass/site/_header-and-footer.scss */
+/* line 52, sass/site/_header-and-footer.scss */
 header.purple-header {
   background: #6f3d79;
   color: #fff !important;
 }
-/* line 47, sass/site/_header-and-footer.scss */
+/* line 56, sass/site/_header-and-footer.scss */
 header.purple-header a.mega-menu-link {
   color: #fff !important;
 }
-/* line 50, sass/site/_header-and-footer.scss */
+/* line 59, sass/site/_header-and-footer.scss */
 header.purple-header a.mega-menu-link:hover {
   color: #fff !important;
   text-transform: underline;
 }
-/* line 57, sass/site/_header-and-footer.scss */
+/* line 66, sass/site/_header-and-footer.scss */
 header.blue-header {
   background: #26395a;
   color: #fff !important;
 }
-/* line 61, sass/site/_header-and-footer.scss */
+/* line 70, sass/site/_header-and-footer.scss */
 header.blue-header a.mega-menu-link {
   color: #fff !important;
 }
-/* line 64, sass/site/_header-and-footer.scss */
+/* line 73, sass/site/_header-and-footer.scss */
 header.blue-header a.mega-menu-link:hover {
   color: #fff !important;
   text-transform: underline;
 }
-/* line 71, sass/site/_header-and-footer.scss */
+/* line 80, sass/site/_header-and-footer.scss */
 header .upper-header {
   font-size: 0.875em;
   height: 30px;
   text-align: right;
 }
-/* line 77, sass/site/_header-and-footer.scss */
+/* line 86, sass/site/_header-and-footer.scss */
 header .upper-header .fa {
   font-size: 1.25em;
   margin-right: 10px;
 }
-/* line 83, sass/site/_header-and-footer.scss */
+/* line 92, sass/site/_header-and-footer.scss */
 header .lower-header {
   margin-bottom: 30px;
 }
-/* line 87, sass/site/_header-and-footer.scss */
+/* line 96, sass/site/_header-and-footer.scss */
 header .header-title {
   text-align: center;
 }
 
-/* line 92, sass/site/_header-and-footer.scss */
+/* line 101, sass/site/_header-and-footer.scss */
 footer {
   background: #242424;
   color: #7d807f;
   padding: 60px 0;
 }
-/* line 97, sass/site/_header-and-footer.scss */
+/* line 106, sass/site/_header-and-footer.scss */
 footer h2 {
   color: #7d807f;
 }
-/* line 101, sass/site/_header-and-footer.scss */
+/* line 110, sass/site/_header-and-footer.scss */
 footer a {
   color: #fff;
   display: block;
@@ -1960,23 +1969,23 @@ footer a {
   line-height: 2em;
   text-decoration: none;
 }
-/* line 108, sass/site/_header-and-footer.scss */
+/* line 117, sass/site/_header-and-footer.scss */
 footer a:hover {
   color: #e7a13d;
   text-decoration: underline;
 }
-/* line 113, sass/site/_header-and-footer.scss */
+/* line 122, sass/site/_header-and-footer.scss */
 footer a:visited {
   color: #fff;
 }
-/* line 118, sass/site/_header-and-footer.scss */
+/* line 127, sass/site/_header-and-footer.scss */
 footer .site-copyright {
   font-size: 0.6875em;
   padding-top: 60px;
   text-align: center;
   text-transform: uppercase;
 }
-/* line 124, sass/site/_header-and-footer.scss */
+/* line 133, sass/site/_header-and-footer.scss */
 footer .site-copyright .fa {
   font-size: 0.5625em;
   margin: 0 20px;
