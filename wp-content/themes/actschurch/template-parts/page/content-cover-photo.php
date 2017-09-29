@@ -9,6 +9,10 @@
 
 ?>
 
-<div class="cover-photo" style="background:url('<?php echo get_field('cover_photo');?>');background-size: cover">
-	<?php the_title('<h1>','</h1>'); ?>
+<div class="cover-photo" style="background:url('<?php echo get_field('cover_photo');?>');background-size: contain; background-repeat: no-repeat;">
+	<img src="<?php echo get_field('cover_photo');?>" >
+	<div class="gradient-overlay"></div>
+	<div class="text-overlay">
+		<?php the_title('<h1>','</h1>'); ?>
+	</div>
 </div>

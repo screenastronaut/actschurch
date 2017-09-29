@@ -36,6 +36,7 @@ endif;
 ?>
 
 <div class="splash-image" style="background:url('<?php echo get_field('cover_photo');?>');background-size: cover; background-position: center">
+	<img src="<?php echo get_field('cover_photo');?>" >
 	<div class="gradient-overlay"></div>
 	<div class="text-overlay">
 		<h1>A Place For <span class="special">all</span></h1>

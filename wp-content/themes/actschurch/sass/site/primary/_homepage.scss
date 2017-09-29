@@ -6,10 +6,17 @@
 	// top: -30px;
 	z-index: 1;
 
+	img {
+		display: block;
+		position: relative;
+		visibility: hidden;
+	}
+
 	.gradient-overlay {
 		background: rgba(0,0,0,0.3);
 		height: 100%;
 		position: absolute;
+		top: 0;
 		width: 100%;
 		z-index: 1;
 	}
@@ -17,6 +24,7 @@
 	.text-overlay {
 		height: 100%;
 		position: absolute;
+		top: 0;
 		width: 100%;
 		z-index: 2;
 	}

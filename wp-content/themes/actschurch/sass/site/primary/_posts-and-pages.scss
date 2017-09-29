@@ -117,7 +117,31 @@ section:not(.widget) {
 }
 
 .cover-photo {
-	height: 400px;
+	// height: 400px;
+	position: relative;
+
+	img {
+		display: block;
+		position: relative;
+		visibility: hidden;
+	}
+
+	.gradient-overlay {
+		background: rgba(0,0,0,0.3);
+		height: 100%;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+	}
+
+	.text-overlay {
+		height: 100%;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 2;
+	}
 
 	h1 {
 		color: $color__white;
