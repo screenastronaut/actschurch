@@ -46,19 +46,49 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 			</section>
 
 			<section class="grid-layout container-fluid">
-				<div class="grid-box col-lg-6" style="background:url('<?=$photo_1?>');background-size: contain">MEALS</div>
-				<div class="grid-box grid-pic-up col-lg-3" style="background:url('<?=$photo_2?>');background-size: contain"></div>
-				<div class="grid-box col-lg-3" style="padding:0">
-					<div class="grid-half grid-pic-up" style="background:url('<?=$photo_3?>');background-size: contain"></div>
-					<div class="grid-half">FELLOWSHIP</div>
+				<div class="col-lg-12 col-md-12 hidden-sm hidden-xs">
+					<div class="grid-box col-lg-6 col-md-6" style="background:url('<?=$photo_1?>');background-size: cover; background-position: center">MEALS</div>
+					<div class="grid-box grid-pic-up col-lg-3 col-md-3" style="background:url('<?=$photo_2?>');background-size: cover; background-position: center"></div>
+					<div class="grid-box col-lg-3 col-md-3" style="padding:0">
+						<div class="grid-half grid-pic-up" style="background:url('<?=$photo_3?>');background-size: cover; background-position: center"></div>
+						<div class="grid-half">FELLOWSHIP</div>
+					</div>
+					<div class="grid-box grey col-lg-3 col-md-3">WORSHIP</div>
+					<div class="grid-box grid-pic-right col-lg-3 col-md-3" style="background:url('<?=$photo_4?>');background-size: cover; background-position: center"></div>
+					<div class="grid-box col-lg-3 col-md-3" style="padding:0">
+						<div class="grid-half">SUPPORT</div>
+						<div class="grid-half grey">WORD</div>
+					</div>
+					<div class="grid-box col-lg-3 col-md-3" style="background:url('<?=$photo_5?>');background-size: cover; background-position: center"></div>
 				</div>
-				<div class="grid-box grey col-lg-3">WORSHIP</div>
-				<div class="grid-box grid-pic-right col-lg-3" style="background:url('<?=$photo_4?>');background-size: contain"></div>
-				<div class="grid-box col-lg-3" style="padding:0">
-					<div class="grid-half">SUPPORT</div>
-					<div class="grid-half grey">WORD</div>
+
+				<!-- responsive -->
+				<div class="hidden-lg hidden-md col-sm-12 col-xs-12">
+					<div class="grid-box grid-box-small col-sm-12 col-xs-12" style="background:url('<?=$photo_1?>');background-size: cover; background-position: center">
+							<img src="<?=$photo_1?>">
+						</div>
+					<div class="grid-box grid-box-small col-sm-12 col-xs-12 grey">MEALS</div>
+					
+					<div class="grid-box grid-box-small col-sm-12 col-xs-12" style="background:url('<?=$photo_2?>');background-size: cover; background-position: center">
+							<img src="<?=$photo_2?>">
+						</div>
+					<div class="grid-box grid-box-small col-sm-12 col-xs-12 grey">SUPPORT</div>
+
+					<div class="grid-box grid-box-small col-sm-12 col-xs-12" style="background:url('<?=$photo_3?>');background-size: cover; background-position: center">
+							<img src="<?=$photo_3?>">
+						</div>
+					<div class="grid-box grid-box-small col-sm-12 col-xs-12 grey">FELLOWSHIP</div>
+
+					<div class="grid-box grid-box-small grid-pic-right col-sm-12 col-xs-12" style="background:url('<?=$photo_4?>');background-size: cover; background-position: center">
+							<img src="<?=$photo_4?>">
+						</div>
+					<div class="grid-box grid-box-small grey col-sm-12 col-xs-12 grey">WORSHIP</div>
+
+					<div class="grid-box grid-box-small col-sm-12 col-xs-12" style="background:url('<?=$photo_5?>');background-size: cover; background-position: center">
+							<img src="<?=$photo_5?>">
+						</div>
+					<div class="grid-box grid-box-small col-sm-12 col-xs-12 grey">WORD</div>
 				</div>
-				<div class="grid-box col-lg-3" style="background:url('<?=$photo_5?>');background-size: contain"></div>
 			</section>
 
 			<section id="find-homes" class="find-homes container">
@@ -89,12 +119,12 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 					<?php
 					if(have_rows('homes_repeater')) {
 						while(have_rows('homes_repeater')) : the_row();
-						echo '<tr class="'.get_sub_field('city_state').'">';
-						echo '<td>'.get_sub_field('city_state').'</td>';
-						echo '<td>'.get_sub_field('location').'</td>';
-						echo '<td>'.get_sub_field('homes_leaders').'</td>';
-						echo '<td>'.get_sub_field('homes_code').'<br>'.'</td>';
-						echo '</tr>';
+							echo '<tr class="'.get_sub_field('city_state').'">';
+							echo '<td>'.get_sub_field('city_state').'</td>';
+							echo '<td>'.get_sub_field('location').'</td>';
+							echo '<td>'.get_sub_field('homes_leaders').'</td>';
+							echo '<td>'.get_sub_field('homes_code').'<br>'.'</td>';
+							echo '</tr>';
 						endwhile;
 					}
 					?>

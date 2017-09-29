@@ -63,6 +63,23 @@
 		justify-content: center;
 	}
 
+	.grid-box-small {
+		height: auto;
+
+		img {
+			display: block;
+			visibility: hidden;
+		}
+
+		h4 {
+			font-size: 1.2em;
+		}
+
+		p {
+			font-size: 0.875em;
+		}
+	}
+
 	.grid-half {
 		height: 200px;
 		line-height: 200px;
@@ -176,6 +193,7 @@
 	.featured-sermon {
 		i {
 			color: $color__white;
+			position: absolute;
 
 			&:hover {
 				color: $color__red;
