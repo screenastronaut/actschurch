@@ -2063,6 +2063,11 @@ footer .site-copyright .fa {
   margin: 0 20px;
 }
 
+/* line 141, sass/site/_header-and-footer.scss */
+.events-archive header {
+  background: #4b8944;
+}
+
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
