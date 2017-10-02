@@ -8,11 +8,6 @@
  */
 
 get_header(); 
-
-$introduction_photo = get_field('introduction_photo');
-$introduction_text = get_field('introduction_text');
-
-get_template_part( 'template-parts/page/content', 'cover-photo' );
 ?>
 
 <div id="content" class="site-content">
