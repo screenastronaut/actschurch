@@ -5,6 +5,14 @@ $(document).ready(function() {
 	var infowindows = [];
 	var userLat, userLng;
 
+	$(window).scroll(function() {
+		if($(window).scrollTop() > 80) {
+			$('.site-header').addClass('shrink');
+		} else {
+			$('.site-header').removeClass('shrink');
+		}
+	});
+
 	if (navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(showLocation);
 	} else { 

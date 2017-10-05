@@ -9,8 +9,25 @@ header {
 	width: 100%;
 	z-index: 3;
 
+	transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+
 	.logo {
 		margin-top: 15px;
+		transition: all 0.5s ease-in-out;
+		-moz-transition: all 0.5s ease-in-out;
+		-webkit-transition: all 0.5s ease-in-out;
+		-o-transition: all 0.5s ease-in-out;
+
+		img {
+			height: 60px;
+			transition: all 0.5s ease-in-out;
+			-moz-transition: all 0.5s ease-in-out;
+			-webkit-transition: all 0.5s ease-in-out;
+			-o-transition: all 0.5s ease-in-out;
+		}
 	}
 
 	&.transparent-header {
@@ -94,10 +111,30 @@ header {
 
 	.lower-header {
 		margin: 30px 0;
+		transition: all 0.5s ease-in-out;
+		-moz-transition: all 0.5s ease-in-out;
+		-webkit-transition: all 0.5s ease-in-out;
+		-o-transition: all 0.5s ease-in-out;
 	}
 
 	.header-title {
 		text-align: center;
+	}
+
+	&.shrink {
+		height: 50px;
+
+		.logo {
+			margin-top: 10px;
+
+			img {
+				height: 30px;
+			}
+		}
+
+		.lower-header {
+			margin: 5px 0;
+		}
 	}
 }
 

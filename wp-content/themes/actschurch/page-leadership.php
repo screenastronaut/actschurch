@@ -16,6 +16,9 @@ get_header();
 		<main id="main" class="site-main" role="main">
 
 			<div class="container">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<?php the_title('<h1 class="page-title">','</h1>'); ?>
+				</div>
 				<div class="kenneth-chin row">
 					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 						<?php if (has_post_thumbnail( $post->ID ) ): ?>
