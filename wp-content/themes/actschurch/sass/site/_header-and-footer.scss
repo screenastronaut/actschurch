@@ -3,6 +3,7 @@
 }
 
 header {
+	border-bottom: 1px solid #ccc;
 	height: 100px;
 	position: relative;
 	width: 100%;
@@ -92,7 +93,7 @@ header {
 	}
 
 	.lower-header {
-		margin-bottom: 30px;
+		margin: 30px 0;
 	}
 
 	.header-title {
