@@ -1,18 +1,20 @@
+#page {
+	margin-top: 100px;
+}
+
 header {
-	// height: 100px;
+	height: 100px;
 	position: relative;
+	width: 100%;
 	z-index: 3;
 
 	.logo {
-		margin-top: 30px;
+		margin-top: 15px;
 	}
 
 	&.transparent-header {
-		background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
-		background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
-		background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
-	
+		background: $color__white;
+
 		ul.mega-sub-menu a.mega-menu-link {
 			color: $color__white !important;
 
@@ -142,3 +144,50 @@ footer {
 		background: #4b8944;
 	}
 }
+
+// ----
+// Sass (v3.4.12)
+// Compass (v1.0.3)
+// ----
+
+/*
+ * Mixin to compensate for the height of the admin bar
+ * for fixed position elements in WordPress themes
+ */
+
+ @mixin admin-sticky-fix( $offset: 0 ) {
+ 	$narrow-offset: 46px;
+ 	$wide-offset: 32px;
+ 	@if $offset != 0 and type-of($offset) == 'number' {
+ 		$narrow-offset: $narrow-offset + $offset;
+ 		$wide-offset: $wide-offset + $offset;
+ 	}
+ 	.admin-bar & {
+ 		top: $narrow-offset;
+ 		@media screen and (min-width: 783px) {
+ 			top: $wide-offset;
+ 		}
+ 	}
+
+ 	offset-type: type-of($offset);
+ }
+
+ .sticky-header {
+ 	position: fixed;
+ 	top: 0;
+
+ 	@include admin-sticky-fix;
+ }
+ .sticky-header-offset {
+ 	position: fixed;
+ 	top: 10px;
+
+ 	@include admin-sticky-fix(20px);
+ }
+
+ .sticky-header-fake-offset {
+ 	position: fixed;
+ 	top: 10px;
+
+ 	@include admin-sticky-fix(dumb);
+ }
