@@ -49,28 +49,35 @@ if(is_front_page()) {
 	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'actschurch' ); ?></a>
 
-		<header id="masthead" class="site-header <?=$header_class?>" role="banner">
+		<header id="masthead" class="site-header <?=$header_class?> sticky-header" role="banner">
 			<div class="container">
 
 				<div class="logo col-lg-3 col-md-3 col-sm-6 col-xs-6">
-					<?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
+					<?php
+					if($header_class === 'transparent-header') {
+						get_template_part( 'template-parts/header/site', 'branding-orange' );
+					} else {
+						get_template_part( 'template-parts/header/site', 'branding' );
+					}
+
+					?>
 				</div>
 
 				<div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
-					<div class="upper-header col-lg-12 col-md-12">
+<!-- 					<div class="upper-header col-lg-12 col-md-12">
 						<?php if ( is_active_sidebar( 'header-1' ) ) : ?>
 							<div id="header-widget-area" class="chw-widget-area widget-area" role="complementary">
 							<?php dynamic_sidebar( 'header-1' ); ?>
 							</div>
 						<?php endif; ?>
-					</div>
+					</div> -->
 
 					<div class="lower-header col-lg-12 col-md-12">
 						<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
 					</div>
 				</div>
 
-				<?php 
+				<?php
 				$body_classes = get_body_class();
 				if(in_array('page-template-page-location', $body_classes)) {
 					echo '<div class="header-title col-lg-12 col-md-12 col-sm-12 col-xs-12">';
