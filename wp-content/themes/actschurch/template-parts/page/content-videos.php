@@ -29,6 +29,10 @@ $video_id = get_the_ID();
 		<div class="clear"></div>
 		<?php echo '<h5>'.get_the_title().'</h5>'; ?>
 		<div class="clear"></div>
+		<?php echo 'Speaker: '.get_field('speaker'); ?>
+		<div class="clear"></div>
+		<?php echo 'Time: '.get_field('timing'); ?>
+		<div class="clear"></div>			
 		<?php echo 'Share this video: '.do_shortcode('[addtoany]'); ?>
 	</div>
 </div>
