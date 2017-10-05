@@ -8,7 +8,7 @@
  */
 
 $youtube_link = "https://www.youtube.com/watch?v=".get_field('video_link')."&rel=0";
-$youtube_embed = '<iframe width="560" height="315" src="https://www.youtube.com/embed/'.get_field('video_link').'" frameborder="0" allowfullscreen></iframe>';
+$youtube_embed = '<iframe width="854" height="480" src="https://www.youtube.com/embed/'.get_field('video_link').'" frameborder="0" allowfullscreen></iframe>';
 $video_id = get_the_ID();
 ?>
 
@@ -25,16 +25,10 @@ $video_id = get_the_ID();
 	</div>
 
 	<div style="display:none" class="watch-fancybox" id="video-<?=$video_id?>">
-		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="margin-bottom:15px;">
-			<?=$youtube_embed;?>
-		</div>
-		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-			<?php 
-			echo get_the_title();
-			echo '<div class="clear"></div>';
-			echo get_field('description'); 
-			?>
-			
-		</div>
+		<?=$youtube_embed?>
+		<div class="clear"></div>
+		<?php echo '<h5>'.get_the_title().'</h5>'; ?>
+		<div class="clear"></div>
+		<?php echo 'Share this video: '.do_shortcode('[addtoany]'); ?>
 	</div>
 </div>

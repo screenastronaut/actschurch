@@ -25,7 +25,7 @@ $featured_video = get_field('featured_video');
 						<div class="featured-left col-lg-6 col-md-6 col-sm-12 col-xs-12">
 							<h2><?php echo get_the_title(); ?></h2>
 							<?php echo get_field('description'); ?>
-							<?php echo do_shortcode('[addtoany]'); ?>
+							<?php echo 'Share this video: '.do_shortcode('[addtoany]'); ?>
 						</div>
 						<div class="featured-right col-lg-6 col-md-6 col-sm-12 col-xs-12">
 							<div class="embed-responsive embed-responsive-4by3">
