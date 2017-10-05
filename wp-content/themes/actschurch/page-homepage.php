@@ -59,17 +59,19 @@ endif;
 			</section>
 
 			<section class="grid-layout container-fluid">
-				<div class="col-lg-12 col-md-12 hidden-sm hidden-xs">
-					<a href="<?=$video_link?>" data-fancybox><div class="grid-box featured-sermon col-lg-6 col-md-6" style="background:url('<?=$featured_sermon?>') no-repeat;background-size: cover;background-position:center;"><i class="main-video fa fa-3x fa-play-circle-o" aria-hidden="true"></i></div></a>
-					<div class="grid-box grid-pic-up col-lg-3 col-md-3" style="background:url('<?=$small_groups_picture?>') no-repeat;background-size: cover;background-position:center;"></div>
-					<div class="grid-box col-lg-3 col-md-3" style="padding:0">
-						<div class="grid-half grid-pic-up" style="background:url('<?=$calendar_picture?>') no-repeat;background-size: cover;background-position:center;"></div>
-						<div class="grid-half"><?=$calendar_text?></div>
+				<div class="row">
+					<div class="col-lg-12 col-md-12 hidden-sm hidden-xs">
+						<a href="<?=$video_link?>" data-fancybox><div class="grid-box featured-sermon col-lg-6 col-md-6" style="background:url('<?=$featured_sermon?>') no-repeat;background-size: cover;background-position:center;"><i class="main-video fa fa-3x fa-play-circle-o" aria-hidden="true"></i></div></a>
+						<div class="grid-box grid-pic-up col-lg-3 col-md-3" style="background:url('<?=$small_groups_picture?>') no-repeat;background-size: cover;background-position:center;"></div>
+						<div class="grid-box col-lg-3 col-md-3" style="padding:0">
+							<div class="grid-half grid-pic-up" style="background:url('<?=$calendar_picture?>') no-repeat;background-size: cover;background-position:center;"></div>
+							<div class="grid-half"><?=$calendar_text?></div>
+						</div>
+						<div class="grid-box col-lg-3 col-md-3"><?=$age_group_text?></div>
+						<div class="grid-box grid-pic-right col-lg-3 col-md-3" style="background:url('<?=$age_group_picture?>') no-repeat;background-size: cover;background-position:center;"></div>
+						<div class="grid-box col-lg-3 col-md-3"><?=$small_groups_text?></div>
+						<div class="grid-box grid-pic-down col-lg-3 col-md-3" style="background:url('<?=$calendar_picture?>') no-repeat;background-size: cover;background-position:center;"></div>
 					</div>
-					<div class="grid-box col-lg-3 col-md-3"><?=$age_group_text?></div>
-					<div class="grid-box grid-pic-right col-lg-3 col-md-3" style="background:url('<?=$age_group_picture?>') no-repeat;background-size: cover;background-position:center;"></div>
-					<div class="grid-box col-lg-3 col-md-3"><?=$small_groups_text?></div>
-					<div class="grid-box grid-pic-down col-lg-3 col-md-3" style="background:url('<?=$calendar_picture?>') no-repeat;background-size: cover;background-position:center;"></div>
 				</div>
 
 				<!-- responsive -->

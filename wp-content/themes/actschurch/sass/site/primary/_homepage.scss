@@ -36,7 +36,7 @@
 		padding-top: 150px;
 
 		.special {
-			color: $color__red;
+			// color: $color__red;
 			font-family: $font__special;
 			font-size: 90px;
 		}
@@ -49,6 +49,9 @@
 }
 
 .grid-layout {
+	overflow: hidden !important;
+	padding: 0 !important;
+
 	.grid-box {
 		font-size: 1.5em;
 		height: 400px;

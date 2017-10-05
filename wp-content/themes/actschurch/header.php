@@ -23,12 +23,12 @@
 	document.createElement('header'); document.createElement('nav'); document.createElement('section'); document.createElement('article'); document.createElement('aside'); document.createElement('footer');
 	</script>
 	<p class="internetmessge">Your browser is out of date, and may not be compatible with our website. For optimal viewing, we recommend that you switch to a different browser or upgrade to the latest Internet Explorer. Upgrade <a target="_blank" href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">here</a>!</p><br />
-	<![endif]-->
+<![endif]-->
 	<!--[if IE 9]>
 	<script> document.createElement('header'); document.createElement('nav'); document.createElement('section'); document.createElement('article'); document.createElement('aside'); document.createElement('footer');
 	</script>
 	<p class="internetmessge">Your browser is out of date, and may not be compatible with our website. For optimal viewing, we recommend that you switch to a different browser or upgrade to the latest Internet Explorer. Upgrade <a target="_blank" href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">here</a>!</p><br />
-	<![endif]-->
+<![endif]-->
 </head>
 
 <?php
@@ -64,7 +64,7 @@ if(is_front_page()) {
 				</div>
 
 				<div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
-<!-- 					<div class="upper-header col-lg-12 col-md-12">
+<!-- <div class="upper-header col-lg-12 col-md-12">
 						<?php if ( is_active_sidebar( 'header-1' ) ) : ?>
 							<div id="header-widget-area" class="chw-widget-area widget-area" role="complementary">
 							<?php dynamic_sidebar( 'header-1' ); ?>
@@ -76,7 +76,7 @@ if(is_front_page()) {
 						<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
 					</div>
 				</div>
-		</div>
-	</header><!-- #masthead -->
+			</div>
+		</header><!-- #masthead -->
 
-	<!-- <div id="content" class="site-content container"> -->
+		<a href="#" class="scrollToTop"></a>

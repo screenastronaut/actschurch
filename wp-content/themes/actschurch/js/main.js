@@ -8,9 +8,16 @@ $(document).ready(function() {
 	$(window).scroll(function() {
 		if($(window).scrollTop() > 80) {
 			$('.site-header').addClass('shrink');
+			$('.scrollToTop').fadeIn();
 		} else {
 			$('.site-header').removeClass('shrink');
+			$('.scrollToTop').fadeOut();
 		}
+	});
+
+	$('.scrollToTop').on('click', function() {
+		$('html, body').animate({scrollTop: 0},800);
+		return false;
 	});
 
 	if (navigator.geolocation) {
