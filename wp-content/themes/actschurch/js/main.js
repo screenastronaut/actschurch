@@ -22,7 +22,7 @@ $(document).ready(function() {
 
 	if (navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(showLocation);
-	} else { 
+	} else {
 		console.log('Geolocation is not supported by this browser. Please upgrade your browser');
 	}
 
@@ -56,7 +56,7 @@ $(document).ready(function() {
 	});
 
 	$('.location-name').on('click', function() {
-		var id = $(this).attr('id'); 
+		var id = $(this).attr('id');
 
 		if($('.a-' + id).is(':visible')) {
 			$('.a-' + id).hide();
@@ -73,7 +73,7 @@ $(document).ready(function() {
 	});
 
 	$('.question').on('click', function() {
-		var id = $(this).attr('id'); 
+		var id = $(this).attr('id');
 
 		if($('.a-' + id).is(':visible')) {
 			$('.a-' + id).hide('slow');
@@ -159,7 +159,7 @@ $(document).ready(function() {
 		map.setZoom(11);
 	});
 
-	function initMap() { 
+	function initMap() {
 
 		var userCoords = {lat: 3.0478567, lng: 101.5157253};
 		// var userCoords = {lat: userLat, lng: userLng};
@@ -179,7 +179,7 @@ $(document).ready(function() {
 			title: 'Me',
 		});
 		marker.setMap(map);
-		
+
 		markers = location_markers;
 		addMarkers();
 	}
@@ -236,6 +236,14 @@ $(document).ready(function() {
 
 		google.maps.event.addDomListener( window, 'load', initSingleMap );
 	}
+
+	$('.slick-slider').slick({
+		adaptiveHeight: true,
+		arrows: false,
+		dots: true,
+		fade: true,
+		infinite: true,
+	})
 });
 
 var styledMapType = new google.maps.StyledMapType(

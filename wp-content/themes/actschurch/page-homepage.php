@@ -7,7 +7,7 @@
  * @package actschurch
  */
 
-get_header(); 
+get_header();
 
 $intro_text = get_field('introduction_text');
 $age_group_picture = get_field('age_group_picture');
@@ -25,7 +25,7 @@ $watchID = $watchpage->ID;
 
 $featured_video=get_field('featured_video',$watchID);
 
-if($featured_video): 
+if($featured_video):
 	foreach($featured_video as $post) : setup_postdata($post);
 		$featured_sermon = get_field('photo');
 		$video_link = "https://www.youtube.com/watch?v=".get_field('video_link')."&rel=0";
@@ -109,15 +109,30 @@ endif;
 
 				<?php
 				$class = 0;
-				if($real_stories): 
+				if($real_stories):
 					foreach($real_stories as $post) : setup_postdata($post);
 						$class++;
 						set_query_var('class',$class);
 						get_template_part( 'template-parts/post/content', 'featured-stories' );
-					endforeach; 
-					wp_reset_postdata(); 
-				endif; 
+					endforeach;
+					wp_reset_postdata();
+				endif;
 				?>
+			</section>
+
+			<section class="featured-events-slider container-fluid">
+				<div class="slick-slider">
+					<?php
+					if(have_rows('featured_events_slider')) :
+					while(have_rows('featured_events_slider')) : the_row();
+					?>
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<a href="<?php echo get_sub_field('link');?>">
+							<img src="<?php echo get_sub_field('image'); ?>">
+						</a>
+					</div>
+					<?php endwhile; endif;?>
+				</div>
 			</section>
 
 			<section class="locations" id="time-and-locations">
@@ -140,13 +155,13 @@ endif;
 								$service_times = get_sub_field('service_times');
 								$waze_link = get_sub_field('waze_link');
 								$google_map_links = get_sub_field('google_map_links');
-								$page_link = get_sub_field('page_link'); 
+								$page_link = get_sub_field('page_link');
 								if($id % 2 == 0) {
 									echo '<div class="location col-lg-offset-1 col-md-offset-1 col-lg-5 col-md-5 col-sm-12 col-xs-12">';
 								} else {
 									echo '<div class="row"><div class="location col-lg-5 col-md-5 col-sm-12 col-xs-12">';
 								}
-								?>									
+								?>
 								<div class="location-name" id="<?=$id?>">
 									<h3><?=$name?></h3><div class="triangle triangle-down t-<?=$id?>"></div>
 								</div>
@@ -179,7 +194,7 @@ endif;
 								$service_times = get_sub_field('service_times');
 								$waze_link = get_sub_field('waze_link');
 								$google_map_links = get_sub_field('google_map_links');
-								$page_link = get_sub_field('page_link'); 
+								$page_link = get_sub_field('page_link');
 								if($id % 2 == 0) {
 									echo '<div class="location col-lg-offset-1 col-md-offset-1 col-lg-5 col-md-5 col-sm-12 col-xs-12">';
 								} else {

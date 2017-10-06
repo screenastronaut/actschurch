@@ -7,7 +7,7 @@
  * @package actschurch
  */
 
-get_header(); 
+get_header();
 
 $introduction_text = get_field('introduction_text');
 $calendar_text = get_field('calendar_text');
@@ -33,18 +33,22 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 				</div>
 			</section>
 
-			<section class="container-fluid" style="padding:0">
-				<?php
-				if(have_rows('slider')) {
-					while(have_rows('slider')) : the_row();
-						echo '<img class="slider-img" src="'.get_sub_field('posters').'" >';
-					endwhile;
-				}
-				?>
+			<section class="featured-events-slider container-fluid">
+				<div class="slick-slider">
+					<?php
+					if(have_rows('slider')) {
+						while(have_rows('slider')) : the_row();
+							echo '<a href="'.get_sub_field('link').'">';
+							echo '<img class="slider-img" src="'.get_sub_field('posters').'" >';
+							echo '</a>';
+						endwhile;
+					}
+					?>
+				</div>
 			</section>
 
 			<section class="container">
-			<!-- TODO: calendar -->
+				<!-- TODO: calendar -->
 				<h2>Upcoming Events</h2>
 				<?=$calendar_text?>
 				<?php echo do_shortcode('[tribe_events]'); ?>
@@ -60,14 +64,14 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 
 				<?php
 				$class = 0;
-				if($real_stories): 
+				if($real_stories):
 					foreach($real_stories as $post) : setup_postdata($post);
 						$class++;
 						set_query_var('class',$class);
 						get_template_part( 'template-parts/post/content', 'featured-stories' );
-					endforeach; 
-					wp_reset_postdata(); 
-				endif; 
+					endforeach;
+					wp_reset_postdata();
+				endif;
 				?>
 
 			</section>
