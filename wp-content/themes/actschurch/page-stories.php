@@ -28,20 +28,10 @@ $featured_story = get_field('featured_story');
 					foreach($featured_story as $post) : setup_postdata($post);
 				?>
 				<div class="featured-left col-lg-6 col-md-6 col-sm-12 col-xs-12">
-					<h2><?php echo get_the_title(); ?></h2>
+					<h4><?php echo get_the_title(); ?></h4>
 					<?php echo get_field('excerpt'); ?>
 					<div class="by-person"><?php echo get_field('name'); ?></div>
-					<!-- <div class="category">Category: 
-						<?php 
-						$category = get_field('category');
-						if($category) {
-							foreach($category as $cat) {
-								echo $cat.', ';
-							}
-						}
-						?>
-					</div> -->
-					<a href="<?php the_permalink(); ?>" class="read-more">Read More</a>
+					<a href="<?php the_permalink(); ?>" class="button purple read-more">Read More</a>
 				</div>
 				<div class="featured-right col-lg-6 col-md-6 col-sm-12 col-xs-12"">
 					<img src="<?php echo get_field('photo'); ?>" alt="">

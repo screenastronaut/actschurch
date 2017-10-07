@@ -20,7 +20,7 @@ $video_id = get_the_ID();
 	</a>
 	<div class="text">
 		<div class="video-title">
-			<h4><a data-fancybox data-src="#video-<?=$video_id?>" href="javascript:;"><?php the_title(); ?></a></h4>
+			<h5><a data-fancybox data-src="#video-<?=$video_id?>" href="javascript:;"><?php the_title(); ?></a></h5>
 		</div>
 	</div>
 

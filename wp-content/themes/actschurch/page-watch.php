@@ -28,7 +28,7 @@ $featured_video = get_field('featured_video');
 					foreach($featured_video as $post) : setup_postdata($post);
 						?>
 						<div class="featured-left col-lg-6 col-md-6 col-sm-12 col-xs-12">
-							<h2><?php echo get_the_title(); ?></h2>
+							<h4><?php echo get_the_title(); ?></h4>
 							<?php echo 'Speaker: '.get_field('speaker'); ?>
 							<div class="clear"></div>
 							<?php echo 'Time: '.get_field('timing'); ?>

@@ -136,10 +136,10 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 			</section>
 
 			<section class="contact container-fluid" style="padding:0">
-				<div class="contact-form col-lg-6">
+				<div class="contact-form col-lg-6 col-md-6 col-sm-12 col-xs-12">
 					<?=$contact_form?>
 				</div>
-				<div class="contact-image col-lg-6" style="background:url('<?=$contact_form_image?>');background-size: cover">
+				<div class="contact-image col-lg-6 col-md-6 hidden-sm hidden-xs" style="background:url('<?=$contact_form_image?>');background-size: cover">
 				</div>
 			</section>
 

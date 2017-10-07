@@ -13,11 +13,10 @@
 	<div class="pic" style="background:url(<?php echo get_field('photo'); ?>);background-size:cover;background-repeat:no-repeat;"></div>
 	<div class="text">
 		<div class="story-title">
-			<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+			<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 		</div>
 		<div class="story-excerpt">
 			<?php echo get_field('excerpt'); ?>
 		</div>
-		<!-- <a href="<?php the_permalink(); ?>" class="read-more">Read More</a> -->
 	</div>
 </div>
