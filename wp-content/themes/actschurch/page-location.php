@@ -53,7 +53,7 @@ get_header();
 			</div>
 
 			<div class="location-contact container-fluid">
-				<div class="row">
+				<div class="contact row">
 					<div class="orange-bg col-lg-6 col-md-6 col-sm-12 col-xs-12">
 						<?php echo get_field('contact_lift') ?>
 					</div>

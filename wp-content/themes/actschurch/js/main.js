@@ -89,7 +89,7 @@ $(document).ready(function() {
 	$('.sub-menu-item').on('click', function() {
 		var id = $(this).attr('id');
 		$('.container-fluid > div').hide();
-		$('.' + id).show();
+		$('.' + id).css('display','flex');
 	});
 
 	$('.tab-link').on('click', function() {
