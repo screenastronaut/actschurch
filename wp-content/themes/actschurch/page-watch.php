@@ -32,7 +32,8 @@ $featured_video = get_field('featured_video');
 							<?php echo 'Speaker: '.get_field('speaker'); ?>
 							<div class="clear"></div>
 							<?php echo 'Time: '.get_field('timing'); ?>
-							<div class="clear"></div>						
+							<div class="clear"></div>
+							<?php the_tags('<p>Tags: ', ', ', '</p>'); ?>			
 							<?php echo 'Share this video: '.do_shortcode('[addtoany]'); ?>
 						</div>
 						<div class="featured-right col-lg-6 col-md-6 col-sm-12 col-xs-12">

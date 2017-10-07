@@ -16,7 +16,8 @@
 			<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 		</div>
 		<div class="story-excerpt">
-			<?php echo get_field('excerpt'); ?>
+			<div class="by-person"><?php echo get_field('name'); ?></div>
+			<?php the_tags('<p>Tags: ', ', ', '</p>'); ?>
 		</div>
 	</div>
 </div>

@@ -26,63 +26,42 @@ $featured_story = get_field('featured_story');
 				<?php 
 				if($featured_story): 
 					foreach($featured_story as $post) : setup_postdata($post);
-				?>
-				<div class="featured-left col-lg-6 col-md-6 col-sm-12 col-xs-12">
-					<h4><?php echo get_the_title(); ?></h4>
-					<?php echo get_field('excerpt'); ?>
-					<div class="by-person"><?php echo get_field('name'); ?></div>
-					<a href="<?php the_permalink(); ?>" class="button purple read-more">Read More</a>
+						?>
+						<div class="featured-left col-lg-6 col-md-6 col-sm-12 col-xs-12">
+							<h4><?php echo get_the_title(); ?></h4>
+							<?php echo get_field('excerpt'); ?>
+							<div class="by-person"><?php echo get_field('name'); ?></div>
+							<?php the_tags('<p>Tags: ', ', ', '</p>'); ?>
+							<a href="<?php the_permalink(); ?>" class="button purple read-more">Read More</a>
+						</div>
+						<div class="featured-right col-lg-6 col-md-6 col-sm-12 col-xs-12"">
+							<img src="<?php echo get_field('photo'); ?>" alt="">
+						</div>
+					<?php endforeach; endif; ?>
 				</div>
-				<div class="featured-right col-lg-6 col-md-6 col-sm-12 col-xs-12"">
-					<img src="<?php echo get_field('photo'); ?>" alt="">
+
+				<hr>
+
+				<div class="container stories-container">
+
+					<div class="all-stories">
+
+						<?php
+
+						$args = array(
+							'post_type' => 'stories',
+							'posts_per_page' => -1,
+						);
+						$the_query = new WP_Query( $args );
+						while ( $the_query->have_posts() ) : $the_query->the_post();
+							get_template_part( 'template-parts/page/content', 'stories' ); 
+						endwhile;
+						?>
+					</div>
+
 				</div>
-			<?php endforeach; endif; ?>
-		</div>
 
-		<hr>
+			</main><!-- #main -->
+		</div><!-- #primary -->
 
-		<div class="container stories-container">
-			<!-- <div class="search-stories col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				<form id="storysearchform">
-					<input type="text" name="storysearch" id="storysearch" placeholder="Search">
-					<label for="storydate">Date: </label><input type="month" name="storydate" id="storydate">
-					<label for="storycat">Category: </label>
-					<?php
-					$allcats = get_field_object('category');
-					if( $allcats )
-					{
-						echo '<select name="' . $allcats['key'] . '" name="storycat" id="storycat">';
-						echo '<option default value="All">All</option>';
-						foreach( $allcats['choices'] as $k => $v )
-						{
-							echo '<option value="' . $k . '">' . $v . '</option>';
-						}
-						echo '</select>';
-					}
-					?>
-					<input type="submit" name="submit" id="submit" value="Search">
-				</form>
-			</div> -->
-
-			<div class="all-stories">
-
-				<?php
-
-				$args = array(
-					'post_type' => 'stories',
-					'posts_per_page' => -1,
-					);
-				$the_query = new WP_Query( $args );
-				while ( $the_query->have_posts() ) : $the_query->the_post();
-				get_template_part( 'template-parts/page/content', 'stories' ); 
-				endwhile;
-				?>
-			</div>
-
-			<!-- TODO: load more button -->
-		</div>
-
-	</main><!-- #main -->
-</div><!-- #primary -->
-
-<?php get_footer();
+		<?php get_footer();

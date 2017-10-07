@@ -257,7 +257,7 @@ section:not(.widget) {
 
 		.text {
 			background: $color__light-grey;
-			height: 300px;
+			height: 150px;
 			overflow: hidden;
 			padding: 15px;
 
@@ -267,6 +267,14 @@ section:not(.widget) {
 				padding: 15px 0;
 			}
 		}
+	}
+}
+
+.single-story {
+	text-align: left;
+
+	p {
+		margin-bottom: 15px;
 	}
 }
 
@@ -320,7 +328,7 @@ section:not(.widget) {
 
 		.text {
 			background: $color__light-grey;
-			height: 170px;
+			height: 120px;
 			overflow: hidden;
 			padding: 15px;
 
