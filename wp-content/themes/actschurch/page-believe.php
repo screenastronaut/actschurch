@@ -29,7 +29,7 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 				</nav>
 			</div>
 
-			<div class="container-fluid">
+			<div class="believe-background container-fluid">
 				<div class="vision row">
 					<div class="believe-text col-lg-6 col-md-6 col-sm-12 col-xs-12">
 						<h3 class="red">Our Vision</h3>

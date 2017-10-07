@@ -52,9 +52,9 @@ get_header();
 				</div>	
 			</div>
 
-			<div class="location-contact container-fluid">
-				<div class="contact row">
-					<div class="orange-bg col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<div class="location-contact contact container-fluid">
+				<div class="row">
+					<div class="orange-bg contact-form col-lg-6 col-md-6 col-sm-12 col-xs-12">
 						<?php echo get_field('contact_lift') ?>
 					</div>
 					<div class="grey-bg col-lg-6 col-md-6 col-sm-12 col-xs-12 no-padding">

@@ -7,8 +7,6 @@
  * @package actschurch
  */
 
-// TODO: form styling
-
 get_header(); 
 
 $introduction_photo = get_field('introduction_photo');

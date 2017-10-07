@@ -137,7 +137,6 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 
 			<section class="contact container-fluid" style="padding:0">
 				<div class="contact-form col-lg-6">
-					<!-- TODO: homes contact form -->
 					<?=$contact_form?>
 				</div>
 				<div class="contact-image col-lg-6" style="background:url('<?=$contact_form_image?>');background-size: cover">

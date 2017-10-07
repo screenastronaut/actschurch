@@ -76,9 +76,8 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 
 			</section>
 
-			<section class="contact container-fluid">
+			<section class="age-contact contact container-fluid">
 				<div class="contact-form col-lg-6">
-					<!-- TODO: age group contact form -->
 					<?=$contact_form?>
 				</div>
 				<div class="contact-image col-lg-6" style="background:url('<?=$contact_form_image?>');background-size: cover">
