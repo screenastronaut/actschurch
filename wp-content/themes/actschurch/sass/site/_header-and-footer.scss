@@ -15,7 +15,11 @@ header {
 	-o-transition: all 0.5s ease-in-out;
 
 	.logo {
-		margin-top: 15px;
+		display: flex;
+		flex-direction: column;
+		height: 100px;
+		justify-content: center;
+
 		transition: all 0.5s ease-in-out;
 		-moz-transition: all 0.5s ease-in-out;
 		-webkit-transition: all 0.5s ease-in-out;
@@ -125,7 +129,7 @@ header {
 		height: 50px;
 
 		.logo {
-			margin-top: 10px;
+			height: 50px;
 
 			img {
 				height: 30px;
@@ -247,7 +251,7 @@ footer {
  	z-index: 999;
 
  	&:hover{
- 	background: url('images/arrow-up-hover.png') no-repeat;
+ 		background: url('images/arrow-up-hover.png') no-repeat;
  		text-decoration: none;
  	}
  }
