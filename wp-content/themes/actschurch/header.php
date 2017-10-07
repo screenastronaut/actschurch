@@ -52,7 +52,7 @@ if(is_front_page()) {
 		<header id="masthead" class="site-header <?=$header_class?> sticky-header" role="banner">
 			<div class="container">
 
-				<div class="logo col-lg-3 col-md-3 col-sm-3 col-xs-3">
+				<div class="logo col-lg-3 col-md-3 col-sm-3 col-xs-6">
 					<?php
 					if($header_class === 'transparent-header') {
 						get_template_part( 'template-parts/header/site', 'branding-orange' );
@@ -63,7 +63,7 @@ if(is_front_page()) {
 					?>
 				</div>
 
-				<div class="lower-header col-lg-9 col-md-9 col-sm-9 col-xs-9">
+				<div class="lower-header col-lg-9 col-md-9 col-sm-9 col-xs-6">
 					<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
 				</div>
 			</div>
