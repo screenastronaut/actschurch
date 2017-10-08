@@ -4145,19 +4145,24 @@ object {
   }
 }
 @media (max-width: 767px) {
-  /* line 28, sass/responsive/_responsive-classes.scss */
+  /* line 29, sass/responsive/_responsive-classes.scss */
   section:not(.widget) {
     padding: 30px 0;
   }
 
-  /* line 32, sass/responsive/_responsive-classes.scss */
+  /* line 33, sass/responsive/_responsive-classes.scss */
   a.button {
     font-size: 12px;
     margin: 15px;
   }
 
-  /* line 37, sass/responsive/_responsive-classes.scss */
+  /* line 38, sass/responsive/_responsive-classes.scss */
   .homes-table {
     font-size: 12px;
+  }
+
+  /* line 43, sass/responsive/_responsive-classes.scss */
+  .services h5 {
+    letter-spacing: 0;
   }
 }

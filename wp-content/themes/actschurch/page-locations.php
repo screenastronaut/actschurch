@@ -28,35 +28,50 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 				</div>
 
 				<div class="services col-lg-push-1 col-lg-10 col-md-12 col-sm-12 col-xs-12">
-					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-						<h3 class="red">Malaysia</h3>
-						<?php
-						if(have_rows('local')) {
-							while(have_rows('local')) : the_row();
-							$marker = get_sub_field('google_map');
-							echo '<div class="service">';
-							echo '<h5>'.get_sub_field('location_name').'</h5>';
-							echo '<a href="#locations-map" class="locate-map" data-lat="'.$marker['lat'].'" data-lng="'.$marker['lng'].'">Find on Map</a> | ';
-							echo '<a href="'.get_sub_field('link').'">Visit Page</a>';
-							echo '</div>';
-							endwhile;
-						}
-						?>
-					</div>
-					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-						<h3 class="red">International</h3>
-						<?php
-						if(have_rows('international')) {
-							while(have_rows('international')) : the_row();
-							$marker = get_sub_field('google_map');
-							echo '<div class="service">';
-							echo '<h5>'.get_sub_field('location_name').'</h5>';
-							echo '<a href="#locations-map" class="locate-map" data-lat="'.$marker['lat'].'" data-lng="'.$marker['lng'].'">Find on Map</a> | ';
-							echo '<a href="'.get_sub_field('link').'">Visit Page</a>';
-							echo '</div>';
-							endwhile;
-						}
-						?>
+					<div class="row">
+						<div class="col-lg-6 col-md-6 col-sm-12 hidden-xs">
+							<h3 class="red">Malaysia</h3>
+							<?php
+							if(have_rows('local')) {
+								while(have_rows('local')) : the_row();
+									get_template_part( 'template-parts/post/content', 'locations' );
+								endwhile;
+							}
+							?>
+						</div>
+						<div class="hidden-lg hidden-md hidden-sm col-xs-12">
+							<h3 class="red">Malaysia</h3>
+							<?php
+							if(have_rows('local')) {
+								while(have_rows('local')) : the_row();
+									get_template_part( 'template-parts/post/content', 'locations-mobile' );
+								endwhile;
+							}
+							?>
+						</div>
+						<div class="hidden-lg hidden-md col-sm-12 col-xs-12">
+							<hr>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 hidden-xs">
+							<h3 class="red">International</h3>
+							<?php
+							if(have_rows('international')) {
+								while(have_rows('international')) : the_row();
+									get_template_part( 'template-parts/post/content', 'locations' );
+								endwhile;
+							}
+							?>
+						</div>
+						<div class="hidden-lg hidden-md hidden-sm col-xs-12">
+							<h3 class="red">International</h3>
+							<?php
+							if(have_rows('international')) {
+								while(have_rows('international')) : the_row();
+									get_template_part( 'template-parts/post/content', 'locations-mobile' );
+								endwhile;
+							}
+							?>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -67,25 +82,25 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 				$location_markers = array();
 				if(have_rows('local')) : 
 					while(have_rows('local')) : the_row(); 
-				$marker = get_sub_field('google_map');
-				$html = get_sub_field('location_name').'<hr>'.$marker['address'];
-				array_push($location_markers, array($marker['address'],$marker['lat'],$marker['lng'],$html));
-				endwhile; endif; 
+						$marker = get_sub_field('google_map');
+						$html = get_sub_field('location_name').'<hr>'.$marker['address'];
+						array_push($location_markers, array($marker['address'],$marker['lat'],$marker['lng'],$html));
+					endwhile; endif; 
 
-				if(have_rows('international')) : 
-					while(have_rows('international')) : the_row(); 
-				$marker = get_sub_field('google_map');
-				$html = get_sub_field('location_name').'<hr>'.$marker['address'];
-				array_push($location_markers, array($marker['address'],$marker['lat'],$marker['lng'],$html));
-				endwhile; endif; 
-				?> 
-				<div id="map"></div>
-				<script type="text/javascript">
-					var location_markers = <?php echo json_encode($location_markers); ?>;
-				</script>
-			</div>		
+					if(have_rows('international')) : 
+						while(have_rows('international')) : the_row(); 
+							$marker = get_sub_field('google_map');
+							$html = get_sub_field('location_name').'<hr>'.$marker['address'];
+							array_push($location_markers, array($marker['address'],$marker['lat'],$marker['lng'],$html));
+						endwhile; endif; 
+						?> 
+						<div id="map"></div>
+						<script type="text/javascript">
+							var location_markers = <?php echo json_encode($location_markers); ?>;
+						</script>
+					</div>		
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+				</main><!-- #main -->
+			</div><!-- #primary -->
 
-	<?php get_footer();
+			<?php get_footer();

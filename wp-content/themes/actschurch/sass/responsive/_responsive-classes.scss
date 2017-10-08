@@ -5,7 +5,7 @@
 	}
 }
 
-//smaller than ipad portrait
+//ipad portrait
 @media (max-width: 768px) {
 	.splash-image {
 		h1 {			
@@ -24,6 +24,7 @@
 	}
 }
 
+//smaller than ipad portrait
 @media (max-width: 767px) {
 	section:not(.widget) {
 		padding: 30px 0;
@@ -36,5 +37,11 @@
 
 	.homes-table {
 		font-size: 12px;
+	}
+
+	.services {
+		h5 {
+			letter-spacing: 0;
+		}
 	}
 }
