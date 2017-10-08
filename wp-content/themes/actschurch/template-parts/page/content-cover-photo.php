@@ -9,9 +9,8 @@
 
 ?>
 
-<div class="cover-photo" style="background:url('<?php echo get_field('cover_photo');?>');background-size: contain; background-repeat: no-repeat;">
+<div class="splash-image cover-photo" style="background-image:url('<?php echo get_field('cover_photo');?>')">
 	<img src="<?php echo get_field('cover_photo');?>" >
-	<div class="gradient-overlay"></div>
 	<div class="text-overlay">
 		<?php the_title('<h1>','</h1>'); ?>
 	</div>

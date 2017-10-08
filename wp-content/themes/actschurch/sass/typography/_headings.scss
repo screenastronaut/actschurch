@@ -8,7 +8,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 2.75em; //44px
+	font-size: 44px;
 	margin-bottom: 0.5em;
 
 	&.page-title {
@@ -18,31 +18,38 @@ h1 {
 }
 
 h2 {
-	font-size: 2.5em; //40px
+	font-size: 40px;
 	line-height: 44px;
 	margin-bottom: 0.5em;
 
 	&.page-title {
-		font-size: 2.5em; //40px
+		font-size: 40px;
 	}
 }
 
 h3 {
-	font-size: 2.25em; //36px
+	font-size: 36px;
 	margin-bottom: 0.5em;
 }
 
 h4 {
 	font-family: $font__main;
-	font-size: 1.5em; //24px
+	font-size: 24px;
 }
 
 h5 {
 	font-family: $font__main;
-	font-size: 1.25em; //20px
+	font-size: 20px;
 }
 
 h6 {
 	font-family: $font__main;
-	font-size: 1.125em; //18px
+	font-size: 18px;
+}
+
+
+@media (max-width: 1024px) {
+	h1 {
+		// font-size: 
+	}
 }

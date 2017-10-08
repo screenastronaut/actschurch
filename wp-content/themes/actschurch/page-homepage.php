@@ -35,9 +35,9 @@ endif;
 
 ?>
 
-<div class="splash-image" style="background:url('<?php echo get_field('cover_photo');?>');background-size: contain; background-position: center; background-repeat: no-repeat">
+<div class="splash-image" style="background-image:url('<?php echo get_field('cover_photo');?>')">
 	<img src="<?php echo get_field('cover_photo');?>" >
-	<div class="gradient-overlay"></div>
+	<!-- <div class="gradient-overlay"></div> -->
 	<div class="text-overlay">
 		<h1>A Place For <span class="special">all</span></h1>
 		<a href="#time-and-locations" class="inner-link button green">Time & Locations</a>
@@ -101,7 +101,7 @@ endif;
 			</section>
 
 			<section class="stories">
-				<div class="col-lg-push-2 col-md-push-2 col-lg-8 col-md-8 col-sm-12 col-xs-12">
+				<div class="col-lg-push-2 col-lg-8 col-md-12 col-sm-12 col-xs-12">
 					<?php echo $real_stories_text; ?>
 					<a href="stories" class="button green">Explore Stories</a>
 				</div>
@@ -163,7 +163,7 @@ endif;
 									}
 									?>
 									<div class="location-name" id="<?=$id?>">
-										<h3><?=$name?></h3><div class="triangle triangle-down t-<?=$id?>"></div>
+										<h4><?=$name?></h4><div class="triangle triangle-down t-<?=$id?>"></div>
 									</div>
 									<div class="more-info a-<?=$id?>">
 										<h5><?=$address?></h5>
@@ -211,7 +211,7 @@ endif;
 										}
 										?>
 										<div class="location-name" id="<?=$id?>">
-											<h3><?=$name?></h3><div class="triangle triangle-down t-<?=$id?>"></div>
+											<h4><?=$name?></h4><div class="triangle triangle-down t-<?=$id?>"></div>
 										</div>
 										<div class="more-info a-<?=$id?>">
 											<h5><?=$address?></h5>
