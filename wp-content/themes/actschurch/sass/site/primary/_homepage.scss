@@ -41,7 +41,7 @@
 			font-size: 70px;
 		}
 	}
-	
+
 	.main-video {
 		display: block;
 		margin: 30px 0;
@@ -227,10 +227,12 @@
 	}
 
 	.real-story {
+		margin-bottom: 30px;
+
 		.text {
-			height: 150px;
+			height: 100px;
 			overflow: hidden;
-			padding: 30px 20px;
+			padding: 15px 20px;
 			text-align: left;
 
 			h4 {
@@ -255,6 +257,8 @@
 		}
 
 		.pic {
+			background-repeat:no-repeat;
+			background-size:cover;
 			height: 300px;
 		}
 	}

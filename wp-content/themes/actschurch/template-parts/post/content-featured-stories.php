@@ -13,12 +13,12 @@ $story_url = get_permalink();
 ?>
 
 <a href="<?=$story_url?>" class="real-story-link">
-	<div class="real-story col-lg-3 col-md-3 col-sm-12 col-xs-12">
+	<div class="real-story col-lg-3 col-md-6 col-sm-6 col-xs-12">
 		<div class="text text-<?=$class?>">
 			<div class="story-title">
 				<h4><?=$story_title?></h4>
 			</div>
 		</div>
-		<div class="pic" style="background:url(<?=$story_pic?>);background-size:cover;background-repeat:no-repeat;"></div>
+		<div class="pic" style="background-image:url(<?=$story_pic?>);"></div>
 	</div>
 </a>
