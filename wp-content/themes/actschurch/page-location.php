@@ -7,8 +7,6 @@
  * @package actschurch
  */
 
-// TODO: contact forms
-
 get_header(); 
 
 ?>
@@ -25,7 +23,7 @@ get_header();
 			</div>
 
 			<div class="container about">
-				<div class="col-lg-push-2 col-lg-8 col-md-12 col-sm-12 col-xs-12">
+				<div class="col-lg-push-2 col-md-push-1 col-sm-push-1 col-lg-8 col-md-10 col-sm-10 col-xs-12">
 					<h2 class="red">Acts <?php the_title(); ?></h2>
 					<?php echo get_field('about'); ?>
 				</div>
@@ -35,6 +33,18 @@ get_header();
 				<div class="container">
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 						<?php echo get_field('service_times'); ?>
+						<div class="button-row">
+							<?php 
+							$waze_link = get_field('waze_link');
+							$google_map_link = get_field('google_map_link');
+							if($waze_link) {
+								echo '<a href="'.$waze_link.'" class="button black" target="_blank">Waze Link</a>';
+							}
+							if($google_map_link) {
+								echo '<a href="'.$google_map_link.'" class="button black" target="_blank">Google Map Link</a>';
+							}
+							?>
+						</div>
 					</div>
 				</div>
 			</div>
