@@ -144,7 +144,7 @@ header {
 footer {
 	background: $color__dark-grey;
 	color: $color__grey;
-	padding: 60px 0;
+	padding: 15px 0;
 
 	h2 {
 		color: $color__grey;
@@ -153,8 +153,8 @@ footer {
 	a {
 		color: $color__white;
 		display: block;
-		font-size: 0.75em;
-		line-height: 2em;
+		font-size: 14px;
+		line-height: 1.5em;
 		text-decoration: none;
 
 		&:hover {
@@ -168,8 +168,8 @@ footer {
 	}
 
 	.site-copyright {
-		font-size: 0.6875em;
-		padding-top: 60px;
+		font-size: 12px;
+		padding-top: 30px;
 		text-align: center;
 		text-transform: uppercase;
 

@@ -2412,7 +2412,7 @@ header.shrink .lower-header {
 footer {
   background: #242424;
   color: #7d807f;
-  padding: 60px 0;
+  padding: 15px 0;
 }
 /* line 149, sass/site/_header-and-footer.scss */
 footer h2 {
@@ -2422,8 +2422,8 @@ footer h2 {
 footer a {
   color: #fff;
   display: block;
-  font-size: 0.75em;
-  line-height: 2em;
+  font-size: 14px;
+  line-height: 1.5em;
   text-decoration: none;
 }
 /* line 160, sass/site/_header-and-footer.scss */
@@ -2437,8 +2437,8 @@ footer a:visited {
 }
 /* line 170, sass/site/_header-and-footer.scss */
 footer .site-copyright {
-  font-size: 0.6875em;
-  padding-top: 60px;
+  font-size: 12px;
+  padding-top: 30px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -4129,5 +4129,17 @@ object {
   /* line 17, sass/responsive/_responsive-classes.scss */
   .splash-image .button {
     margin: 30px 0;
+  }
+}
+@media (max-width: 767px) {
+  /* line 24, sass/responsive/_responsive-classes.scss */
+  section:not(.widget) {
+    padding: 30px 0;
+  }
+
+  /* line 28, sass/responsive/_responsive-classes.scss */
+  a.button {
+    font-size: 12px;
+    margin: 15px;
   }
 }

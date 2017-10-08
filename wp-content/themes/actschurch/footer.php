@@ -14,7 +14,7 @@
 
 <footer id="colophon" class="site-footer" role="contentinfo">
 	<div class="site-info container">
-		<div class="col-lg-2 col-md-2 hidden-sm hidden-xs">
+		<div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
 			<h6>LINKS</h6>
 			<a href="<?php echo home_url(); ?>/watch/">Watch</a>
 			<a href="<?php echo home_url(); ?>/stories/">Stories</a>
@@ -22,7 +22,7 @@
 			<a href="<?php echo home_url(); ?>/locations/">Locations</a>
 
 		</div>
-		<div class="col-lg-2 col-md-2 hidden-sm hidden-xs">
+		<div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
 			<h6>VISIT</h6>
 			<a href="<?php echo home_url(); ?>/what-to-expect/">What to Expect</a>
 			<a href="<?php echo home_url(); ?>/what-we-believe-in/">What We Believe In</a>
@@ -30,7 +30,7 @@
 			<a href="<?php echo home_url(); ?>/our-history/">Our History</a>
 
 		</div>
-		<div class="col-lg-2 col-md-2 hidden-sm hidden-xs">
+		<div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
 			<h6>CONNECT</h6>
 			<a href="<?php echo home_url(); ?>/homes/">Homes</a>
 			<a href="<?php echo home_url(); ?>/kids/">Kids</a>
@@ -41,7 +41,7 @@
 			<a href="<?php echo home_url(); ?>/calendar/">Calendar</a>
 
 		</div>
-		<div class="col-lg-2 col-md-2 hidden-sm hidden-xs">
+		<div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
 			<h6>LOCAL SERVICES</h6>
 			<a href="<?php echo home_url(); ?>/subang-jaya/">Subang Jaya</a>
 			<a href="<?php echo home_url(); ?>/petaling-jaya/">Petaling Jaya</a>
@@ -54,7 +54,7 @@
 			<a href="<?php echo home_url(); ?>/iskandar/">Iskandar</a>
 
 		</div>
-		<div class="col-lg-2 col-md-2 hidden-sm hidden-xs">
+		<div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
 			<h6>INTERNATIONAL</h6>
 			<a href="<?php echo home_url(); ?>/singapore/">Singapore</a>
 			<a href="<?php echo home_url(); ?>/bekasi/">Bekasi</a>
@@ -69,7 +69,7 @@
 		</div>
 	</div><!-- .site-info -->
 	<div class="site-copyright container">
-		<span><i class="fa fa-circle" aria-hidden="true"></i>copyright &copy; <?php echo date('Y');?> Acts Church. All Rights Reserved. <i class="fa fa-circle" aria-hidden="true"></i></span>
+		<span>copyright &copy; <?php echo date('Y');?> Acts Church. All Rights Reserved. </span>
 	</div>
 </footer><!-- #colophon -->
 </div><!-- #page -->

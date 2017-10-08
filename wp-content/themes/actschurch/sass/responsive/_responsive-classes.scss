@@ -19,3 +19,14 @@
 		}
 	}
 }
+
+@media (max-width: 767px) {
+	section:not(.widget) {
+		padding: 30px 0;
+	}
+
+	a.button {
+		font-size: 12px;
+		margin: 15px;
+	}
+}
