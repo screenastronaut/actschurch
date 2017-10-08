@@ -34,8 +34,9 @@
 		position: relative;
 		text-align: left;
 
-		h3 {
+		h5 {
 			display: inline-block;
+			width: 90%;
 		}
 
 		.triangle {
@@ -77,9 +78,11 @@
 	span {
 		cursor: pointer;
 		margin: 0 20px;
+		text-align: center;
 
+		&.active,
 		&:hover {
-			text-decoration: underline;
+			text-shadow: 1px 0px 0px black;
 		}
 	}
 }

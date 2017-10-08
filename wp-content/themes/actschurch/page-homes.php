@@ -31,15 +31,17 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 
 			<section class="what-is-homes container">
 				<h1>What is Homes?</h1>
-				<div class="col-lg-push-1 col-lg-10">
+				<div class="col-lg-push-1 col-lg-10 col-md-12 col-sm-12 col-xs-12">
 					
 					<div class="left-text col-lg-7 col-md-7 col-sm-12 col-xs-12">
 						<?=$what_is_homes?>
 						<br>
-						<a href="#find-homes" class="button green">Find a Home</a>
-						<a href="#join-homes" class="button green">Join a Home</a>
+						<div class="button-row">
+							<a href="#find-homes" class="button green">Find a Home</a>
+							<a href="#join-homes" class="button green">Join a Home</a>
+						</div>
 					</div>
-					<div class="right-text col-lg-5 col-md-5 col-sm-12 col-xs-12">
+					<div class="right-text col-lg-5 col-md-5 hidden-sm hidden-xs">
 						<?=$bible_quote?>						
 					</div>
 				</div>
@@ -145,7 +147,7 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 
 			<section class="stories container-fluid">
 				<h2>Real Stories</h2>
-				<div class="col-lg-push-2 col-md-push-2 col-lg-8 col-md-8 col-sm-12 col-xs-12">
+				<div class="col-lg-push-2 col-lg-12 col-md-8 col-sm-12 col-xs-12">
 					<?php echo get_field('real_stories_text'); ?>
 					<a href="stories" class="button green">Explore Stories</a>
 				</div>

@@ -26,7 +26,7 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 		<main id="main" class="site-main" role="main">
 
 			<section class="container">
-				<div class="col-lg-push-2 col-lg-8 col-md-12 col-sm-12 col-xs-12">
+				<div class="col-lg-push-2 col-lg-8 col-md-push-1 col-md-10 col-sm-12 col-xs-12">
 					<h1>Acts <?php the_title(); ?></h1>
 					<?=$introduction_text?><br>
 					<h5>Follow Us on <a href="<?php echo get_field('facebook_link'); ?>">Facebook</a>!</h5>
@@ -56,7 +56,7 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 
 			<section class="stories container-fluid">
 				<h2>Real Stories</h2>
-				<div class="col-lg-push-2 col-md-push-2 col-lg-8 col-md-8 col-sm-12 col-xs-12">
+				<div class="col-lg-push-2 col-lg-8 col-md-12 col-sm-12 col-xs-12">
 					<?php echo get_field('real_stories_text'); ?>
 					<a href="stories" class="button green">Explore Stories</a>
 				</div>

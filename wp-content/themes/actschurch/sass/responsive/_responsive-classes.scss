@@ -18,6 +18,10 @@
 			margin: 30px 0;
 		}
 	}
+
+	.multi-tab .container {
+		flex-flow: column;
+	}
 }
 
 @media (max-width: 767px) {
@@ -28,5 +32,9 @@
 	a.button {
 		font-size: 12px;
 		margin: 15px;
+	}
+
+	.homes-table {
+		font-size: 12px;
 	}
 }

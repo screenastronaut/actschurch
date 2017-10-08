@@ -22,7 +22,7 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 
 			<div class="container">
 				<nav class="sub-menu">
-					<span class="sub-menu-item" id="vision">Our Vision</span>
+					<span class="sub-menu-item active" id="vision">Our Vision</span>
 					<span class="sub-menu-item" id="mission">Our Mission</span>
 					<span class="sub-menu-item" id="purpose">Our Purpose</span>
 					<span class="sub-menu-item" id="sof">Our Statement of Faith</span>

@@ -36,7 +36,7 @@ get_header();
 				</div>
 			</div>
 
-			<div class="multi-tab">
+			<div class="multi-tab container-fluid">
 				<div class="container">
 					<span class="tab-link current-link" data-tab="pastors">Pastoral Team</span>
 					<span class="tab-link" data-tab="elders">Elders</span>
@@ -47,7 +47,7 @@ get_header();
 
 			<div class="container">
 
-			<div class="tab-content current-tab" id="pastors">
+				<div class="tab-content current-tab" id="pastors">
 					<h3 class="center-text">Pastoral Team</h3>
 					<?php
 					$args = array(
@@ -55,10 +55,10 @@ get_header();
 						'posts_per_page' => -1,
 						'meta_key' => 'category',
 						'meta_value' => 'pastors',
-						);
+					);
 					$the_query = new WP_Query( $args );
 					while ( $the_query->have_posts() ) : $the_query->the_post();
-					get_template_part( 'template-parts/page/content', 'leaders' ); 
+						get_template_part( 'template-parts/page/content', 'leaders' ); 
 					endwhile;
 					?>
 					<div class="clear"></div>
@@ -71,10 +71,10 @@ get_header();
 						'posts_per_page' => -1,
 						'meta_key' => 'category',
 						'meta_value' => 'elders',
-						);
+					);
 					$the_query = new WP_Query( $args );
 					while ( $the_query->have_posts() ) : $the_query->the_post();
-					get_template_part( 'template-parts/page/content', 'leaders' ); 
+						get_template_part( 'template-parts/page/content', 'leaders' ); 
 					endwhile;
 					?>
 					<div class="clear"></div>
@@ -87,10 +87,10 @@ get_header();
 						'posts_per_page' => -1,
 						'meta_key' => 'category',
 						'meta_value' => 'local',
-						);
+					);
 					$the_query = new WP_Query( $args );
 					while ( $the_query->have_posts() ) : $the_query->the_post();
-					get_template_part( 'template-parts/page/content', 'leaders' ); 
+						get_template_part( 'template-parts/page/content', 'leaders' ); 
 					endwhile;
 					?>
 					<div class="clear"></div>
@@ -103,10 +103,10 @@ get_header();
 						'posts_per_page' => -1,
 						'meta_key' => 'category',
 						'meta_value' => 'international',
-						);
+					);
 					$the_query = new WP_Query( $args );
 					while ( $the_query->have_posts() ) : $the_query->the_post();
-					get_template_part( 'template-parts/page/content', 'leaders' ); 
+						get_template_part( 'template-parts/page/content', 'leaders' ); 
 					endwhile;
 					?>
 				</div>

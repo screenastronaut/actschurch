@@ -145,13 +145,14 @@ section:not(.widget) {
 
 	.container {		
 		display: flex;
-		justify-content: space-evenly;
+		justify-content: center;
 	}
 
 	.tab-link {
 		cursor: pointer;
-		font-size: 0.9375em;
-		padding-right: 30px;
+		font-size: 14px;
+		padding: 10px;
+		text-align: center;
 		text-transform: uppercase;
 
 		&:hover,
@@ -329,4 +330,8 @@ section:not(.widget) {
 .contact-us {
 	padding-top: 60px;
 	padding-bottom: 60px;
+}
+
+.button-row {
+	text-align: center;
 }
