@@ -15,6 +15,7 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 
 	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.png" type="image/x-icon">
+	<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.png" type="image/x-icon">
 
 	<?php wp_head(); ?>
 
