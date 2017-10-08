@@ -77,30 +77,34 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 			</div>
 
 			<div class="locations-map container-fluid" id="locations-map">
-				<?php 
-				global $location_markers;
-				$location_markers = array();
-				if(have_rows('local')) : 
-					while(have_rows('local')) : the_row(); 
-						$marker = get_sub_field('google_map');
-						$html = get_sub_field('location_name').'<hr>'.$marker['address'];
-						array_push($location_markers, array($marker['address'],$marker['lat'],$marker['lng'],$html));
-					endwhile; endif; 
+				<div class="row">
+					<?php 
+					global $location_markers;
+					$location_markers = array();
+					if(have_rows('local')) : 
+						while(have_rows('local')) : the_row(); 
+							$marker = get_sub_field('google_map');
+							$html = get_sub_field('location_name').'<hr>'.$marker['address'];
+							array_push($location_markers, array($marker['address'],$marker['lat'],$marker['lng'],$html));
+						endwhile; 
+					endif; 
 
 					if(have_rows('international')) : 
 						while(have_rows('international')) : the_row(); 
 							$marker = get_sub_field('google_map');
 							$html = get_sub_field('location_name').'<hr>'.$marker['address'];
 							array_push($location_markers, array($marker['address'],$marker['lat'],$marker['lng'],$html));
-						endwhile; endif; 
-						?> 
-						<div id="map"></div>
-						<script type="text/javascript">
-							var location_markers = <?php echo json_encode($location_markers); ?>;
-						</script>
-					</div>		
+						endwhile; 
+					endif; 
+					?> 
+					<div id="map"></div>
+					<script type="text/javascript">
+						var location_markers = <?php echo json_encode($location_markers); ?>;
+					</script>
+				</div>		
+			</div>
 
-				</main><!-- #main -->
-			</div><!-- #primary -->
+		</main><!-- #main -->
+	</div><!-- #primary -->
 
-			<?php get_footer();
+	<?php get_footer();
