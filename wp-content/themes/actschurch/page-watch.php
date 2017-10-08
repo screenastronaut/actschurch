@@ -27,7 +27,12 @@ $featured_video = get_field('featured_video');
 				if($featured_video): 
 					foreach($featured_video as $post) : setup_postdata($post);
 						?>
-						<div class="featured-left col-lg-6 col-md-6 col-sm-12 col-xs-12">
+						<div class="featured-right hidden-lg hidden-md hidden-sm col-xs-12">
+							<div class="embed-responsive embed-responsive-4by3">
+								<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?php echo get_field('video_embed'); ?>?rel=0"></iframe>
+							</div>
+						</div>
+						<div class="featured-left col-lg-6 col-md-6 col-sm-6 col-xs-12">
 							<h4><?php echo get_the_title(); ?></h4>
 							<?php echo 'Speaker: '.get_field('speaker'); ?>
 							<div class="clear"></div>
@@ -36,22 +41,17 @@ $featured_video = get_field('featured_video');
 							<?php the_tags('<p>Tags: ', ', ', '</p>'); ?>			
 							<?php echo 'Share this video: '.do_shortcode('[addtoany]'); ?>
 						</div>
-						<div class="featured-right col-lg-6 col-md-6 col-sm-12 col-xs-12">
+						<div class="featured-right col-lg-6 col-md-6 col-sm-6 hidden-xs">
 							<div class="embed-responsive embed-responsive-4by3">
 								<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?php echo get_field('video_embed'); ?>?rel=0"></iframe>
 							</div>
-
-					<!-- <a href="<?php echo get_field('url');?>" class="featured-container">
-						<img src="<?php echo get_field('photo'); ?>" alt="" class="featured-photo">
-						<i class="featured-play fa fa-play fa-3x" aria-hidden="true"></i>
-					</a> -->
+						</div>
+					<?php endforeach; endif; ?>
 				</div>
-			<?php endforeach; endif; ?>
-		</div>
 
-		<hr>
+				<hr>
 
-		<div class="container videos-container">
+				<div class="container videos-container">
 			<!-- <div class="search-video col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<form id="storysearchform">
 					<input type="text" name="storysearch" id="storysearch" placeholder="Search">

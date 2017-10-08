@@ -21,10 +21,11 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 		<main id="main" class="site-main" role="main">
 
 			<div class="contact-us container">
-				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 					<?php echo get_field('contact_form'); ?>
+					<br><br>
 				</div>
-				<div class="col-lg-push-1 col-md-push-1 col-lg-5 col-md-5 col-sm-12 col-xs-12">
+				<div class="col-lg-push-1 col-md-push-1 col-lg-5 col-md-5 col-sm-6 col-xs-12">
 					<?php echo get_field('aya_details'); ?>
 				</div>
 			</div>
