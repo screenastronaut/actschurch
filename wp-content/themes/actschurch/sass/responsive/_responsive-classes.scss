@@ -26,6 +26,21 @@
 
 //smaller than ipad portrait
 @media (max-width: 767px) {
+	.splash-image {
+		h1 {
+			font-size: 24px;
+			.special {
+				font-size: 30px;
+			}
+		}
+
+		.button {
+			font-size: 10px;
+			margin: 10px 5px;
+			padding: 5px 10px;
+		}
+	}
+
 	section:not(.widget) {
 		padding: 30px 0;
 	}

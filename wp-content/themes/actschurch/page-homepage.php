@@ -40,8 +40,8 @@ endif;
 	<div class="text-overlay">
 		<h1>A Place For <span class="special">all</span></h1>
 
-		<a href="#time-and-locations" class="inner-link button green hidden-xs">Time & Locations</a>
-		<a href="what-to-expect" class="button blue hidden-xs">What to Expect</a>
+		<a href="#time-and-locations" class="inner-link button green">Time & Locations</a>
+		<a href="what-to-expect" class="button blue">What to Expect</a>
 	</div>
 </div>
 
