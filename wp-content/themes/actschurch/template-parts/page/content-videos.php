@@ -22,6 +22,13 @@ $video_id = get_the_ID();
 		<div class="video-title">
 			<h5><a data-fancybox data-src="#video-<?=$video_id?>" href="javascript:;"><?php the_title(); ?></a></h5>
 		</div>
+		<div class="video-excerpt">
+			<?php 
+			echo '<p><b>Speaker</b>: '.get_field('speaker').'</p>';
+			echo '<p><b>Time</b>: '.get_field('timing').'</p>';
+			the_tags('<p><b>Tags</b>: ', ', ', '</p>'); 
+			?>
+		</div>
 	</div>
 
 	<div style="display:none" class="watch-fancybox" id="video-<?=$video_id?>">

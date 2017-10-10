@@ -245,17 +245,29 @@ section:not(.widget) {
 	}
 }
 
+.featured-video {
+	.pic {
+		position: relative;
+	}
+
+	img {
+		display: block;
+		position: relative;
+		visibility: hidden;
+	}
+
+	.play-icon {
+		color: #fff;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+	}
+}
+
 .videos-container {
 	margin-top: 30px;
-
-	.search-videos {
-		margin-bottom: 30px;
-
-		input,
-		select {
-			margin-right: 30px;
-		}
-	}
 
 	.individual-video {
 		margin-bottom: 30px;
@@ -295,12 +307,11 @@ section:not(.widget) {
 
 		.text {
 			background: $color__light-grey;
-			height: 120px;
+			height: 230px;
 			overflow: hidden;
 			padding: 15px;
 
 			.video-excerpt {
-				height: 180px;
 				overflow: hidden;
 				padding: 15px 0;
 			}

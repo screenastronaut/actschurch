@@ -26,11 +26,15 @@ $featured_video = get_field('featured_video');
 				<?php 
 				if($featured_video): 
 					foreach($featured_video as $post) : setup_postdata($post);
+						$youtube_link = "https://www.youtube.com/watch?v=".get_field('video_link')."&rel=0";
 						?>
 						<div class="featured-right hidden-lg hidden-md hidden-sm col-xs-12">
-							<div class="embed-responsive embed-responsive-4by3">
-								<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?php echo get_field('video_embed'); ?>?rel=0"></iframe>
-							</div>
+							<a data-fancybox href="<?=$youtube_link?>">
+								<div class="pic" style="background:url(<?php echo get_field('photo'); ?>);background-size:cover;background-repeat:no-repeat;">
+									<img src="<?php echo get_field('photo');?>" >
+									<i class="play-icon fa fa-play fa-3x" aria-hidden="true"></i>
+								</div>
+							</a>
 						</div>
 						<div class="featured-left col-lg-6 col-md-6 col-sm-6 col-xs-12">
 							<h4><?php echo get_the_title(); ?></h4>
@@ -42,9 +46,12 @@ $featured_video = get_field('featured_video');
 							<?php echo 'Share this video: '.do_shortcode('[addtoany]'); ?>
 						</div>
 						<div class="featured-right col-lg-6 col-md-6 col-sm-6 hidden-xs">
-							<div class="embed-responsive embed-responsive-4by3">
-								<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?php echo get_field('video_embed'); ?>?rel=0"></iframe>
-							</div>
+							<a data-fancybox href="<?=$youtube_link?>">
+								<div class="pic" style="background:url(<?php echo get_field('photo'); ?>);background-size:cover;background-repeat:no-repeat;">
+									<img src="<?php echo get_field('photo');?>" >
+									<i class="play-icon fa fa-play fa-3x" aria-hidden="true"></i>
+								</div>
+							</a>
 						</div>
 					<?php endforeach; endif; ?>
 				</div>
