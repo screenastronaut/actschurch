@@ -69,7 +69,7 @@ endif;
 						<div class="grid-box col-lg-3 col-md-3"><?=$age_group_text?></div>
 						<div class="grid-box grid-pic-right col-lg-3 col-md-3" style="background:url('<?=$age_group_picture?>') no-repeat;background-size: cover;background-position:center;"></div>
 						<div class="grid-box col-lg-3 col-md-3"><?=$small_groups_text?></div>
-						<div class="grid-box grid-pic-down col-lg-3 col-md-3" style="background:url('<?=$calendar_picture?>') no-repeat;background-size: cover;background-position:center;"></div>
+						<div class="grid-box col-lg-3 col-md-3" style="background:url('<?=$extra_picture?>') no-repeat;background-size: cover;background-position:center;"></div>
 					</div>
 				</div>
 
