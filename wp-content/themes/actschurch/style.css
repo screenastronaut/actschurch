@@ -1404,6 +1404,7 @@ a:hover, a:active {
 
 /* line 226, sass/site/primary/_homepage.scss */
 .featured-events-slider {
+  height: 500px;
   overflow: hidden !important;
   padding: 0 !important;
 }
