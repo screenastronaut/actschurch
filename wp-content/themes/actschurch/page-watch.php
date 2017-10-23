@@ -16,11 +16,6 @@ $featured_video = get_field('featured_video');
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			<div class="container">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-					<?php the_title('<h1 class="page-title">','</h1>'); ?>
-				</div>
-			</div>
 
 			<div class="container featured-video">
 				<?php 

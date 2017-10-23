@@ -6,7 +6,7 @@ $(document).ready(function() {
 	var userLat, userLng;
 
 	$(window).scroll(function() {
-		if($(window).scrollTop() > 80) {
+		if($(window).scrollTop() > 150) {
 			$('.site-header').addClass('shrink');
 			$('.scrollToTop').fadeIn();
 		} else {

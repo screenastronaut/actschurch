@@ -16,9 +16,6 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<section>
-					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-						<h1><?php the_title(); ?></h1>
-					</div>
 					<div class="single-story col-lg-9 col-md-9 col-sm-12 col-xs-12">
 						<?php 
 						echo get_field('story');

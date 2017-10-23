@@ -24,7 +24,6 @@ get_header();
 
 			<div class="container about">
 				<div class="col-lg-push-2 col-md-push-1 col-sm-push-1 col-lg-8 col-md-10 col-sm-10 col-xs-12">
-					<h2 class="red">Acts <?php the_title(); ?></h2>
 					<?php echo get_field('about'); ?>
 				</div>
 			</div>

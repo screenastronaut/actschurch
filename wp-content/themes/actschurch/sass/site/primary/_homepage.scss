@@ -1,7 +1,22 @@
+.home {
+	#page {
+		margin-top: 100px;
+	}
+
+	header {
+		height: 100px;
+	}
+
+	.lower-header {
+		display: none;
+	}
+}
+
 .splash-image {
 	background-position: top center; 
 	background-repeat: no-repeat;
 	background-size: cover;
+	height: 500px;
 	position: relative;
 	text-align: center;
 	z-index: 1;

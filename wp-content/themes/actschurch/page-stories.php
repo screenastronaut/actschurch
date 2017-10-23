@@ -16,11 +16,6 @@ $featured_story = get_field('featured_story');
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			<div class="container">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-					<?php the_title('<h1 class="page-title">','</h1>'); ?>
-				</div>
-			</div>
 
 			<div class="container featured-story">
 				<?php 
@@ -28,7 +23,7 @@ $featured_story = get_field('featured_story');
 					foreach($featured_story as $post) : setup_postdata($post);
 						?>
 						<div class="featured-right hidden-lg hidden-md hidden-sm col-xs-12"">
-							<img src="<?php echo get_field('photo'); ?>" alt="">
+							<a href="<?php the_permalink(); ?>"><img src="<?php echo get_field('photo'); ?>" alt=""></a>
 						</div>
 						<div class="featured-left col-lg-6 col-md-6 col-sm-6 col-xs-12">
 							<h4><?php echo get_the_title(); ?></h4>
@@ -38,7 +33,7 @@ $featured_story = get_field('featured_story');
 							<a href="<?php the_permalink(); ?>" class="button purple read-more">Read More</a>
 						</div>
 						<div class="featured-right col-lg-6 col-md-6 col-sm-6 hidden-xs"">
-							<img src="<?php echo get_field('photo'); ?>" alt="">
+							<a href="<?php the_permalink(); ?>"><img src="<?php echo get_field('photo'); ?>" alt=""></a>
 						</div>
 					<?php endforeach; endif; ?>
 				</div>
