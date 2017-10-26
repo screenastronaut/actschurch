@@ -12,24 +12,32 @@
 	margin-bottom: 30px;
 }
 
+.table-div {
+	margin-top: 30px;
+}
+
 .homes-table {
 
-	.table-header {
-		background: $color__green;
-		color: $color__white;
-		text-transform: uppercase;
+	thead {
+		tr {
+			background: $color__green;
+			border-bottom: none;
+			color: $color__white;
+			text-transform: uppercase;
 
-		td {
-			padding: 10px 0;
+			th {
+				font-weight: normal;
+				padding: 10px;
+			}
 		}
 	}
 
-	tr:not(.table-header) {
+	tr {		
 		border-bottom: 2px solid $color__green;
+	}
 
-		td {
-			padding: 10px 0;
-		}
+	td {
+		padding: 10px;
 	}
 }
 

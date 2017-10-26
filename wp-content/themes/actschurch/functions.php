@@ -165,7 +165,7 @@ function actschurch_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	wp_localize_script( "actschurch-mainjs", 'storysearch1',
+	wp_localize_script( "actschurch-mainjs", 'homesfilter',
 		array(
             'ajaxUrl' => admin_url( 'admin-ajax.php' ), //url for php file that process ajax request to WP
         )
@@ -442,67 +442,6 @@ function my_acf_google_map_api( $api ){
 
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 
-add_action('wp_ajax_story_form_process', 'story_form_process');
-add_action('wp_ajax_nopriv_story_form_process', 'story_form_process');
-function story_form_process() {
-	$storysearch = $_POST['keywords'];
-	$storydate = $_POST['date'];
-	$storycat = $_POST['category'];
-	$args = array(
-		'post_type' => 'stories',
-		'posts_per_page' => -1,
-	);
-	$meta_array = array();
-	$keyword_array = array('relation' => 'OR');
-	$hasmetaquery = false;
-	$haskeywords = false;
-	// if($keywords !== '') {
-	// 	array_push($keyword_array, array(
-	// 		'key' => 'initiative_name',
-	// 		'value' => $keywords,
-	// 		'compare' => 'LIKE',
-	// 		));
-	// 	array_push($keyword_array, array(
-	// 		'key' => 'organisation_name',
-	// 		'value' => $keywords,
-	// 		'compare' => 'LIKE',
-	// 		));
-	// 	array_push($keyword_array, array(
-	// 		'key' => 'initiative_description',
-	// 		'value' => $keywords,
-	// 		'compare' => 'LIKE',
-	// 		));
-	// 	$haskeywords = true;
-	// }
-	if($storycat !== 'All') {
-		array_push($meta_array, array(
-			'key' => 'category',
-			'value' => $storycat,
-			'compare' => '=',
-		));
-		$hasmetaquery = true;
-	}
-	if($haskeywords && $hasmetaquery) { //has keywords and filters
-		$args['meta_query'] = array(
-			$keyword_array,
-			'relation' => 'AND',
-			$meta_array
-		);
-	} else if(!$haskeywords && $hasmetaquery) {	//no keywords but has filters
-		$args['meta_query'] = array(
-			'relation' => 'AND',
-			$meta_array
-		);
-	} else if ($haskeywords && !$hasmetaquery) { //has keywords but no filters
-		$args['meta_query'] = $keyword_array;
-	}
-	$the_query = new WP_Query( $args );
-	if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post();
-		get_template_part( 'template-parts/page/content', 'stories' );
-	endwhile;endif;
-	wp_die();
-}
-
 add_action('wp_ajax_getlocation', 'getlocation');
 add_action('wp_ajax_nopriv_getlocation', 'getlocation');
 function getlocation() {
@@ -522,4 +461,37 @@ function getlocation() {
 		echo $location;
 		wp_die();
 	}
+}
+
+//this is wordpress ajax that can work in front-end and admin areas
+add_action('wp_ajax_nopriv_homes_filter', 'homes_filter_function');
+add_action('wp_ajax_homes_filter', 'homes_filter_function');
+function homes_filter_function(){
+	$plant = $_REQUEST['plant'];
+	$homes_listing = $_REQUEST['homes_listing'];
+
+	switch($_REQUEST['fn']){
+		case 'run_shortcode_function':
+		if($plant == 'All') {
+			$output = '[gdoc key="'.$homes_listing.'" class="homes-table"]';
+		} else {
+			$output = '[gdoc key="'.$homes_listing.'" class="homes-table" query="select A,B,C,D,E,F where B=\'Church Plant\' or B=\''.$plant.'\'"]';
+		}
+		break;
+
+		default:
+		$output = 'No function specified.';
+		break;
+	}
+
+	$output = do_shortcode($output);
+	$output=json_encode($output);
+	if(is_array($output)){
+		print_r($output);
+	}
+	else{
+		echo $output;
+	}
+	die;
+
 }

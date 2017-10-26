@@ -113,43 +113,26 @@ $(document).ready(function() {
 		$('#' + id).addClass('current-tab');
 	});
 
-	$('#homes-city').change(function() {
-		var rex = new RegExp($('#homes-city').val());
-		if(rex =="/All/") {
-			$('tr').show();
-		} else{
-			$('tr:not(.table-header)').hide();
-			$('tr:not(.table-header)').filter(function() {
-				return rex.test($(this).text());
-			}).show();
-		}
-	});
-
-	$('#storysearchform').on('submit', function(e) {
-		e.preventDefault();
-		var storysearch = $('#storysearch').val();
-		var storydate = $('#storydate').val();
-		var storycat = $('#storycat').val();
-
+	$('#homes-plant').change(function() {
 		$.ajax({
-			type: 'post',
-			url: storysearch1.ajaxUrl,
+			url: homesfilter.ajaxUrl,
+			dataType: 'json',
 			data: {
-				action: 'story_form_process',
-				keywords: storysearch,
-				date: storydate,
-				category: storycat,
+				'action': 'homes_filter',
+				'fn': 'run_shortcode_function',
+				'homes_listing': homes_listing,
+				'plant': jQuery('#homes-plant').val(),
 			},
 			beforeSend: function() {
-				$('.all-stories').html('');
+				$('.table-div').html('<img src="../wp-content/themes/actschurch/images/ajax-loader.gif" alt="Loading...">');
 			},
-			success:function(data){
-				$('.all-stories').html(data);
+			success: function(results){
+				$('.table-div').html(results);
 			},
 			error: function(errorThrown){
 				console.log(errorThrown);
 			}
-		});
+		});	
 	});
 
 	$('.locate-map').on('click', function(e) {

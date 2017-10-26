@@ -98,11 +98,10 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 			<section id="find-homes" class="find-homes">
 				<div class="container">
 					<h2>Find a Homes</h2>
-					<!-- TODO: excel and custom city/state -->
 
-					<label for="city">City/State: </label>
-					<select name="city" id="homes-city" >
-						<option disabled selected value="">By City</option>
+					<label for="plant">Church Plant: </label>
+					<select name="plant" id="homes-plant">
+						<option disabled selected value="">By Church Plant</option>
 						<option value="All">All</option>
 						<option value="Ampang">Ampang</option>
 						<option value="Cheras">Cheras</option>
@@ -114,26 +113,12 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 						<option value="Subang Jaya">Subang Jaya</option>
 					</select>
 
-					<table class="homes-table">
-						<tr class="table-header">
-							<td>City/State</td>
-							<td>Location</td>
-							<td>Homes Leader(s)</td>
-							<td>Homes Code</td>
-						</tr>
-						<?php
-						if(have_rows('homes_repeater')) {
-							while(have_rows('homes_repeater')) : the_row();
-								echo '<tr class="'.get_sub_field('city_state').'">';
-								echo '<td>'.get_sub_field('city_state').'</td>';
-								echo '<td>'.get_sub_field('location').'</td>';
-								echo '<td>'.get_sub_field('homes_leaders').'</td>';
-								echo '<td>'.get_sub_field('homes_code').'<br>'.'</td>';
-								echo '</tr>';
-							endwhile;
-						}
-						?>
-					</table>
+					<div class="table-div">
+					<?php echo do_shortcode('[gdoc key="'.get_field('homes_listing').'" class="homes-table" use_cache="no"]'); ?>
+					</div>
+					<script type="text/javascript">
+						var homes_listing = <?php echo json_encode(get_field('homes_listing')); ?>;
+					</script>
 				</div>
 			</section>
 

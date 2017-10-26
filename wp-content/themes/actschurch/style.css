@@ -1732,26 +1732,33 @@ a:hover, a:active {
   margin-bottom: 30px;
 }
 
-/* line 17, sass/site/primary/_connect.scss */
-.homes-table .table-header {
+/* line 15, sass/site/primary/_connect.scss */
+.table-div {
+  margin-top: 30px;
+}
+
+/* line 22, sass/site/primary/_connect.scss */
+.homes-table thead tr {
   background: #4b8944;
+  border-bottom: none;
   color: #fff;
   text-transform: uppercase;
 }
-/* line 22, sass/site/primary/_connect.scss */
-.homes-table .table-header td {
-  padding: 10px 0;
+/* line 28, sass/site/primary/_connect.scss */
+.homes-table thead tr th {
+  font-weight: normal;
+  padding: 10px;
 }
-/* line 27, sass/site/primary/_connect.scss */
-.homes-table tr:not(.table-header) {
+/* line 35, sass/site/primary/_connect.scss */
+.homes-table tr {
   border-bottom: 2px solid #4b8944;
 }
-/* line 30, sass/site/primary/_connect.scss */
-.homes-table tr:not(.table-header) td {
-  padding: 10px 0;
+/* line 39, sass/site/primary/_connect.scss */
+.homes-table td {
+  padding: 10px;
 }
 
-/* line 38, sass/site/primary/_connect.scss */
+/* line 46, sass/site/primary/_connect.scss */
 .contact .contact-form {
   background: #4b8944;
   color: #fff;
@@ -1759,19 +1766,19 @@ a:hover, a:active {
   padding: 2em 3em;
   text-align: left;
 }
-/* line 45, sass/site/primary/_connect.scss */
+/* line 53, sass/site/primary/_connect.scss */
 .contact .contact-form .wpcf7 {
   margin-top: 30px;
 }
-/* line 48, sass/site/primary/_connect.scss */
+/* line 56, sass/site/primary/_connect.scss */
 .contact .contact-form .wpcf7 p {
   margin-bottom: 15px;
 }
-/* line 52, sass/site/primary/_connect.scss */
+/* line 60, sass/site/primary/_connect.scss */
 .contact .contact-form .wpcf7 textarea {
   height: 100px;
 }
-/* line 56, sass/site/primary/_connect.scss */
+/* line 64, sass/site/primary/_connect.scss */
 .contact .contact-form .wpcf7 input[type="submit"] {
   background: #fff;
   border: 2px solid #fff;
@@ -1788,12 +1795,12 @@ a:hover, a:active {
   text-shadow: none;
   text-transform: uppercase;
 }
-/* line 72, sass/site/primary/_connect.scss */
+/* line 80, sass/site/primary/_connect.scss */
 .contact .contact-form .wpcf7 input[type="submit"]:hover {
   background: transparent;
   color: #fff;
 }
-/* line 80, sass/site/primary/_connect.scss */
+/* line 88, sass/site/primary/_connect.scss */
 .contact .contact-image {
   min-height: 700px;
 }
