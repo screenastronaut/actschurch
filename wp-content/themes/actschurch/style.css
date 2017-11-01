@@ -2452,12 +2452,13 @@ footer {
   background: #242424;
   color: #7d807f;
   padding: 45px 0;
+  padding-bottom: 60px;
 }
-/* line 147, sass/site/_header-and-footer.scss */
+/* line 148, sass/site/_header-and-footer.scss */
 footer h2 {
   color: #7d807f;
 }
-/* line 151, sass/site/_header-and-footer.scss */
+/* line 152, sass/site/_header-and-footer.scss */
 footer a {
   color: #fff;
   display: block;
@@ -2465,29 +2466,29 @@ footer a {
   line-height: 1.5em;
   text-decoration: none;
 }
-/* line 158, sass/site/_header-and-footer.scss */
+/* line 159, sass/site/_header-and-footer.scss */
 footer a:hover {
   color: #e7a13d;
   text-decoration: underline;
 }
-/* line 163, sass/site/_header-and-footer.scss */
+/* line 164, sass/site/_header-and-footer.scss */
 footer a:visited {
   color: #fff;
 }
-/* line 168, sass/site/_header-and-footer.scss */
+/* line 169, sass/site/_header-and-footer.scss */
 footer .site-copyright {
   font-size: 12px;
   padding-top: 30px;
   text-align: center;
   text-transform: uppercase;
 }
-/* line 174, sass/site/_header-and-footer.scss */
+/* line 175, sass/site/_header-and-footer.scss */
 footer .site-copyright .fa {
   font-size: 0.5625em;
   margin: 0 20px;
 }
 
-/* line 182, sass/site/_header-and-footer.scss */
+/* line 183, sass/site/_header-and-footer.scss */
 .events-archive header {
   background: #4b8944;
 }
@@ -2496,58 +2497,58 @@ footer .site-copyright .fa {
  * Mixin to compensate for the height of the admin bar
  * for fixed position elements in WordPress themes
  */
-/* line 214, sass/site/_header-and-footer.scss */
+/* line 215, sass/site/_header-and-footer.scss */
 .sticky-header {
   position: fixed;
   top: 0;
   offset-type: number;
 }
-/* line 204, sass/site/_header-and-footer.scss */
+/* line 205, sass/site/_header-and-footer.scss */
 .admin-bar .sticky-header {
   top: 46px;
 }
 @media screen and (min-width: 783px) {
-  /* line 204, sass/site/_header-and-footer.scss */
+  /* line 205, sass/site/_header-and-footer.scss */
   .admin-bar .sticky-header {
     top: 32px;
   }
 }
 
-/* line 220, sass/site/_header-and-footer.scss */
+/* line 221, sass/site/_header-and-footer.scss */
 .sticky-header-offset {
   position: fixed;
   top: 10px;
   offset-type: number;
 }
-/* line 204, sass/site/_header-and-footer.scss */
+/* line 205, sass/site/_header-and-footer.scss */
 .admin-bar .sticky-header-offset {
   top: 66px;
 }
 @media screen and (min-width: 783px) {
-  /* line 204, sass/site/_header-and-footer.scss */
+  /* line 205, sass/site/_header-and-footer.scss */
   .admin-bar .sticky-header-offset {
     top: 52px;
   }
 }
 
-/* line 227, sass/site/_header-and-footer.scss */
+/* line 228, sass/site/_header-and-footer.scss */
 .sticky-header-fake-offset {
   position: fixed;
   top: 10px;
   offset-type: string;
 }
-/* line 204, sass/site/_header-and-footer.scss */
+/* line 205, sass/site/_header-and-footer.scss */
 .admin-bar .sticky-header-fake-offset {
   top: 46px;
 }
 @media screen and (min-width: 783px) {
-  /* line 204, sass/site/_header-and-footer.scss */
+  /* line 205, sass/site/_header-and-footer.scss */
   .admin-bar .sticky-header-fake-offset {
     top: 32px;
   }
 }
 
-/* line 234, sass/site/_header-and-footer.scss */
+/* line 235, sass/site/_header-and-footer.scss */
 .scrollToTop {
   width: 50px;
   height: 50px;
@@ -2564,7 +2565,7 @@ footer .site-copyright .fa {
   background: url("images/arrow-up.png") no-repeat;
   z-index: 999;
 }
-/* line 250, sass/site/_header-and-footer.scss */
+/* line 251, sass/site/_header-and-footer.scss */
 .scrollToTop:hover {
   background: url("images/arrow-up-hover.png") no-repeat;
   text-decoration: none;

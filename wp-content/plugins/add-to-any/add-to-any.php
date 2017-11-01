@@ -3,7 +3,7 @@
 Plugin Name: AddToAny Share Buttons
 Plugin URI: https://www.addtoany.com/
 Description: Share buttons for your pages including AddToAny's universal sharing button, Facebook, Twitter, Google+, Pinterest, WhatsApp and many more.
-Version: 1.7.19
+Version: 1.7.21
 Author: AddToAny
 Author URI: https://www.addtoany.com/
 Text Domain: add-to-any
@@ -768,9 +768,9 @@ function A2A_SHARE_SAVE_head_script() {
 	
 	$javascript_header = "\n" . '<script type="text/javascript">' . "\n"
 	
-		. 'var a2a_config=a2a_config||{};'
-		. 'a2a_config.callbacks=a2a_config.callbacks||[];'
-		. 'a2a_config.templates=a2a_config.templates||{};'
+		. 'window.a2a_config=window.a2a_config||{};'
+		. 'a2a_config.callbacks=[];a2a_config.overlays=[];'
+		. 'a2a_config.templates={};'
 		. A2A_menu_locale()
 		. $script_configs
 		
@@ -866,7 +866,7 @@ function A2A_SHARE_SAVE_add_to_content( $content ) {
 	);
 	
 	// If a Sharing Header is set
-	if ( isset( $options['header'] ) && '' != $options['header'] ) {
+	if ( ! empty( $options['header'] ) ) {
 		$html_header = '<div class="addtoany_header">' . stripslashes( $options['header'] ) . '</div>';
 	} else {
 		$html_header = '';

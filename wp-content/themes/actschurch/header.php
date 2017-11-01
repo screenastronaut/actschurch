@@ -76,4 +76,4 @@ if(is_front_page()) {
 			</div>
 		</header><!-- #masthead -->
 
-		<a href="#" class="scrollToTop"></a>
+		<!-- <a href="#" class="scrollToTop"></a> -->
