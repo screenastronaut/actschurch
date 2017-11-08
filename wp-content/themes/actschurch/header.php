@@ -72,7 +72,7 @@ if(is_front_page()) {
 				</div>
 				<div class="row lower-header">
 					<?php 
-					if(tribe_is_month() || tribe_is_day() || tribe_is_list_view() || tribe_is_map() || tribe_is_photo() || tribe_is_week() ) {
+					if(tribe_is_month() || tribe_is_day() || tribe_is_list_view() || tribe_is_map() || tribe_is_photo() || tribe_is_week() || tribe_is_event() ) {
 						echo '<h1>Calendar</h1>';
 					} else {
 						the_title('<h1>','</h1>'); 

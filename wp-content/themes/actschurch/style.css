@@ -1805,6 +1805,15 @@ a:hover, a:active {
   min-height: 700px;
 }
 
+/* line 93, sass/site/primary/_connect.scss */
+.featured-cal-events-slider {
+  padding-top: 0 !important;
+}
+/* line 96, sass/site/primary/_connect.scss */
+.featured-cal-events-slider img {
+  width: 100%;
+}
+
 /*--------------------------------------------------------------
 ## Locations
 --------------------------------------------------------------*/
