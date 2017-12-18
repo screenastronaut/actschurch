@@ -29,7 +29,6 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 					</div>
 			</section>
 
-			<!-- TODO: replace icons -->
 			<section class="what-to-expect">
 				<div class="container">
 					<h2>What can I expect from my first visit?</h2>

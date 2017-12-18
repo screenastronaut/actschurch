@@ -47,7 +47,23 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 				</div>
 			</section>
 
-			<section class="grid-layout container-fluid">
+			<section class="what-to-expect">
+				<div class="container">
+					<h2>What can I expect from small groups (HOMES)?</h2>
+					<?php 
+					if(have_rows('what_to_expect')) {
+						while(have_rows('what_to_expect')) : the_row();
+							echo '<div class="expect-box col-lg-3 col-md-3 col-sm-6 col-xs-6">';
+							echo '<img src="'.get_sub_field('icon').'" class="expect-icon" aria-hidden="true">';
+							echo '<h4>'.get_sub_field('title').'</h4>';
+							echo '</div>';
+						endwhile;
+					}
+					?>
+				</div>
+			</section>
+
+			<!-- <section class="grid-layout container-fluid">
 				<div class="row">
 					<div class="col-lg-12 col-md-12 hidden-sm hidden-xs">
 						<div class="grid-box col-lg-6 col-md-6" style="background:url('<?=$photo_1?>');background-size: cover; background-position: center">MEALS</div>
@@ -66,7 +82,6 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 					</div>
 				</div>
 
-				<!-- responsive -->
 				<div class="hidden-lg hidden-md col-sm-12 col-xs-12">
 					<div class="grid-box grid-box-small col-sm-12 col-xs-12" style="background:url('<?=$photo_1?>');background-size: cover; background-position: center">
 						<img src="<?=$photo_1?>">
@@ -93,7 +108,7 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 					</div>
 					<div class="grid-box grid-box-small col-sm-12 col-xs-12 grey">WORD</div>
 				</div>
-			</section>
+			</section> -->
 
 			<section id="find-homes" class="find-homes">
 				<div class="container">
