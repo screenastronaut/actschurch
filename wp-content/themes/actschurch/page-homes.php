@@ -37,8 +37,8 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 						<?=$what_is_homes?>
 						<br>
 						<div class="button-row">
-							<a href="#find-homes" class="button green">Find a Home</a>
-							<a href="#join-homes" class="button green">Join a Home</a>
+							<a href="#find-homes" class="button green" style="margin:20px">Find a Homes</a>
+							<a href="#join-homes" class="button green" style="margin:20px">Join a Homes</a>
 						</div>
 					</div>
 					<div class="right-text col-lg-5 col-md-5 hidden-sm hidden-xs">
