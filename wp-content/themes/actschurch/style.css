@@ -986,6 +986,14 @@ a:hover, a:active {
   display: none;
 }
 
+/* line 102, sass/modules/_slick.scss */
+.slick-slider .image {
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  min-height: 500px;
+}
+
 /* Slider */
 /* line 45, sass/modules/_slick-theme.scss */
 .slick-loading .slick-list {
@@ -1404,7 +1412,6 @@ a:hover, a:active {
 
 /* line 226, sass/site/primary/_homepage.scss */
 .featured-events-slider {
-  height: 500px;
   overflow: hidden !important;
   padding: 0 !important;
 }
@@ -1685,32 +1692,33 @@ a:hover, a:active {
 .profile .short-bio {
   background: #242424;
   color: #fff;
+  height: 160px;
   padding: 20px;
 }
-/* line 130, sass/site/primary/_visit.scss */
+/* line 131, sass/site/primary/_visit.scss */
 .profile .short-bio .leader-name {
   font-size: 1.3em;
   text-transform: uppercase;
 }
-/* line 135, sass/site/primary/_visit.scss */
+/* line 136, sass/site/primary/_visit.scss */
 .profile .short-bio .leader-title {
-  font-size: 1.0625em;
+  font-size: 0.9375em;
 }
-/* line 139, sass/site/primary/_visit.scss */
+/* line 140, sass/site/primary/_visit.scss */
 .profile .short-bio .facts {
   margin-top: 15px;
 }
-/* line 143, sass/site/primary/_visit.scss */
+/* line 144, sass/site/primary/_visit.scss */
 .profile .short-bio i {
   font-size: 1.5em;
   margin-right: 5px;
 }
-/* line 148, sass/site/primary/_visit.scss */
+/* line 149, sass/site/primary/_visit.scss */
 .profile .short-bio a {
   color: #fff;
   text-decoration: none;
 }
-/* line 152, sass/site/primary/_visit.scss */
+/* line 153, sass/site/primary/_visit.scss */
 .profile .short-bio a:hover {
   text-decoration: underline;
 }
@@ -4164,56 +4172,90 @@ object {
   .splash-image {
     height: 300px;
   }
+
+  /* line 8, sass/responsive/_responsive-classes.scss */
+  .grid-box.featured-sermon {
+    background-size: cover !important;
+    background-position: center center !important;
+  }
+
+  /* line 14, sass/responsive/_responsive-classes.scss */
+  .grid-box img {
+    display: none;
+  }
 }
 @media (max-width: 768px) {
-  /* line 13, sass/responsive/_responsive-classes.scss */
+  /* line 24, sass/responsive/_responsive-classes.scss */
   .splash-image h1 .special {
     font-size: 50px;
   }
-  /* line 18, sass/responsive/_responsive-classes.scss */
+  /* line 29, sass/responsive/_responsive-classes.scss */
   .splash-image .button {
     margin: 30px 0;
   }
 
-  /* line 23, sass/responsive/_responsive-classes.scss */
+  /* line 34, sass/responsive/_responsive-classes.scss */
   .multi-tab .container {
     flex-flow: column;
   }
 }
 @media (max-width: 767px) {
-  /* line 31, sass/responsive/_responsive-classes.scss */
+  /* line 42, sass/responsive/_responsive-classes.scss */
   .splash-image h1 {
     font-size: 24px;
   }
-  /* line 33, sass/responsive/_responsive-classes.scss */
+  /* line 44, sass/responsive/_responsive-classes.scss */
   .splash-image h1 .special {
     font-size: 30px;
   }
-  /* line 38, sass/responsive/_responsive-classes.scss */
+  /* line 49, sass/responsive/_responsive-classes.scss */
   .splash-image .button {
     font-size: 10px;
     margin: 10px 5px;
     padding: 5px 10px;
   }
 
-  /* line 45, sass/responsive/_responsive-classes.scss */
+  /* line 56, sass/responsive/_responsive-classes.scss */
   section:not(.widget) {
     padding: 30px 0;
   }
 
-  /* line 49, sass/responsive/_responsive-classes.scss */
+  /* line 60, sass/responsive/_responsive-classes.scss */
   a.button {
     font-size: 12px;
     margin: 15px;
   }
 
-  /* line 54, sass/responsive/_responsive-classes.scss */
+  /* line 65, sass/responsive/_responsive-classes.scss */
   .homes-table {
     font-size: 12px;
   }
 
-  /* line 59, sass/responsive/_responsive-classes.scss */
+  /* line 70, sass/responsive/_responsive-classes.scss */
   .services h5 {
     letter-spacing: 0;
+  }
+
+  /* line 76, sass/responsive/_responsive-classes.scss */
+  .grid-layout .grid-box {
+    background: #db654d;
+    color: #fff;
+    height: 300px;
+  }
+  /* line 81, sass/responsive/_responsive-classes.scss */
+  .grid-layout .grid-box a {
+    color: #fff;
+  }
+
+  /* line 87, sass/responsive/_responsive-classes.scss */
+  .grid-box.featured-sermon {
+    background-size: contain !important;
+    background-position: unset !important;
+  }
+
+  /* line 93, sass/responsive/_responsive-classes.scss */
+  .slick-slider .image {
+    background-size: contain !important;
+    min-height: 300px;
   }
 }

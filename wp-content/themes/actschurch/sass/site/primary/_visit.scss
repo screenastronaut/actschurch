@@ -125,6 +125,7 @@
 	.short-bio {
 		background: $color__dark-grey;
 		color: $color__white;
+		height: 160px;
 		padding: 20px;
 
 		.leader-name {
@@ -133,7 +134,7 @@
 		}
 
 		.leader-title {
-			font-size: 1.0625em;
+			font-size: 0.9375em;
 		}
 
 		.facts {

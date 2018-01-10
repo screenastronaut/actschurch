@@ -495,3 +495,5 @@ function homes_filter_function(){
 	die;
 
 }
+
+add_filter('show_admin_bar', '__return_false');

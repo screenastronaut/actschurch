@@ -98,3 +98,11 @@
 .slick-arrow.slick-hidden {
     display: none;
 }
+.slick-slider {
+    .image {
+        background-repeat: no-repeat !important;
+        background-position: center center !important;
+        background-size: cover !important;
+        min-height: 500px;
+    }
+}

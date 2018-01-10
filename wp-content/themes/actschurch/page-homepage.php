@@ -74,28 +74,31 @@ endif;
 				</div>
 
 				<!-- responsive -->
-				<div class="hidden-lg hidden-md col-sm-12 col-xs-12">
-					<a href="<?=$video_link?>" data-fancybox>
-						<div class="grid-box grid-box-small featured-sermon col-sm-12 col-xs-12" style="background:url('<?=$featured_sermon?>') no-repeat;background-size: contain">
-							<img src="<?=$featured_sermon?>">
-							<i class="main-video fa fa-3x fa-play-circle-o" aria-hidden="true"></i>
+				<div class="row">
+					<div class="hidden-lg hidden-md col-sm-12 col-xs-12">
+						<a href="<?=$video_link?>" data-fancybox>
+							<div class="grid-box featured-sermon col-sm-12 col-xs-12" style="background:url('<?=$featured_sermon?>') no-repeat;background-size: contain">
+								<img src="<?=$featured_sermon?>">
+								<i class="main-video fa fa-3x fa-play-circle-o" aria-hidden="true"></i>
+							</div>
+						</a>
+
+						<div class="grid-box col-sm-6 col-xs-12" style="background:url('<?=$small_groups_picture?>') no-repeat;background-size: cover;background-position:top;">
+							<img src="<?=$small_groups_picture?>">
 						</div>
-					</a>
+						<div class="grid-box col-sm-6 col-xs-12"><?=$small_groups_text?></div>
 
-					<div class="grid-box grid-box-small grid-pic-up col-sm-12 col-xs-12" style="background:url('<?=$small_groups_picture?>') no-repeat;background-size: cover;background-position:center;">
-						<img src="<?=$small_groups_picture?>">
-					</div>
-					<div class="grid-box grid-box-small col-sm-12 col-xs-12"><?=$small_groups_text?></div>
+						<div class="grid-box col-sm-6 hidden-xs"><?=$age_group_text?></div>
+						<div class="grid-box col-sm-6 col-xs-12" style="background:url('<?=$age_group_picture?>') no-repeat;background-size: cover;background-position:center;">
+							<img src="<?=$age_group_picture?>">
+						</div>
+						<div class="grid-box hidden-sm col-xs-12"><?=$age_group_text?></div>
 
-					<div class="grid-box grid-box-small grid-pic-up col-sm-12 col-xs-12" style="background:url('<?=$age_group_picture?>') no-repeat;background-size: cover;background-position:center;">
-						<img src="<?=$age_group_picture?>">
+						<div class="grid-box col-sm-6 col-xs-12" style="background:url('<?=$calendar_picture?>') no-repeat;background-size: cover;background-position:center;">
+							<img src="<?=$calendar_picture?>">
+						</div>
+						<div class="grid-box col-sm-6 col-xs-12"><?=$calendar_text?></div>
 					</div>
-					<div class="grid-box grid-box-small col-sm-12 col-xs-12"><?=$age_group_text?></div>
-
-					<div class="grid-box grid-box-small grid-pic-up col-sm-12 col-xs-12" style="background:url('<?=$calendar_picture?>') no-repeat;background-size: cover;background-position:center;">
-						<img src="<?=$calendar_picture?>">
-					</div>
-					<div class="grid-box grid-box-small col-sm-12 col-xs-12"><?=$calendar_text?></div>
 				</div>
 			</section>
 
@@ -125,10 +128,13 @@ endif;
 					if(have_rows('featured_events_slider')) :
 						while(have_rows('featured_events_slider')) : the_row();
 							?>
-							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-								<a href="<?php echo get_sub_field('link');?>">
-									<img src="<?php echo get_sub_field('image'); ?>">
-								</a>
+							<div class="row">
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+									<a href="<?php echo get_sub_field('link');?>">
+										<div class="image" style="background:url('<?php echo get_sub_field('image'); ?>');"></div>
+										<!-- <img src="<?php echo get_sub_field('image'); ?>"> -->
+									</a>
+								</div>
 							</div>
 						<?php endwhile; endif;?>
 					</div>

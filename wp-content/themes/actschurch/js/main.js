@@ -9,9 +9,11 @@ $(document).ready(function() {
 		if($(window).scrollTop() > 150) {
 			$('.site-header').addClass('shrink');
 			$('.scrollToTop').fadeIn();
+			$('button#responsive-menu-button').css({'top': '5px'});
 		} else {
 			$('.site-header').removeClass('shrink');
 			$('.scrollToTop').fadeOut();
+			$('button#responsive-menu-button').css({'top': '25px'});
 		}
 	});
 

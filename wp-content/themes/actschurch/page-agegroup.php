@@ -39,19 +39,13 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 					if(have_rows('slider')) {
 						while(have_rows('slider')) : the_row();
 							echo '<a href="'.get_sub_field('link').'">';
-							echo '<img class="slider-img" src="'.get_sub_field('posters').'" >';
+							echo '<div class="image" style="background:url('.get_sub_field('posters').')"></div>';
+							// echo '<img class="slider-img" src="'.get_sub_field('posters').'" >';
 							echo '</a>';
 						endwhile;
 					}
 					?>
 				</div>
-			</section>
-
-			<section class="container">
-				<!-- TODO: calendar -->
-				<h2>Upcoming Events</h2>
-				<?=$calendar_text?>
-				<?php echo do_shortcode('[tribe_events]'); ?>
 			</section>
 
 			<section class="stories container-fluid">

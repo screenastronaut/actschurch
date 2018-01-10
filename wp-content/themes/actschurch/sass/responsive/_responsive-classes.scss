@@ -4,6 +4,17 @@
 		// background-size: contain;
 		height: 300px;
 	}
+
+	.grid-box.featured-sermon {
+		background-size: cover !important; 
+		background-position: center center !important;
+	}
+
+	.grid-box {
+		img {
+			display: none;
+		}
+	}
 }
 
 //ipad portrait
@@ -58,6 +69,30 @@
 	.services {
 		h5 {
 			letter-spacing: 0;
+		}
+	}
+
+	.grid-layout {
+		.grid-box {
+			background: $color__red;
+			color: $color__white;
+			height: 300px;
+
+			a {
+				color: $color__white;
+			}
+		}
+	}
+
+	.grid-box.featured-sermon {
+		background-size: contain !important; 
+		background-position: unset !important;
+	}
+
+	.slick-slider {
+		.image {
+			background-size: contain !important;
+			min-height: 300px;
 		}
 	}
 }
