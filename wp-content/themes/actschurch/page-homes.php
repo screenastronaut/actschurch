@@ -114,7 +114,9 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 				<div class="container">
 					<h2>Find a Homes</h2>
 
-					<label for="plant">Church Plant: </label>
+					<?php echo '<iframe width="100%" height="500px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTZshWg8uEiQx68kg8cEmcJLAqukp4I_hiWM8B2LI3XLBumoomaQREHzBke55D3IG0VjiA3mxfHo_S7/pubhtml?widget=true&amp;headers=false"></iframe>'; ?>
+
+					<!-- <label for="plant">Church Plant: </label>
 					<select name="plant" id="homes-plant">
 						<option disabled selected value="">By Church Plant</option>
 						<option value="All">All</option>
@@ -129,11 +131,11 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 					</select>
 
 					<div class="table-div">
-					<?php echo do_shortcode('[gdoc key="'.get_field('homes_listing').'" class="homes-table" use_cache="no"]'); ?>
+					<?php //echo do_shortcode('[gdoc key="'.get_field('homes_listing').'" class="homes-table" use_cache="no"]'); ?>
 					</div>
 					<script type="text/javascript">
-						var homes_listing = <?php echo json_encode(get_field('homes_listing')); ?>;
-					</script>
+						var homes_listing = <?php //echo json_encode(get_field('homes_listing')); ?>;
+					</script> -->
 				</div>
 			</section>
 
@@ -147,7 +149,7 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 
 			<section class="stories container-fluid">
 				<h2>Real Stories</h2>
-				<div class="col-lg-push-2 col-lg-12 col-md-8 col-sm-12 col-xs-12">
+				<div class="col-lg-push-2 col-lg-8 col-md-8 col-sm-12 col-xs-12">
 					<?php echo get_field('real_stories_text'); ?>
 					<a href="stories" class="button green">Explore Stories</a>
 				</div>

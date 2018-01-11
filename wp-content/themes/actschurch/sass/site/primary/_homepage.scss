@@ -10,6 +10,10 @@
 	.lower-header {
 		display: none;
 	}
+
+	.featured-events-slider {
+		background: $color__white;
+	}
 }
 
 .splash-image {
@@ -225,8 +229,13 @@
 
 .featured-events-slider {
 	// height: 500px;
+	background: $color__light-grey;
 	overflow: hidden !important;
 	padding: 0 !important;
+
+	h2 {
+		margin-top: 0.5em;
+	}
 }
 
 .stories {
@@ -295,6 +304,10 @@
 	.location {
 		border-bottom: 1px solid $color__white;
 		text-align: left;
+
+		h4 {
+			margin: 0.5em 0;
+		}
 
 		.location-name {
 			cursor: pointer;

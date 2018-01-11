@@ -33,20 +33,31 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 				</div>
 			</section>
 
+			<?php
+			if(have_rows('slider')) { ?>
 			<section class="featured-events-slider container-fluid">
+				<h2>Upcoming Events</h2>
 				<div class="slick-slider">
 					<?php
-					if(have_rows('slider')) {
-						while(have_rows('slider')) : the_row();
-							echo '<a href="'.get_sub_field('link').'">';
-							echo '<div class="image" style="background:url('.get_sub_field('posters').')"></div>';
-							// echo '<img class="slider-img" src="'.get_sub_field('posters').'" >';
-							echo '</a>';
-						endwhile;
-					}
-					?>
+					while(have_rows('slider')) : the_row();
+						$link = get_sub_field('link');
+						$landscape = get_sub_field('posters');
+						$portrait = get_sub_field('posters_portrait'); 
+						?>
+						<a href="<?=$link?>">
+							<div class="image" style="background:url(<?=$landscape?>)"><img class="slider-img" src="<?=$landscape?>" ></div>
+							<!-- <?php if($portrait) { ?>
+							<div class="image hidden-lg hidden-md" style="background:url(<?=$portrait?>)"><img class="slider-img" src="<?=$portrait?>" ></div>
+							<?php } ?> -->
+						</a>
+					<?php endwhile; ?>
 				</div>
 			</section>
+			<?php } ?>
+
+			<?php
+			$class = 0;
+			if($real_stories): ?>
 
 			<section class="stories container-fluid">
 				<h2>Real Stories</h2>
@@ -55,22 +66,19 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 					<a href="stories" class="button green">Explore Stories</a>
 				</div>
 				<div class="clear"></div>
-
 				<?php
-				$class = 0;
-				if($real_stories):
-					foreach($real_stories as $post) : setup_postdata($post);
-						$class++;
-						set_query_var('class',$class);
-						get_template_part( 'template-parts/post/content', 'featured-stories' );
-					endforeach;
-					wp_reset_postdata();
-				endif;
-				?>
+				foreach($real_stories as $post) : setup_postdata($post);
+					$class++;
+					set_query_var('class',$class);
+					get_template_part( 'template-parts/post/content', 'featured-stories' );
+				endforeach;
+				wp_reset_postdata();
 
-			</section>
+				echo '</section>';
+			endif;
+			?>
 
-			<section class="age-contact contact container-fluid">
+			<section class="age-contact contact container-fluid" style="padding:0">
 				<div class="contact-form col-lg-6 col-md-6 col-sm-12 col-xs-12">
 					<?=$contact_form?>
 				</div>

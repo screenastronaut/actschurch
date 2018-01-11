@@ -19,6 +19,54 @@
 
 //ipad portrait
 @media (max-width: 768px) {
+	.home {
+		#page {
+			margin-top: 0;
+		}
+
+		.mobile-header {
+			display: none;
+		}
+	}
+
+	#page {
+		margin-top: 0;
+	}
+
+	.mobile-header {
+		height: 80px;
+		line-height: 80px;
+		text-align: center;
+
+		&.transparent-header {
+			background: $color__white;
+		}
+
+		&.orange-header {
+			background: $color__red;
+			color: $color__white !important;
+		}
+
+		&.green-header {
+			background: $color__green;
+			color: $color__white !important;
+		}
+
+		&.purple-header {
+			background: $color__purple;
+			color: $color__white !important;
+		}
+
+		&.blue-header {
+			background: $color__blue;
+			color: $color__white !important;
+		}
+	}
+
+	.hide-on-mobile {
+		display: none;
+	}
+
 	.splash-image {
 		h1 {			
 			.special {
@@ -34,6 +82,22 @@
 	.multi-tab .container {
 		flex-flow: column;
 	}
+
+	#wprmenu_bar {
+		height: 50px !important;
+
+		.hamburger {
+			margin-top: 0 !important;
+		}
+
+		.menu_title {
+			top: -3px !important;
+		}
+	}
+
+	// #wprmenu_menu_ul li.wprmenu_no_border_bottom ul.sub-menu {
+	// 	display: block !important;
+	// }
 }
 
 //smaller than ipad portrait
@@ -92,7 +156,8 @@
 	.slick-slider {
 		.image {
 			background-size: contain !important;
-			min-height: 300px;
+			background-position: top !important;
+			min-height: 200px;
 		}
 	}
 }

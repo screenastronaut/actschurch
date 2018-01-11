@@ -1,5 +1,6 @@
 input[type="text"],
 input[type="email"],
+input[type="tel"],
 input[type="url"],
 input[type="password"],
 input[type="search"],
@@ -7,6 +8,7 @@ textarea {
 	color: $color__text-input;
 	border: 1px solid $color__border-input;
 	border-radius: 3px;
+	max-width: 100%;
 
 	&:focus {
 		color: $color__text-input-focus;

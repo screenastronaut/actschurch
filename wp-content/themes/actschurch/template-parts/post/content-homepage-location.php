@@ -27,8 +27,12 @@ if($id % 2 == 0) {
 	<h5><?=$address?></h5>
 	<div><?=$service_times?></div>
 	<div class="links">
-		<a href="<?=$waze_link?>" target="_blank">Waze</a>
-		<a href="<?=$google_map_links?>" target="_blank">Google Maps</a>
+		<?php 
+		if($waze_link)
+			echo '<a href="'.$waze_link.'" target="_blank">Waze</a>';
+		if($google_map_links)
+			echo '<a href="'.$google_map_links.'" target="_blank">Google Maps</a>';
+		?>
 		<a href="<?=$page_link?>">Find out more</a>
 	</div>
 </div>

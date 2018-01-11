@@ -82,4 +82,14 @@ if(is_front_page()) {
 			</div>
 		</header><!-- #masthead -->
 
+		<div class="mobile-header <?=$header_class?> hidden-lg hidden-md">
+			<?php 
+			if(tribe_is_month() || tribe_is_day() || tribe_is_list_view() || tribe_is_map() || tribe_is_photo() || tribe_is_week() || tribe_is_event() ) {
+				echo '<h1>Calendar</h1>';
+			} else {
+				the_title('<h1>','</h1>'); 
+			}
+			?>
+		</div>
+
 		<!-- <a href="#" class="scrollToTop"></a> -->

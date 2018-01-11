@@ -617,6 +617,7 @@ input[type="submit"]:focus {
 /* line 1, sass/forms/_fields.scss */
 input[type="text"],
 input[type="email"],
+input[type="tel"],
 input[type="url"],
 input[type="password"],
 input[type="search"],
@@ -624,10 +625,12 @@ textarea {
   color: #666;
   border: 1px solid #ccc;
   border-radius: 3px;
+  max-width: 100%;
 }
-/* line 11, sass/forms/_fields.scss */
+/* line 13, sass/forms/_fields.scss */
 input[type="text"]:focus,
 input[type="email"]:focus,
+input[type="tel"]:focus,
 input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
@@ -635,7 +638,7 @@ textarea:focus {
   color: #111;
 }
 
-/* line 16, sass/forms/_fields.scss */
+/* line 18, sass/forms/_fields.scss */
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -644,7 +647,7 @@ input[type="search"] {
   padding: 3px;
 }
 
-/* line 24, sass/forms/_fields.scss */
+/* line 26, sass/forms/_fields.scss */
 textarea {
   padding-left: 3px;
   width: 100%;
@@ -956,37 +959,37 @@ a:hover, a:active {
 }
 /* line 71, sass/modules/_slick.scss */
 .slick-slide img {
-  display: block;
+  display: none;
 }
-/* line 74, sass/modules/_slick.scss */
+/* line 75, sass/modules/_slick.scss */
 .slick-slide.slick-loading img {
   display: none;
 }
-/* line 80, sass/modules/_slick.scss */
+/* line 81, sass/modules/_slick.scss */
 .slick-slide.dragging img {
   pointer-events: none;
 }
-/* line 84, sass/modules/_slick.scss */
+/* line 85, sass/modules/_slick.scss */
 .slick-initialized .slick-slide {
   display: block;
 }
-/* line 88, sass/modules/_slick.scss */
+/* line 89, sass/modules/_slick.scss */
 .slick-loading .slick-slide {
   visibility: hidden;
 }
-/* line 92, sass/modules/_slick.scss */
+/* line 93, sass/modules/_slick.scss */
 .slick-vertical .slick-slide {
   display: block;
   height: auto;
   border: 1px solid transparent;
 }
 
-/* line 98, sass/modules/_slick.scss */
+/* line 99, sass/modules/_slick.scss */
 .slick-arrow.slick-hidden {
   display: none;
 }
 
-/* line 102, sass/modules/_slick.scss */
+/* line 103, sass/modules/_slick.scss */
 .slick-slider .image {
   background-repeat: no-repeat !important;
   background-position: center center !important;
@@ -1028,8 +1031,9 @@ a:hover, a:active {
   padding: 0;
   border: none;
   outline: none;
+  z-index: 99999;
 }
-/* line 81, sass/modules/_slick-theme.scss */
+/* line 82, sass/modules/_slick-theme.scss */
 .slick-prev:hover, .slick-prev:focus,
 .slick-next:hover,
 .slick-next:focus {
@@ -1037,22 +1041,22 @@ a:hover, a:active {
   background: transparent;
   color: transparent;
 }
-/* line 85, sass/modules/_slick-theme.scss */
+/* line 86, sass/modules/_slick-theme.scss */
 .slick-prev:hover:before, .slick-prev:focus:before,
 .slick-next:hover:before,
 .slick-next:focus:before {
   opacity: 1;
 }
-/* line 89, sass/modules/_slick-theme.scss */
+/* line 90, sass/modules/_slick-theme.scss */
 .slick-prev.slick-disabled:before,
 .slick-next.slick-disabled:before {
   opacity: 0.25;
 }
-/* line 92, sass/modules/_slick-theme.scss */
+/* line 93, sass/modules/_slick-theme.scss */
 .slick-prev:before,
 .slick-next:before {
   font-family: "slick";
-  font-size: 20px;
+  font-size: 40px;
   line-height: 1;
   color: white;
   opacity: 0.75;
@@ -1060,49 +1064,49 @@ a:hover, a:active {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 103, sass/modules/_slick-theme.scss */
+/* line 104, sass/modules/_slick-theme.scss */
 .slick-prev {
-  left: -25px;
+  left: 25px;
 }
-/* line 105, sass/modules/_slick-theme.scss */
+/* line 106, sass/modules/_slick-theme.scss */
 [dir="rtl"] .slick-prev {
   left: auto;
   right: -25px;
 }
-/* line 109, sass/modules/_slick-theme.scss */
+/* line 110, sass/modules/_slick-theme.scss */
 .slick-prev:before {
   content: "←";
 }
-/* line 111, sass/modules/_slick-theme.scss */
+/* line 112, sass/modules/_slick-theme.scss */
 [dir="rtl"] .slick-prev:before {
   content: "→";
 }
 
-/* line 117, sass/modules/_slick-theme.scss */
+/* line 118, sass/modules/_slick-theme.scss */
 .slick-next {
-  right: -25px;
+  right: 25px;
 }
-/* line 119, sass/modules/_slick-theme.scss */
+/* line 120, sass/modules/_slick-theme.scss */
 [dir="rtl"] .slick-next {
   left: -25px;
   right: auto;
 }
-/* line 123, sass/modules/_slick-theme.scss */
+/* line 124, sass/modules/_slick-theme.scss */
 .slick-next:before {
   content: "→";
 }
-/* line 125, sass/modules/_slick-theme.scss */
+/* line 126, sass/modules/_slick-theme.scss */
 [dir="rtl"] .slick-next:before {
   content: "←";
 }
 
 /* Dots */
-/* line 133, sass/modules/_slick-theme.scss */
+/* line 134, sass/modules/_slick-theme.scss */
 .slick-dotted.slick-slider {
   margin-bottom: 30px;
 }
 
-/* line 137, sass/modules/_slick-theme.scss */
+/* line 138, sass/modules/_slick-theme.scss */
 .slick-dots {
   position: absolute;
   bottom: -25px;
@@ -1113,7 +1117,7 @@ a:hover, a:active {
   margin: 0;
   width: 100%;
 }
-/* line 146, sass/modules/_slick-theme.scss */
+/* line 147, sass/modules/_slick-theme.scss */
 .slick-dots li {
   position: relative;
   display: inline-block;
@@ -1123,7 +1127,7 @@ a:hover, a:active {
   padding: 0;
   cursor: pointer;
 }
-/* line 154, sass/modules/_slick-theme.scss */
+/* line 155, sass/modules/_slick-theme.scss */
 .slick-dots li button {
   border: 0;
   background: transparent;
@@ -1137,15 +1141,15 @@ a:hover, a:active {
   padding: 5px;
   cursor: pointer;
 }
-/* line 166, sass/modules/_slick-theme.scss */
+/* line 167, sass/modules/_slick-theme.scss */
 .slick-dots li button:hover, .slick-dots li button:focus {
   outline: none;
 }
-/* line 168, sass/modules/_slick-theme.scss */
+/* line 169, sass/modules/_slick-theme.scss */
 .slick-dots li button:hover:before, .slick-dots li button:focus:before {
   opacity: 1;
 }
-/* line 172, sass/modules/_slick-theme.scss */
+/* line 173, sass/modules/_slick-theme.scss */
 .slick-dots li button:before {
   position: absolute;
   top: 0;
@@ -1162,7 +1166,7 @@ a:hover, a:active {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* line 189, sass/modules/_slick-theme.scss */
+/* line 190, sass/modules/_slick-theme.scss */
 .slick-dots li.slick-active button:before {
   color: black;
   opacity: 0.75;
@@ -1204,8 +1208,12 @@ a:hover, a:active {
 .home .lower-header {
   display: none;
 }
+/* line 14, sass/site/primary/_homepage.scss */
+.home .featured-events-slider {
+  background: #fff;
+}
 
-/* line 15, sass/site/primary/_homepage.scss */
+/* line 19, sass/site/primary/_homepage.scss */
 .splash-image {
   background-position: top center;
   background-repeat: no-repeat;
@@ -1215,13 +1223,13 @@ a:hover, a:active {
   text-align: center;
   z-index: 1;
 }
-/* line 24, sass/site/primary/_homepage.scss */
+/* line 28, sass/site/primary/_homepage.scss */
 .splash-image img {
   display: block;
   position: relative;
   visibility: hidden;
 }
-/* line 30, sass/site/primary/_homepage.scss */
+/* line 34, sass/site/primary/_homepage.scss */
 .splash-image .gradient-overlay {
   background: rgba(0, 0, 0, 0.3);
   height: 100%;
@@ -1230,7 +1238,7 @@ a:hover, a:active {
   width: 100%;
   z-index: 1;
 }
-/* line 39, sass/site/primary/_homepage.scss */
+/* line 43, sass/site/primary/_homepage.scss */
 .splash-image .text-overlay {
   position: absolute;
   top: 50%;
@@ -1238,29 +1246,29 @@ a:hover, a:active {
   width: 100%;
   z-index: 2;
 }
-/* line 48, sass/site/primary/_homepage.scss */
+/* line 52, sass/site/primary/_homepage.scss */
 .splash-image h1 {
   background: rgba(0, 0, 0, 0.5);
   color: #fff;
   margin-bottom: 0;
 }
-/* line 53, sass/site/primary/_homepage.scss */
+/* line 57, sass/site/primary/_homepage.scss */
 .splash-image h1 .special {
   font-family: "JustLovely", sans-serif;
   font-size: 70px;
 }
-/* line 59, sass/site/primary/_homepage.scss */
+/* line 63, sass/site/primary/_homepage.scss */
 .splash-image .main-video {
   display: block;
   margin: 30px 0;
 }
 
-/* line 65, sass/site/primary/_homepage.scss */
+/* line 69, sass/site/primary/_homepage.scss */
 .grid-layout {
   overflow: hidden !important;
   padding: 0 !important;
 }
-/* line 69, sass/site/primary/_homepage.scss */
+/* line 73, sass/site/primary/_homepage.scss */
 .grid-layout .grid-box {
   font-size: 1.5em;
   height: 400px;
@@ -1273,30 +1281,30 @@ a:hover, a:active {
   flex-direction: column;
   justify-content: center;
 }
-/* line 83, sass/site/primary/_homepage.scss */
+/* line 87, sass/site/primary/_homepage.scss */
 .grid-layout .grid-box-small {
   height: auto;
 }
-/* line 86, sass/site/primary/_homepage.scss */
+/* line 90, sass/site/primary/_homepage.scss */
 .grid-layout .grid-box-small img {
   display: block;
   visibility: hidden;
 }
-/* line 91, sass/site/primary/_homepage.scss */
+/* line 95, sass/site/primary/_homepage.scss */
 .grid-layout .grid-box-small h4 {
   font-size: 1.2em;
 }
-/* line 95, sass/site/primary/_homepage.scss */
+/* line 99, sass/site/primary/_homepage.scss */
 .grid-layout .grid-box-small p {
   font-size: 0.875em;
 }
-/* line 100, sass/site/primary/_homepage.scss */
+/* line 104, sass/site/primary/_homepage.scss */
 .grid-layout .grid-half {
   height: 200px;
   line-height: 200px;
   width: 100%;
 }
-/* line 106, sass/site/primary/_homepage.scss */
+/* line 110, sass/site/primary/_homepage.scss */
 .grid-layout .grid-half.grid-pic-up:after, .grid-layout .grid-half.grid-pic-up:before {
   top: 40%;
   left: 50%;
@@ -1307,21 +1315,21 @@ a:hover, a:active {
   position: absolute;
   pointer-events: none;
 }
-/* line 117, sass/site/primary/_homepage.scss */
+/* line 121, sass/site/primary/_homepage.scss */
 .grid-layout .grid-half.grid-pic-up:after {
   border-color: rgba(255, 255, 255, 0);
   border-bottom-color: #ffffff;
   border-width: 20px;
   margin-left: -20px;
 }
-/* line 123, sass/site/primary/_homepage.scss */
+/* line 127, sass/site/primary/_homepage.scss */
 .grid-layout .grid-half.grid-pic-up:before {
   border-color: rgba(255, 255, 255, 0);
   border-bottom-color: #ffffff;
   border-width: 21px;
   margin-left: -21px;
 }
-/* line 133, sass/site/primary/_homepage.scss */
+/* line 137, sass/site/primary/_homepage.scss */
 .grid-layout .grid-pic-up:after, .grid-layout .grid-pic-up:before {
   top: 90%;
   left: 50%;
@@ -1332,21 +1340,21 @@ a:hover, a:active {
   position: absolute;
   pointer-events: none;
 }
-/* line 144, sass/site/primary/_homepage.scss */
+/* line 148, sass/site/primary/_homepage.scss */
 .grid-layout .grid-pic-up:after {
   border-color: rgba(255, 255, 255, 0);
   border-bottom-color: #ffffff;
   border-width: 20px;
   margin-left: -20px;
 }
-/* line 150, sass/site/primary/_homepage.scss */
+/* line 154, sass/site/primary/_homepage.scss */
 .grid-layout .grid-pic-up:before {
   border-color: rgba(255, 255, 255, 0);
   border-bottom-color: #ffffff;
   border-width: 21px;
   margin-left: -21px;
 }
-/* line 159, sass/site/primary/_homepage.scss */
+/* line 163, sass/site/primary/_homepage.scss */
 .grid-layout .grid-pic-right:after, .grid-layout .grid-pic-right:before {
   left: 0;
   top: 50%;
@@ -1357,21 +1365,21 @@ a:hover, a:active {
   position: absolute;
   pointer-events: none;
 }
-/* line 170, sass/site/primary/_homepage.scss */
+/* line 174, sass/site/primary/_homepage.scss */
 .grid-layout .grid-pic-right:after {
   border-color: rgba(255, 255, 255, 0);
   border-left-color: #ffffff;
   border-width: 20px;
   margin-top: -20px;
 }
-/* line 176, sass/site/primary/_homepage.scss */
+/* line 180, sass/site/primary/_homepage.scss */
 .grid-layout .grid-pic-right:before {
   border-color: rgba(255, 255, 255, 0);
   border-left-color: #ffffff;
   border-width: 21px;
   margin-top: -21px;
 }
-/* line 185, sass/site/primary/_homepage.scss */
+/* line 189, sass/site/primary/_homepage.scss */
 .grid-layout .grid-pic-down:after, .grid-layout .grid-pic-down:before {
   top: 0;
   left: 50%;
@@ -1382,122 +1390,131 @@ a:hover, a:active {
   position: absolute;
   pointer-events: none;
 }
-/* line 196, sass/site/primary/_homepage.scss */
+/* line 200, sass/site/primary/_homepage.scss */
 .grid-layout .grid-pic-down:after {
   border-color: rgba(255, 255, 255, 0);
   border-top-color: #ffffff;
   border-width: 20px;
   margin-left: -20px;
 }
-/* line 202, sass/site/primary/_homepage.scss */
+/* line 206, sass/site/primary/_homepage.scss */
 .grid-layout .grid-pic-down:before {
   border-color: rgba(255, 255, 255, 0);
   border-top-color: #ffffff;
   border-width: 21px;
   margin-left: -21px;
 }
-/* line 211, sass/site/primary/_homepage.scss */
+/* line 215, sass/site/primary/_homepage.scss */
 .grid-layout .featured-sermon i {
   color: #fff;
   position: absolute;
 }
-/* line 215, sass/site/primary/_homepage.scss */
+/* line 219, sass/site/primary/_homepage.scss */
 .grid-layout .featured-sermon i:hover {
   color: #db654d;
 }
-/* line 221, sass/site/primary/_homepage.scss */
+/* line 225, sass/site/primary/_homepage.scss */
 .grid-layout .grey {
   background: #f5f3f4;
 }
 
-/* line 226, sass/site/primary/_homepage.scss */
+/* line 230, sass/site/primary/_homepage.scss */
 .featured-events-slider {
+  background: #f5f3f4;
   overflow: hidden !important;
   padding: 0 !important;
 }
+/* line 236, sass/site/primary/_homepage.scss */
+.featured-events-slider h2 {
+  margin-top: 0.5em;
+}
 
-/* line 232, sass/site/primary/_homepage.scss */
+/* line 241, sass/site/primary/_homepage.scss */
 .stories {
   background: #f5f3f4;
 }
-/* line 237, sass/site/primary/_homepage.scss */
+/* line 246, sass/site/primary/_homepage.scss */
 .stories .real-story-link:hover h4 {
   text-decoration: underline;
 }
-/* line 243, sass/site/primary/_homepage.scss */
+/* line 252, sass/site/primary/_homepage.scss */
 .stories .real-story {
   margin-bottom: 30px;
 }
-/* line 246, sass/site/primary/_homepage.scss */
+/* line 255, sass/site/primary/_homepage.scss */
 .stories .real-story .text {
   height: 100px;
   overflow: hidden;
   padding: 15px 20px;
   text-align: left;
 }
-/* line 252, sass/site/primary/_homepage.scss */
+/* line 261, sass/site/primary/_homepage.scss */
 .stories .real-story .text h4 {
   color: #fff;
 }
-/* line 257, sass/site/primary/_homepage.scss */
+/* line 266, sass/site/primary/_homepage.scss */
 .stories .real-story .text-1 {
   background: #26395a;
 }
-/* line 261, sass/site/primary/_homepage.scss */
+/* line 270, sass/site/primary/_homepage.scss */
 .stories .real-story .text-2 {
   background: #6f3d79;
 }
-/* line 265, sass/site/primary/_homepage.scss */
+/* line 274, sass/site/primary/_homepage.scss */
 .stories .real-story .text-3 {
   background: #e7a13d;
 }
-/* line 269, sass/site/primary/_homepage.scss */
+/* line 278, sass/site/primary/_homepage.scss */
 .stories .real-story .text-4 {
   background: #db654d;
 }
-/* line 273, sass/site/primary/_homepage.scss */
+/* line 282, sass/site/primary/_homepage.scss */
 .stories .real-story .pic {
   background-repeat: no-repeat;
   background-size: cover;
   height: 300px;
 }
 
-/* line 281, sass/site/primary/_homepage.scss */
+/* line 290, sass/site/primary/_homepage.scss */
 .local-services,
 .international-services {
   display: block;
   margin-top: 30px;
 }
 
-/* line 287, sass/site/primary/_homepage.scss */
+/* line 296, sass/site/primary/_homepage.scss */
 .international-services {
   display: none;
 }
 
-/* line 291, sass/site/primary/_homepage.scss */
+/* line 300, sass/site/primary/_homepage.scss */
 .locations {
   background: #26395a;
   color: #fff;
 }
-/* line 295, sass/site/primary/_homepage.scss */
+/* line 304, sass/site/primary/_homepage.scss */
 .locations .location {
   border-bottom: 1px solid #fff;
   text-align: left;
 }
-/* line 299, sass/site/primary/_homepage.scss */
+/* line 308, sass/site/primary/_homepage.scss */
+.locations .location h4 {
+  margin: 0.5em 0;
+}
+/* line 312, sass/site/primary/_homepage.scss */
 .locations .location .location-name {
   cursor: pointer;
   position: relative;
   text-align: left;
 }
-/* line 305, sass/site/primary/_homepage.scss */
+/* line 318, sass/site/primary/_homepage.scss */
 .locations .location .triangle {
   display: inline-block;
   position: absolute;
   right: 0;
   top: 30%;
 }
-/* line 312, sass/site/primary/_homepage.scss */
+/* line 325, sass/site/primary/_homepage.scss */
 .locations .location .triangle-down {
   width: 0;
   height: 0;
@@ -1505,7 +1522,7 @@ a:hover, a:active {
   border-width: 15px 10px 0 10px;
   border-color: #ffffff transparent transparent transparent;
 }
-/* line 320, sass/site/primary/_homepage.scss */
+/* line 333, sass/site/primary/_homepage.scss */
 .locations .location .triangle-up {
   width: 0;
   height: 0;
@@ -1513,43 +1530,43 @@ a:hover, a:active {
   border-width: 0 10px 15px 10px;
   border-color: transparent transparent #ffffff transparent;
 }
-/* line 328, sass/site/primary/_homepage.scss */
+/* line 341, sass/site/primary/_homepage.scss */
 .locations .location .more-info {
   display: none;
   padding-bottom: 30px;
 }
-/* line 332, sass/site/primary/_homepage.scss */
+/* line 345, sass/site/primary/_homepage.scss */
 .locations .location .more-info h5 {
   font-weight: 700;
 }
-/* line 336, sass/site/primary/_homepage.scss */
+/* line 349, sass/site/primary/_homepage.scss */
 .locations .location .more-info .links {
   margin-top: 30px;
   text-align: right;
 }
-/* line 340, sass/site/primary/_homepage.scss */
+/* line 353, sass/site/primary/_homepage.scss */
 .locations .location .more-info .links a {
   color: #fff;
   padding-right: 15px;
   text-decoration: none;
 }
-/* line 345, sass/site/primary/_homepage.scss */
+/* line 358, sass/site/primary/_homepage.scss */
 .locations .location .more-info .links a:hover {
   text-decoration: underline;
 }
 
-/* line 354, sass/site/primary/_homepage.scss */
+/* line 367, sass/site/primary/_homepage.scss */
 .locate-now {
   background: #e7a13d;
   padding: 30px 0 !important;
   text-align: left;
 }
-/* line 359, sass/site/primary/_homepage.scss */
+/* line 372, sass/site/primary/_homepage.scss */
 .locate-now h3 {
   display: inline-block;
   margin: 0;
 }
-/* line 364, sass/site/primary/_homepage.scss */
+/* line 377, sass/site/primary/_homepage.scss */
 .locate-now a.button {
   margin: 10px 30px;
 }
@@ -1632,20 +1649,20 @@ a:hover, a:active {
 }
 
 /* line 72, sass/site/primary/_visit.scss */
-.sub-menu {
+.believe-sub-menu {
   align-items: flex-start;
   display: flex;
   justify-content: center;
   margin: 30px 0;
 }
 /* line 78, sass/site/primary/_visit.scss */
-.sub-menu span {
+.believe-sub-menu span {
   cursor: pointer;
   margin: 0 20px;
   text-align: center;
 }
 /* line 83, sass/site/primary/_visit.scss */
-.sub-menu span.active, .sub-menu span:hover {
+.believe-sub-menu span.active, .believe-sub-menu span:hover {
   text-shadow: 1px 0px 0px black;
 }
 
@@ -1776,7 +1793,7 @@ a:hover, a:active {
 }
 /* line 53, sass/site/primary/_connect.scss */
 .contact .contact-form .wpcf7 {
-  margin-top: 30px;
+  margin-top: 10px;
 }
 /* line 56, sass/site/primary/_connect.scss */
 .contact .contact-form .wpcf7 p {
@@ -4185,77 +4202,141 @@ object {
   }
 }
 @media (max-width: 768px) {
-  /* line 24, sass/responsive/_responsive-classes.scss */
+  /* line 23, sass/responsive/_responsive-classes.scss */
+  .home #page {
+    margin-top: 0;
+  }
+  /* line 27, sass/responsive/_responsive-classes.scss */
+  .home .mobile-header {
+    display: none;
+  }
+
+  /* line 32, sass/responsive/_responsive-classes.scss */
+  #page {
+    margin-top: 0;
+  }
+
+  /* line 36, sass/responsive/_responsive-classes.scss */
+  .mobile-header {
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+  }
+  /* line 41, sass/responsive/_responsive-classes.scss */
+  .mobile-header.transparent-header {
+    background: #fff;
+  }
+  /* line 45, sass/responsive/_responsive-classes.scss */
+  .mobile-header.orange-header {
+    background: #db654d;
+    color: #fff !important;
+  }
+  /* line 50, sass/responsive/_responsive-classes.scss */
+  .mobile-header.green-header {
+    background: #4b8944;
+    color: #fff !important;
+  }
+  /* line 55, sass/responsive/_responsive-classes.scss */
+  .mobile-header.purple-header {
+    background: #6f3d79;
+    color: #fff !important;
+  }
+  /* line 60, sass/responsive/_responsive-classes.scss */
+  .mobile-header.blue-header {
+    background: #26395a;
+    color: #fff !important;
+  }
+
+  /* line 66, sass/responsive/_responsive-classes.scss */
+  .hide-on-mobile {
+    display: none;
+  }
+
+  /* line 72, sass/responsive/_responsive-classes.scss */
   .splash-image h1 .special {
     font-size: 50px;
   }
-  /* line 29, sass/responsive/_responsive-classes.scss */
+  /* line 77, sass/responsive/_responsive-classes.scss */
   .splash-image .button {
     margin: 30px 0;
   }
 
-  /* line 34, sass/responsive/_responsive-classes.scss */
+  /* line 82, sass/responsive/_responsive-classes.scss */
   .multi-tab .container {
     flex-flow: column;
   }
+
+  /* line 86, sass/responsive/_responsive-classes.scss */
+  #wprmenu_bar {
+    height: 50px !important;
+  }
+  /* line 89, sass/responsive/_responsive-classes.scss */
+  #wprmenu_bar .hamburger {
+    margin-top: 0 !important;
+  }
+  /* line 93, sass/responsive/_responsive-classes.scss */
+  #wprmenu_bar .menu_title {
+    top: -3px !important;
+  }
 }
 @media (max-width: 767px) {
-  /* line 42, sass/responsive/_responsive-classes.scss */
+  /* line 106, sass/responsive/_responsive-classes.scss */
   .splash-image h1 {
     font-size: 24px;
   }
-  /* line 44, sass/responsive/_responsive-classes.scss */
+  /* line 108, sass/responsive/_responsive-classes.scss */
   .splash-image h1 .special {
     font-size: 30px;
   }
-  /* line 49, sass/responsive/_responsive-classes.scss */
+  /* line 113, sass/responsive/_responsive-classes.scss */
   .splash-image .button {
     font-size: 10px;
     margin: 10px 5px;
     padding: 5px 10px;
   }
 
-  /* line 56, sass/responsive/_responsive-classes.scss */
+  /* line 120, sass/responsive/_responsive-classes.scss */
   section:not(.widget) {
     padding: 30px 0;
   }
 
-  /* line 60, sass/responsive/_responsive-classes.scss */
+  /* line 124, sass/responsive/_responsive-classes.scss */
   a.button {
     font-size: 12px;
     margin: 15px;
   }
 
-  /* line 65, sass/responsive/_responsive-classes.scss */
+  /* line 129, sass/responsive/_responsive-classes.scss */
   .homes-table {
     font-size: 12px;
   }
 
-  /* line 70, sass/responsive/_responsive-classes.scss */
+  /* line 134, sass/responsive/_responsive-classes.scss */
   .services h5 {
     letter-spacing: 0;
   }
 
-  /* line 76, sass/responsive/_responsive-classes.scss */
+  /* line 140, sass/responsive/_responsive-classes.scss */
   .grid-layout .grid-box {
     background: #db654d;
     color: #fff;
     height: 300px;
   }
-  /* line 81, sass/responsive/_responsive-classes.scss */
+  /* line 145, sass/responsive/_responsive-classes.scss */
   .grid-layout .grid-box a {
     color: #fff;
   }
 
-  /* line 87, sass/responsive/_responsive-classes.scss */
+  /* line 151, sass/responsive/_responsive-classes.scss */
   .grid-box.featured-sermon {
     background-size: contain !important;
     background-position: unset !important;
   }
 
-  /* line 93, sass/responsive/_responsive-classes.scss */
+  /* line 157, sass/responsive/_responsive-classes.scss */
   .slick-slider .image {
     background-size: contain !important;
-    min-height: 300px;
+    background-position: top !important;
+    min-height: 200px;
   }
 }

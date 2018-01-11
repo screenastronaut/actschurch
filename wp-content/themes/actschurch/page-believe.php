@@ -21,7 +21,7 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 		<main id="main" class="site-main" role="main">
 
 			<div class="container">
-				<nav class="sub-menu">
+				<nav class="believe-sub-menu">
 					<span class="sub-menu-item active" id="vision">Our Vision</span>
 					<span class="sub-menu-item" id="mission">Our Mission</span>
 					<span class="sub-menu-item" id="purpose">Our Purpose</span>

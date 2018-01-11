@@ -76,8 +76,8 @@ $(document).ready(function() {
 
 	$('.slick-slider').slick({
 		adaptiveHeight: true,
-		arrows: false,
-		dots: true,
+		arrows: true,
+		dots: false,
 		fade: true,
 		infinite: true,
 	})
@@ -232,14 +232,6 @@ $(document).ready(function() {
 
 		google.maps.event.addDomListener( window, 'load', initSingleMap );
 	}
-
-	$('.slick-slider').slick({
-		adaptiveHeight: true,
-		arrows: false,
-		dots: true,
-		fade: true,
-		infinite: true,
-	})
 });
 
 var styledMapType = new google.maps.StyledMapType(

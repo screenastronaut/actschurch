@@ -1,0 +1,37 @@
+/* Example media queries */
+@media screen and (max-width: 55.1875em) {
+.cbp-spmenu-horizontal { font-size: 75%; height: 110px; }
+.cbp-spmenu-top { top: -100%; }
+.cbp-spmenu-bottom { bottom: -100%; }
+}
+
+
+body.rtl #mg-wprm-wrap ul.sub-menu  { margin-right: 0px; }
+html body.rtl #wprmenu_bar div.menu_title {
+  text-align: right ;
+}
+body.rtl #wprmenu_bar .bar_logo {
+  left: 0 !important;
+  right: auto !important;
+}
+body.rtl #wprmenu_menu_ul {
+  margin: 0 !important;
+}
+body.rtl #mg-wprm-wrap li.menu-item a {
+  padding: 16px 17px 16px 18px;
+}
+body.rtl div#mg-wprm-wrap ul li span.wprmenu_icon {
+  left: 20px;
+  right: auto;
+}
+body.rtl #mg-wprm-wrap li.menu-item ul.sub-menu li.menu-item span {
+  left: 10px;
+  right: auto;
+}
+body.rtl div#mg-wprm-wrap ul li span.wprmenu_icon:before {left: 24px;}
+body.rtl #mg-wprm-wrap li.menu-item ul.sub-menu li.menu-item a {
+  padding: 16px 55px 16px 14px;
+}
+html body.rtl div#mg-wprm-wrap li.menu-item a {
+  padding: 16px 18px 16px 18px;
+}

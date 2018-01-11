@@ -123,6 +123,7 @@ endif;
 			</section>
 
 			<section class="featured-events-slider container-fluid">
+				<h2>Upcoming Events</h2>
 				<div class="slick-slider">
 					<?php
 					if(have_rows('featured_events_slider')) :
