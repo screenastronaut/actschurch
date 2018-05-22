@@ -50,6 +50,20 @@
 
 .single-location {
 
+	.location-photo {
+		background-size: cover !important;
+		background-position: bottom right !important;
+		background-repeat: no-repeat !important;
+		min-height: 500px;
+
+		img {
+			display: none;
+			height: 500px;
+			object-fit: fill;
+			width: 100%;
+		}
+	}
+
 	p {
 		margin-bottom: 15px;
 	}

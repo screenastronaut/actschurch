@@ -3,9 +3,9 @@
 Contributors: ModernTribe, barry.hughes, bordoni, borkweb, brianjessee, brook-tribe, faction23, geoffgraham, ggwicz, jazbek, jbrinley, joshlimecuda, leahkoerper, lucatume, mastromktg, mat-lipe, mdbitz, neillmcshea, nicosantos, peterchester, reid.peifer, roblagatta, ryancurban, shane.pearlman, thatdudebutch,  zbtirrell
 Tags: events, calendar, event, venue, organizer, dates, date, google maps, conference, workshop, concert, meeting, seminar, summit, class, modern tribe, tribe, widget, pro, filters, categories, sort, tags, taxonomy, find, search
 Donate link: http://m.tri.be/29
-Requires at least: 4.4
-Tested up to: 4.8.2
-Stable tag: 4.5.1
+Requires at least: 4.5
+Tested up to: 4.9.1
+Stable tag: 4.5.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -194,6 +194,11 @@ Our Premium Plugins:
 
 == Changelog ==
 
+= [4.5.2] 2017-12-18 =
+
+* Fix - Fix PHP notice "Trying to get property of non-object" when checking category depth, thanks Simon! [93709]
+* Compatibility - Minimum supported version of WordPress in now 4.5
+
 = [4.5.1] 2017-10-04 =
 
 * Fix - Fixed some layout issues with the "Show Filters"/"Collapse Filters" toggle button in mobile views (props to @ergosom for reporting this!) [75373]
@@ -206,6 +211,7 @@ Our Premium Plugins:
 * Feature - display active filters selected in the Filter Bar [38131,70061]
 * Feature - autocheck categories under parent when checked and in dropdown display all events under a parent category [70059]
 * Feature - added an upgrade script to change from autocomplete to Multi-Select [82651]
+* Fix - issue where only the first event would show when using State/Province, City, or Country filters in checkbox mode [82927]
 * Tweak - Select2 to replace Chosen script for dropdowns and autocomplete [75546]
 * Tweak - improve horizontal filter icon styles by moving to the right of the filter names [82533]
 * Tweak - reverse color scheme on vertical filter bar to make header and footer darker [82529]
@@ -213,7 +219,6 @@ Our Premium Plugins:
 * Tweak - set Events Calendar PRO's Additional Fields filter to use alphabetical order [77483]
 * Tweak - Added filters: 'tribe_events_filter_event_category_display_class'
 * Tweak - Changed views: 'filter-bar/filter-view-horizontal', 'filter-bar/filter-view-vertical'
-* Fix - issue where only the first event would show when using State/Province, City, or Country filters in checkbox mode [82927]
 
 = [4.4.3] 2017-06-28 =
 

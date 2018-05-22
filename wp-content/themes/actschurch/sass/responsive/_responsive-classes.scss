@@ -1,5 +1,15 @@
 //smaller than ipad landscape
 @media (max-width: 1024px) {
+
+	.slick-slider {
+		.image {
+			background-size: contain !important;
+			background-position: top !important;
+			min-height: 75vh;
+			// min-height: 45vh;
+		}
+	}
+
 	.splash-image {
 		// background-size: contain;
 		height: 300px;
@@ -17,6 +27,12 @@
 	}
 }
 
+@media (max-width: 992px) and (min-width:769px) {
+	.mobile-header {
+		display: none !important;
+	}
+}
+
 //ipad portrait
 @media (max-width: 768px) {
 	.home {
@@ -31,6 +47,12 @@
 
 	#page {
 		margin-top: 0;
+	}
+
+	.events-archive {
+		.mobile-header {
+			background: #4b8944 !important;
+		}
 	}
 
 	.mobile-header {
@@ -84,7 +106,9 @@
 	}
 
 	#wprmenu_bar {
+		border-bottom: 1px solid $color__grey;
 		height: 50px !important;
+		text-align: center !important;
 
 		.hamburger {
 			margin-top: 0 !important;
@@ -93,11 +117,21 @@
 		.menu_title {
 			top: -3px !important;
 		}
+
+		img {
+			height: 40px !important;
+		}
 	}
 
-	// #wprmenu_menu_ul li.wprmenu_no_border_bottom ul.sub-menu {
-	// 	display: block !important;
-	// }
+	.stories {
+		.real-story {
+			.pic {
+				background-position: center;
+				height: auto;
+				min-height: 200px;
+			}
+		}
+	}
 }
 
 //smaller than ipad portrait
@@ -157,7 +191,21 @@
 		.image {
 			background-size: contain !important;
 			background-position: top !important;
+			min-height: 30vh;
+		}
+	}
+
+	.single-location {
+		.location-photo {
+			background-size: cover !important;
+			background-position: top !important;
 			min-height: 200px;
+		}
+
+		.about {
+			margin-bottom: 30px;
+			margin-top: 30px;
+			text-align: center;
 		}
 	}
 }

@@ -123,18 +123,18 @@ endif;
 			</section>
 
 			<section class="featured-events-slider container-fluid">
-				<h2>Upcoming Events</h2>
+				<h2>What's Happening</h2>
 				<div class="slick-slider">
 					<?php
 					if(have_rows('featured_events_slider')) :
 						while(have_rows('featured_events_slider')) : the_row();
+							$link = get_sub_field('link');
 							?>
 							<div class="row">
 								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-									<a href="<?php echo get_sub_field('link');?>">
+									<?php if($link) { echo '<a href="'.$link.'">'; } ?>
 										<div class="image" style="background:url('<?php echo get_sub_field('image'); ?>');"></div>
-										<!-- <img src="<?php echo get_sub_field('image'); ?>"> -->
-									</a>
+									<?php echo '</a>'; ?>
 								</div>
 							</div>
 						<?php endwhile; endif;?>

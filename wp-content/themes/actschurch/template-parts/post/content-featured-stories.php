@@ -16,7 +16,7 @@ $story_url = get_permalink();
 	<div class="real-story col-lg-3 col-md-6 col-sm-6 col-xs-12">
 		<div class="text text-<?=$class?>">
 			<div class="story-title">
-				<h4><?=$story_title?></h4>
+				<h5><?=$story_title?></h5>
 			</div>
 		</div>
 		<div class="pic" style="background-image:url(<?=$story_pic?>);"></div>

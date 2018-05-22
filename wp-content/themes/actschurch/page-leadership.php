@@ -16,9 +16,6 @@ get_header();
 		<main id="main" class="site-main" role="main">
 
 			<div class="container">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-					<?php the_title('<h1 class="page-title">','</h1>'); ?>
-				</div>
 				<div class="kenneth-chin row">
 					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 						<?php if (has_post_thumbnail( $post->ID ) ): ?>
@@ -53,8 +50,19 @@ get_header();
 					$args = array(
 						'post_type' => 'leaders',
 						'posts_per_page' => -1,
-						'meta_key' => 'category',
-						'meta_value' => 'pastors',
+						'meta_query' => array(
+							'relation' => 'OR',
+							array(
+								'key' => 'category',
+								'value' => 'pastors',
+								'compare' => 'LIKE'
+							),
+							array(
+								'key' => 'category_2',
+								'value' => 'pastors',
+								'compare' => 'LIKE'
+							),
+						),
 					);
 					$the_query = new WP_Query( $args );
 					while ( $the_query->have_posts() ) : $the_query->the_post();
@@ -69,8 +77,19 @@ get_header();
 					$args = array(
 						'post_type' => 'leaders',
 						'posts_per_page' => -1,
-						'meta_key' => 'category',
-						'meta_value' => 'elders',
+						'meta_query' => array(
+							'relation' => 'OR',
+							array(
+								'key' => 'category',
+								'value' => 'elders',
+								'compare' => 'LIKE'
+							),
+							array(
+								'key' => 'category_2',
+								'value' => 'elders',
+								'compare' => 'LIKE'
+							),
+						),
 					);
 					$the_query = new WP_Query( $args );
 					while ( $the_query->have_posts() ) : $the_query->the_post();
@@ -85,8 +104,19 @@ get_header();
 					$args = array(
 						'post_type' => 'leaders',
 						'posts_per_page' => -1,
-						'meta_key' => 'category',
-						'meta_value' => 'local',
+						'meta_query' => array(
+							'relation' => 'OR',
+							array(
+								'key' => 'category',
+								'value' => 'local',
+								'compare' => 'LIKE'
+							),
+							array(
+								'key' => 'category_2',
+								'value' => 'local',
+								'compare' => 'LIKE'
+							),
+						),
 					);
 					$the_query = new WP_Query( $args );
 					while ( $the_query->have_posts() ) : $the_query->the_post();
@@ -102,7 +132,19 @@ get_header();
 						'post_type' => 'leaders',
 						'posts_per_page' => -1,
 						'meta_key' => 'category',
-						'meta_value' => 'international',
+						'meta_query' => array(
+							'relation' => 'OR',
+							array(
+								'key' => 'category',
+								'value' => 'international',
+								'compare' => 'LIKE'
+							),
+							array(
+								'key' => 'category_2',
+								'value' => 'international',
+								'compare' => 'LIKE'
+							),
+						),
 					);
 					$the_query = new WP_Query( $args );
 					while ( $the_query->have_posts() ) : $the_query->the_post();

@@ -36,57 +36,64 @@ get_template_part( 'template-parts/page/content', 'cover-photo' );
 			<?php
 			if(have_rows('slider')) { ?>
 			<section class="featured-events-slider container-fluid">
-				<h2>Upcoming Events</h2>
+				<h2>What's Happening</h2>
 				<div class="slick-slider">
 					<?php
 					while(have_rows('slider')) : the_row();
 						$link = get_sub_field('link');
 						$landscape = get_sub_field('posters');
 						$portrait = get_sub_field('posters_portrait'); 
+						if($link) {
+							echo '<a href="'.$link.'">';
+						}
 						?>
-						<a href="<?=$link?>">
-							<div class="image" style="background:url(<?=$landscape?>)"><img class="slider-img" src="<?=$landscape?>" ></div>
+						
+						<div class="image" style="background:url(<?=$landscape?>)"><img class="slider-img" src="<?=$landscape?>" ></div>
 							<!-- <?php if($portrait) { ?>
 							<div class="image hidden-lg hidden-md" style="background:url(<?=$portrait?>)"><img class="slider-img" src="<?=$portrait?>" ></div>
 							<?php } ?> -->
-						</a>
-					<?php endwhile; ?>
-				</div>
-			</section>
-			<?php } ?>
+							<?php
+							if($link) {
+								echo '</a>';
+							}
+							?>
+						<?php endwhile; ?>
+					</div>
+				</section>
+				<?php } ?>
 
-			<?php
-			$class = 0;
-			if($real_stories): ?>
-
-			<section class="stories container-fluid">
-				<h2>Real Stories</h2>
-				<div class="col-lg-push-2 col-lg-8 col-md-12 col-sm-12 col-xs-12">
-					<?php echo get_field('real_stories_text'); ?>
-					<a href="stories" class="button green">Explore Stories</a>
-				</div>
-				<div class="clear"></div>
 				<?php
-				foreach($real_stories as $post) : setup_postdata($post);
-					$class++;
-					set_query_var('class',$class);
-					get_template_part( 'template-parts/post/content', 'featured-stories' );
-				endforeach;
-				wp_reset_postdata();
+				$class = 0;
+				if($real_stories): ?>
 
-				echo '</section>';
-			endif;
-			?>
+				<section class="stories container-fluid">
+					<h2>Real Stories</h2>
+					<div class="col-lg-push-2 col-lg-8 col-md-12 col-sm-12 col-xs-12">
+						<?php echo get_field('real_stories_text'); ?>
+						<a href="stories" class="button green">Explore Stories</a>
+					</div>
+					<div class="clear"></div>
+					<?php
+					foreach($real_stories as $post) : setup_postdata($post);
+						$class++;
+						set_query_var('class',$class);
+						get_template_part( 'template-parts/post/content', 'featured-stories' );
+					endforeach;
+					wp_reset_postdata();
 
-			<section class="age-contact contact container-fluid" style="padding:0">
-				<div class="contact-form col-lg-6 col-md-6 col-sm-12 col-xs-12">
-					<?=$contact_form?>
-				</div>
-				<div class="contact-image col-lg-6 col-md-6 hidden-sm hidden-xs" style="background:url('<?=$contact_form_image?>');background-size: cover">
-				</div>
-			</section>
+					echo '</section>';
+				endif;
+				?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+				<section class="age-contact contact container-fluid" style="padding:0">
+					<div class="contact-form col-lg-6 col-md-6 col-sm-12 col-xs-12">
+						<?=$contact_form?>
+					</div>
+					<div class="contact-image col-lg-6 col-md-6 hidden-sm hidden-xs" style="background:url('<?=$contact_form_image?>');background-size: cover">
+					</div>
+				</section>
 
-	<?php get_footer();
+			</main><!-- #main -->
+		</div><!-- #primary -->
+
+		<?php get_footer();

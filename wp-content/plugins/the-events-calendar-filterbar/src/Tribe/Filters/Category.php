@@ -67,7 +67,7 @@ class Tribe__Events__Filterbar__Filters__Category extends Tribe__Events__Filterb
 			return $level;
 		} else {
 			$level++;
-			$term = get_category( $term->parent );
+			$term = get_term_by( 'id', $term->parent, Tribe__Events__Main::TAXONOMY );
 
 			return $this->get_depth( $term, $level );
 		}

@@ -42,7 +42,7 @@ if ( ! class_exists( 'Tribe__Events__Filterbar__View' ) ) {
 
 		const REQUIRED_TEC_VERSION = '4.5';
 
-		const VERSION = '4.5.1';
+		const VERSION = '4.5.2';
 
 		/**
 		 * Initialize the addon to make sure the versions line up.

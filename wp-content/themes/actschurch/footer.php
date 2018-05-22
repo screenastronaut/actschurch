@@ -65,7 +65,15 @@
 			<a href="<?php echo home_url(); ?>/edinburgh/">Edinburgh</a>
 			<a href="<?php echo home_url(); ?>/botswana/">Botswana</a>
 			<a href="<?php echo home_url(); ?>/chiang-mai/">Chiang Mai</a>
-			<a href="<?php echo home_url(); ?>/hamburg/">Hamburg</a>
+			<a href="<?php echo home_url(); ?>/myanmar/">Myanmar</a>
+		</div>
+		<div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+			<h6>MORE</h6>
+			<a href="http://volunteer.actschurch.org" target="_blank">Volunteer at Acts</a>
+			<a href="http://testimony.actschurch.org" target="_blank">Share Your Testimony</a>
+			<a href="https://subsplash.com/actschurch/app" target="_blank">Download Our App</a>
+			<a href="http://bit.ly/actsnewsletter18-english" target="_blank">Sign Up for our Newsletter (English)</a>
+			<a href="http://bit.ly/actsnewsletter18-mandarin" target="_blank">点击预定电子简报 (华)</a>
 		</div>
 	</div><!-- .site-info -->
 	<div class="site-copyright container">

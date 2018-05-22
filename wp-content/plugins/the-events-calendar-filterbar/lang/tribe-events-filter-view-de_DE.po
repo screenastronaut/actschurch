@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Filter Bar package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2017-03-23 00:29:14+0000\n"
+"PO-Revision-Date: 2017-10-05 19:42:10+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,12 +13,12 @@ msgstr ""
 
 #: src/Tribe/Filter.php:589
 msgid "Multi-Select"
-msgstr ""
+msgstr "Mehrfach-Auswahl"
 
 #: src/Tribe/Filter.php:332 src/Tribe/View.php:229
 msgctxt "Featured Events active fitler display label"
 msgid "Active"
-msgstr ""
+msgstr "Aktiv"
 
 #: src/Tribe/View.php:427
 msgid "Featured Events"

@@ -7,8 +7,8 @@
  * @package actschurch
  */
 
-$email = get_field('email');
-$facebook = get_field('facebook_page');
+// $email = get_field('email');
+// $facebook = get_field('facebook_page');
 
 ?>
 

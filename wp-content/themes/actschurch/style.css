@@ -994,7 +994,7 @@ a:hover, a:active {
   background-repeat: no-repeat !important;
   background-position: center center !important;
   background-size: cover !important;
-  min-height: 500px;
+  min-height: 100vh;
 }
 
 /* Slider */
@@ -1434,7 +1434,7 @@ a:hover, a:active {
   background: #f5f3f4;
 }
 /* line 246, sass/site/primary/_homepage.scss */
-.stories .real-story-link:hover h4 {
+.stories .real-story-link:hover h5 {
   text-decoration: underline;
 }
 /* line 252, sass/site/primary/_homepage.scss */
@@ -1443,78 +1443,79 @@ a:hover, a:active {
 }
 /* line 255, sass/site/primary/_homepage.scss */
 .stories .real-story .text {
-  height: 100px;
+  height: 80px;
   overflow: hidden;
-  padding: 15px 20px;
+  padding: 15px;
   text-align: left;
 }
 /* line 261, sass/site/primary/_homepage.scss */
-.stories .real-story .text h4 {
+.stories .real-story .text h5 {
   color: #fff;
+  font-size: 18px;
 }
-/* line 266, sass/site/primary/_homepage.scss */
+/* line 267, sass/site/primary/_homepage.scss */
 .stories .real-story .text-1 {
   background: #26395a;
 }
-/* line 270, sass/site/primary/_homepage.scss */
+/* line 271, sass/site/primary/_homepage.scss */
 .stories .real-story .text-2 {
   background: #6f3d79;
 }
-/* line 274, sass/site/primary/_homepage.scss */
+/* line 275, sass/site/primary/_homepage.scss */
 .stories .real-story .text-3 {
   background: #e7a13d;
 }
-/* line 278, sass/site/primary/_homepage.scss */
+/* line 279, sass/site/primary/_homepage.scss */
 .stories .real-story .text-4 {
   background: #db654d;
 }
-/* line 282, sass/site/primary/_homepage.scss */
+/* line 283, sass/site/primary/_homepage.scss */
 .stories .real-story .pic {
   background-repeat: no-repeat;
   background-size: cover;
   height: 300px;
 }
 
-/* line 290, sass/site/primary/_homepage.scss */
+/* line 291, sass/site/primary/_homepage.scss */
 .local-services,
 .international-services {
   display: block;
   margin-top: 30px;
 }
 
-/* line 296, sass/site/primary/_homepage.scss */
+/* line 297, sass/site/primary/_homepage.scss */
 .international-services {
   display: none;
 }
 
-/* line 300, sass/site/primary/_homepage.scss */
+/* line 301, sass/site/primary/_homepage.scss */
 .locations {
   background: #26395a;
   color: #fff;
 }
-/* line 304, sass/site/primary/_homepage.scss */
+/* line 305, sass/site/primary/_homepage.scss */
 .locations .location {
   border-bottom: 1px solid #fff;
   text-align: left;
 }
-/* line 308, sass/site/primary/_homepage.scss */
+/* line 309, sass/site/primary/_homepage.scss */
 .locations .location h4 {
   margin: 0.5em 0;
 }
-/* line 312, sass/site/primary/_homepage.scss */
+/* line 313, sass/site/primary/_homepage.scss */
 .locations .location .location-name {
   cursor: pointer;
   position: relative;
   text-align: left;
 }
-/* line 318, sass/site/primary/_homepage.scss */
+/* line 319, sass/site/primary/_homepage.scss */
 .locations .location .triangle {
   display: inline-block;
   position: absolute;
   right: 0;
   top: 30%;
 }
-/* line 325, sass/site/primary/_homepage.scss */
+/* line 326, sass/site/primary/_homepage.scss */
 .locations .location .triangle-down {
   width: 0;
   height: 0;
@@ -1522,7 +1523,7 @@ a:hover, a:active {
   border-width: 15px 10px 0 10px;
   border-color: #ffffff transparent transparent transparent;
 }
-/* line 333, sass/site/primary/_homepage.scss */
+/* line 334, sass/site/primary/_homepage.scss */
 .locations .location .triangle-up {
   width: 0;
   height: 0;
@@ -1530,43 +1531,43 @@ a:hover, a:active {
   border-width: 0 10px 15px 10px;
   border-color: transparent transparent #ffffff transparent;
 }
-/* line 341, sass/site/primary/_homepage.scss */
+/* line 342, sass/site/primary/_homepage.scss */
 .locations .location .more-info {
   display: none;
   padding-bottom: 30px;
 }
-/* line 345, sass/site/primary/_homepage.scss */
+/* line 346, sass/site/primary/_homepage.scss */
 .locations .location .more-info h5 {
   font-weight: 700;
 }
-/* line 349, sass/site/primary/_homepage.scss */
+/* line 350, sass/site/primary/_homepage.scss */
 .locations .location .more-info .links {
   margin-top: 30px;
   text-align: right;
 }
-/* line 353, sass/site/primary/_homepage.scss */
+/* line 354, sass/site/primary/_homepage.scss */
 .locations .location .more-info .links a {
   color: #fff;
   padding-right: 15px;
   text-decoration: none;
 }
-/* line 358, sass/site/primary/_homepage.scss */
+/* line 359, sass/site/primary/_homepage.scss */
 .locations .location .more-info .links a:hover {
   text-decoration: underline;
 }
 
-/* line 367, sass/site/primary/_homepage.scss */
+/* line 368, sass/site/primary/_homepage.scss */
 .locate-now {
   background: #e7a13d;
   padding: 30px 0 !important;
   text-align: left;
 }
-/* line 372, sass/site/primary/_homepage.scss */
+/* line 373, sass/site/primary/_homepage.scss */
 .locate-now h3 {
   display: inline-block;
   margin: 0;
 }
-/* line 377, sass/site/primary/_homepage.scss */
+/* line 378, sass/site/primary/_homepage.scss */
 .locate-now a.button {
   margin: 10px 30px;
 }
@@ -1709,8 +1710,8 @@ a:hover, a:active {
 .profile .short-bio {
   background: #242424;
   color: #fff;
-  height: 160px;
-  padding: 20px;
+  height: 110px;
+  padding: 10px 20px;
 }
 /* line 131, sass/site/primary/_visit.scss */
 .profile .short-bio .leader-name {
@@ -1743,47 +1744,48 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Connect
 --------------------------------------------------------------*/
-/* line 2, sass/site/primary/_connect.scss */
-.what-is-homes .left-text {
+/* line 1, sass/site/primary/_connect.scss */
+.left-text {
   text-align: left;
 }
-/* line 6, sass/site/primary/_connect.scss */
-.what-is-homes .right-text {
+
+/* line 5, sass/site/primary/_connect.scss */
+.right-text {
   text-align: right;
 }
 
-/* line 11, sass/site/primary/_connect.scss */
+/* line 9, sass/site/primary/_connect.scss */
 #homes-city {
   margin-bottom: 30px;
 }
 
-/* line 15, sass/site/primary/_connect.scss */
+/* line 13, sass/site/primary/_connect.scss */
 .table-div {
   margin-top: 30px;
 }
 
-/* line 22, sass/site/primary/_connect.scss */
+/* line 20, sass/site/primary/_connect.scss */
 .homes-table thead tr {
   background: #4b8944;
   border-bottom: none;
   color: #fff;
   text-transform: uppercase;
 }
-/* line 28, sass/site/primary/_connect.scss */
+/* line 26, sass/site/primary/_connect.scss */
 .homes-table thead tr th {
   font-weight: normal;
   padding: 10px;
 }
-/* line 35, sass/site/primary/_connect.scss */
+/* line 33, sass/site/primary/_connect.scss */
 .homes-table tr {
   border-bottom: 2px solid #4b8944;
 }
-/* line 39, sass/site/primary/_connect.scss */
+/* line 37, sass/site/primary/_connect.scss */
 .homes-table td {
   padding: 10px;
 }
 
-/* line 46, sass/site/primary/_connect.scss */
+/* line 44, sass/site/primary/_connect.scss */
 .contact .contact-form {
   background: #4b8944;
   color: #fff;
@@ -1791,19 +1793,19 @@ a:hover, a:active {
   padding: 2em 3em;
   text-align: left;
 }
-/* line 53, sass/site/primary/_connect.scss */
+/* line 51, sass/site/primary/_connect.scss */
 .contact .contact-form .wpcf7 {
   margin-top: 10px;
 }
-/* line 56, sass/site/primary/_connect.scss */
+/* line 54, sass/site/primary/_connect.scss */
 .contact .contact-form .wpcf7 p {
   margin-bottom: 15px;
 }
-/* line 60, sass/site/primary/_connect.scss */
+/* line 58, sass/site/primary/_connect.scss */
 .contact .contact-form .wpcf7 textarea {
   height: 100px;
 }
-/* line 64, sass/site/primary/_connect.scss */
+/* line 62, sass/site/primary/_connect.scss */
 .contact .contact-form .wpcf7 input[type="submit"] {
   background: #fff;
   border: 2px solid #fff;
@@ -1820,23 +1822,50 @@ a:hover, a:active {
   text-shadow: none;
   text-transform: uppercase;
 }
-/* line 80, sass/site/primary/_connect.scss */
+/* line 78, sass/site/primary/_connect.scss */
 .contact .contact-form .wpcf7 input[type="submit"]:hover {
   background: transparent;
   color: #fff;
 }
-/* line 88, sass/site/primary/_connect.scss */
+/* line 86, sass/site/primary/_connect.scss */
 .contact .contact-image {
   min-height: 700px;
 }
 
-/* line 93, sass/site/primary/_connect.scss */
+/* line 91, sass/site/primary/_connect.scss */
 .featured-cal-events-slider {
-  padding-top: 0 !important;
+  padding-top: 30px !important;
 }
-/* line 96, sass/site/primary/_connect.scss */
+/* line 94, sass/site/primary/_connect.scss */
 .featured-cal-events-slider img {
   width: 100%;
+}
+
+/* line 101, sass/site/primary/_connect.scss */
+.ace-page .classes a.class-link {
+  color: inherit;
+  text-decoration: none;
+}
+/* line 105, sass/site/primary/_connect.scss */
+.ace-page .classes a.class-link:hover {
+  text-decoration: underline;
+}
+/* line 110, sass/site/primary/_connect.scss */
+.ace-page .classes img {
+  width: 60%;
+}
+
+/* line 117, sass/site/primary/_connect.scss */
+.ace-content .ace-sidebar {
+  margin: 60px 0;
+}
+/* line 120, sass/site/primary/_connect.scss */
+.ace-content .ace-sidebar h4 {
+  margin: 50px 0 10px;
+}
+/* line 125, sass/site/primary/_connect.scss */
+.ace-content .content-area {
+  margin: 60px 0;
 }
 
 /*--------------------------------------------------------------
@@ -1898,51 +1927,65 @@ a:hover, a:active {
 }
 
 /* line 53, sass/site/primary/_locations.scss */
+.single-location .location-photo {
+  background-size: cover !important;
+  background-position: bottom right !important;
+  background-repeat: no-repeat !important;
+  min-height: 500px;
+}
+/* line 59, sass/site/primary/_locations.scss */
+.single-location .location-photo img {
+  display: none;
+  height: 500px;
+  object-fit: fill;
+  width: 100%;
+}
+/* line 67, sass/site/primary/_locations.scss */
 .single-location p {
   margin-bottom: 15px;
 }
-/* line 57, sass/site/primary/_locations.scss */
+/* line 71, sass/site/primary/_locations.scss */
 .single-location .about {
   margin-bottom: 60px;
   margin-top: 60px;
   text-align: center;
 }
-/* line 63, sass/site/primary/_locations.scss */
+/* line 77, sass/site/primary/_locations.scss */
 .single-location .service-times {
   background: #db654d;
   color: #fff;
   padding-bottom: 60px;
   padding-top: 60px;
 }
-/* line 69, sass/site/primary/_locations.scss */
+/* line 83, sass/site/primary/_locations.scss */
 .single-location .service-times a {
   color: #fff;
 }
 
-/* line 75, sass/site/primary/_locations.scss */
+/* line 89, sass/site/primary/_locations.scss */
 .location-contact {
   background: #db654d;
 }
-/* line 78, sass/site/primary/_locations.scss */
+/* line 92, sass/site/primary/_locations.scss */
 .location-contact .orange-bg,
 .location-contact .grey-bg {
   padding: 3em 5em;
 }
-/* line 82, sass/site/primary/_locations.scss */
+/* line 96, sass/site/primary/_locations.scss */
 .location-contact .orange-bg h3,
 .location-contact .grey-bg h3 {
   font-weight: 400;
 }
-/* line 87, sass/site/primary/_locations.scss */
+/* line 101, sass/site/primary/_locations.scss */
 .location-contact .orange-bg {
   background: #db654d;
   color: #fff;
 }
-/* line 92, sass/site/primary/_locations.scss */
+/* line 106, sass/site/primary/_locations.scss */
 .location-contact .grey-bg {
   background: #f5f3f4;
 }
-/* line 96, sass/site/primary/_locations.scss */
+/* line 110, sass/site/primary/_locations.scss */
 .location-contact img {
   display: block;
   height: 100%;
@@ -2310,6 +2353,11 @@ section:not(.widget) {
   text-align: center;
 }
 
+/* line 350, sass/site/primary/_posts-and-pages.scss */
+.card {
+  height: 300px;
+}
+
 /*--------------------------------------------------------------
 ## Asides
 --------------------------------------------------------------*/
@@ -2499,10 +2547,6 @@ footer a {
 footer a:hover {
   color: #e7a13d;
   text-decoration: underline;
-}
-/* line 164, sass/site/_header-and-footer.scss */
-footer a:visited {
-  color: #fff;
 }
 /* line 169, sass/site/_header-and-footer.scss */
 footer .site-copyright {
@@ -4185,158 +4229,202 @@ object {
 # Responsive Classes
 --------------------------------------------------------------*/
 @media (max-width: 1024px) {
-  /* line 3, sass/responsive/_responsive-classes.scss */
+  /* line 5, sass/responsive/_responsive-classes.scss */
+  .slick-slider .image {
+    background-size: contain !important;
+    background-position: top !important;
+    min-height: 75vh;
+  }
+
+  /* line 13, sass/responsive/_responsive-classes.scss */
   .splash-image {
     height: 300px;
   }
 
-  /* line 8, sass/responsive/_responsive-classes.scss */
+  /* line 18, sass/responsive/_responsive-classes.scss */
   .grid-box.featured-sermon {
     background-size: cover !important;
     background-position: center center !important;
   }
 
-  /* line 14, sass/responsive/_responsive-classes.scss */
+  /* line 24, sass/responsive/_responsive-classes.scss */
   .grid-box img {
     display: none;
   }
 }
+@media (max-width: 992px) and (min-width: 769px) {
+  /* line 31, sass/responsive/_responsive-classes.scss */
+  .mobile-header {
+    display: none !important;
+  }
+}
 @media (max-width: 768px) {
-  /* line 23, sass/responsive/_responsive-classes.scss */
+  /* line 39, sass/responsive/_responsive-classes.scss */
   .home #page {
     margin-top: 0;
   }
-  /* line 27, sass/responsive/_responsive-classes.scss */
+  /* line 43, sass/responsive/_responsive-classes.scss */
   .home .mobile-header {
     display: none;
   }
 
-  /* line 32, sass/responsive/_responsive-classes.scss */
+  /* line 48, sass/responsive/_responsive-classes.scss */
   #page {
     margin-top: 0;
   }
 
-  /* line 36, sass/responsive/_responsive-classes.scss */
+  /* line 53, sass/responsive/_responsive-classes.scss */
+  .events-archive .mobile-header {
+    background: #4b8944 !important;
+  }
+
+  /* line 58, sass/responsive/_responsive-classes.scss */
   .mobile-header {
     height: 80px;
     line-height: 80px;
     text-align: center;
   }
-  /* line 41, sass/responsive/_responsive-classes.scss */
+  /* line 63, sass/responsive/_responsive-classes.scss */
   .mobile-header.transparent-header {
     background: #fff;
   }
-  /* line 45, sass/responsive/_responsive-classes.scss */
+  /* line 67, sass/responsive/_responsive-classes.scss */
   .mobile-header.orange-header {
     background: #db654d;
     color: #fff !important;
   }
-  /* line 50, sass/responsive/_responsive-classes.scss */
+  /* line 72, sass/responsive/_responsive-classes.scss */
   .mobile-header.green-header {
     background: #4b8944;
     color: #fff !important;
   }
-  /* line 55, sass/responsive/_responsive-classes.scss */
+  /* line 77, sass/responsive/_responsive-classes.scss */
   .mobile-header.purple-header {
     background: #6f3d79;
     color: #fff !important;
   }
-  /* line 60, sass/responsive/_responsive-classes.scss */
+  /* line 82, sass/responsive/_responsive-classes.scss */
   .mobile-header.blue-header {
     background: #26395a;
     color: #fff !important;
   }
 
-  /* line 66, sass/responsive/_responsive-classes.scss */
+  /* line 88, sass/responsive/_responsive-classes.scss */
   .hide-on-mobile {
     display: none;
   }
 
-  /* line 72, sass/responsive/_responsive-classes.scss */
+  /* line 94, sass/responsive/_responsive-classes.scss */
   .splash-image h1 .special {
     font-size: 50px;
   }
-  /* line 77, sass/responsive/_responsive-classes.scss */
+  /* line 99, sass/responsive/_responsive-classes.scss */
   .splash-image .button {
     margin: 30px 0;
   }
 
-  /* line 82, sass/responsive/_responsive-classes.scss */
+  /* line 104, sass/responsive/_responsive-classes.scss */
   .multi-tab .container {
     flex-flow: column;
   }
 
-  /* line 86, sass/responsive/_responsive-classes.scss */
+  /* line 108, sass/responsive/_responsive-classes.scss */
   #wprmenu_bar {
+    border-bottom: 1px solid #7d807f;
     height: 50px !important;
+    text-align: center !important;
   }
-  /* line 89, sass/responsive/_responsive-classes.scss */
+  /* line 113, sass/responsive/_responsive-classes.scss */
   #wprmenu_bar .hamburger {
     margin-top: 0 !important;
   }
-  /* line 93, sass/responsive/_responsive-classes.scss */
+  /* line 117, sass/responsive/_responsive-classes.scss */
   #wprmenu_bar .menu_title {
     top: -3px !important;
   }
+  /* line 121, sass/responsive/_responsive-classes.scss */
+  #wprmenu_bar img {
+    height: 40px !important;
+  }
+
+  /* line 128, sass/responsive/_responsive-classes.scss */
+  .stories .real-story .pic {
+    background-position: center;
+    height: auto;
+    min-height: 200px;
+  }
 }
 @media (max-width: 767px) {
-  /* line 106, sass/responsive/_responsive-classes.scss */
+  /* line 140, sass/responsive/_responsive-classes.scss */
   .splash-image h1 {
     font-size: 24px;
   }
-  /* line 108, sass/responsive/_responsive-classes.scss */
+  /* line 142, sass/responsive/_responsive-classes.scss */
   .splash-image h1 .special {
     font-size: 30px;
   }
-  /* line 113, sass/responsive/_responsive-classes.scss */
+  /* line 147, sass/responsive/_responsive-classes.scss */
   .splash-image .button {
     font-size: 10px;
     margin: 10px 5px;
     padding: 5px 10px;
   }
 
-  /* line 120, sass/responsive/_responsive-classes.scss */
+  /* line 154, sass/responsive/_responsive-classes.scss */
   section:not(.widget) {
     padding: 30px 0;
   }
 
-  /* line 124, sass/responsive/_responsive-classes.scss */
+  /* line 158, sass/responsive/_responsive-classes.scss */
   a.button {
     font-size: 12px;
     margin: 15px;
   }
 
-  /* line 129, sass/responsive/_responsive-classes.scss */
+  /* line 163, sass/responsive/_responsive-classes.scss */
   .homes-table {
     font-size: 12px;
   }
 
-  /* line 134, sass/responsive/_responsive-classes.scss */
+  /* line 168, sass/responsive/_responsive-classes.scss */
   .services h5 {
     letter-spacing: 0;
   }
 
-  /* line 140, sass/responsive/_responsive-classes.scss */
+  /* line 174, sass/responsive/_responsive-classes.scss */
   .grid-layout .grid-box {
     background: #db654d;
     color: #fff;
     height: 300px;
   }
-  /* line 145, sass/responsive/_responsive-classes.scss */
+  /* line 179, sass/responsive/_responsive-classes.scss */
   .grid-layout .grid-box a {
     color: #fff;
   }
 
-  /* line 151, sass/responsive/_responsive-classes.scss */
+  /* line 185, sass/responsive/_responsive-classes.scss */
   .grid-box.featured-sermon {
     background-size: contain !important;
     background-position: unset !important;
   }
 
-  /* line 157, sass/responsive/_responsive-classes.scss */
+  /* line 191, sass/responsive/_responsive-classes.scss */
   .slick-slider .image {
     background-size: contain !important;
     background-position: top !important;
+    min-height: 30vh;
+  }
+
+  /* line 199, sass/responsive/_responsive-classes.scss */
+  .single-location .location-photo {
+    background-size: cover !important;
+    background-position: top !important;
     min-height: 200px;
+  }
+  /* line 205, sass/responsive/_responsive-classes.scss */
+  .single-location .about {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    text-align: center;
   }
 }

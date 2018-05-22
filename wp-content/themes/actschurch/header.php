@@ -19,6 +19,17 @@
 
 	<?php wp_head(); ?>
 
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112421394-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-112421394-1');
+	</script>
+
+
 	<!--[if IE 8]>
 	<script>
 	document.createElement('header'); document.createElement('nav'); document.createElement('section'); document.createElement('article'); document.createElement('aside'); document.createElement('footer');
@@ -35,7 +46,7 @@
 <?php
 if(is_front_page()) {
 	$header_class = 'transparent-header';
-} elseif (is_page('homes') || is_page('kids') || is_page('teens') || is_page('campus') || is_page('young-working-adults') || is_page('family') || is_page('calendar')) {
+} elseif (is_page('homes') || is_page('kids') || is_page('teens') || is_page('campus') || is_page('young-working-adults') || is_page('family') || is_page('calendar') || is_page('ace')) {
 	$header_class = 'green-header';
 } elseif (is_page('stories')) {
 	$header_class = 'purple-header';

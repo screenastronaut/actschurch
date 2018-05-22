@@ -11,11 +11,10 @@
 
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
-}
-
-do_action( 'tribe_events_before_template' );?>
+} ?>
 
 <section class="featured-cal-events-slider container-fluid">
+	<h2>What's Happening</h2>
 	<div class="slick-slider">
 		<?php
 		$args = array(
@@ -27,7 +26,7 @@ do_action( 'tribe_events_before_template' );?>
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<a href="<?php echo get_field('link');?>">
-					<img src="<?php echo get_field('image'); ?>">
+					<div class="image" style="background:url('<?php echo get_field('image'); ?>');"></div>
 				</a>
 			</div>
 		</div>
@@ -36,6 +35,8 @@ do_action( 'tribe_events_before_template' );?>
 </section>
 
 <?php
+do_action( 'tribe_events_before_template' );
+
 // Tribe Bar
 tribe_get_template_part( 'modules/bar' );
 

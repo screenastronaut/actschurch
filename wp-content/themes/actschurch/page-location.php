@@ -18,7 +18,9 @@ get_header();
 
 			<div class="container-fluid">
 				<div class="row">
-					<img src="<?php echo get_field('location_cover_photo'); ?>" alt="">
+					<div class="location-photo col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background:url(<?php echo get_field('location_cover_photo'); ?>)">
+						<img src="<?php echo get_field('location_cover_photo'); ?>" alt="">
+					</div>
 				</div>
 			</div>
 
@@ -48,27 +50,35 @@ get_header();
 				</div>
 			</div>
 
-			<div class="locations-map container-fluid">
-				<div class="row">
-					<?php 
-					$marker = get_field('map');
-					$lat = $marker['lat'];
-					$lng = $marker['lng'];
-					$html = get_field('location_details');
-					?> 
-					<div class="single-marker" data-lat="<?=$lat?>" data-lng="<?=$lng?>" style="display:none"><?=$html?></div>
-					<div id="single-map"></div>
-				</div>	
-			</div>
+			<?php 
+			$marker = get_field('map');
+			if($marker) {
+				$lat = $marker['lat'];
+				$lng = $marker['lng'];
+				$html = get_field('location_details');
+				?> 
+				<div class="locations-map container-fluid">
+					<div class="row">
+						<div class="single-marker" data-lat="<?=$lat?>" data-lng="<?=$lng?>" style="display:none"><?=$html?></div>
+						<div id="single-map"></div>
+					</div>	
+				</div>
+				<?php
+			} 
+			?>
 
 			<div class="location-contact contact container-fluid">
 				<div class="row">
 					<div class="orange-bg contact-form col-lg-6 col-md-6 col-sm-12 col-xs-12">
 						<?php echo get_field('contact_lift') ?>
 					</div>
+					<?php 
+					$contact_image = get_field('contact_image');
+					if($contact_image) {?>
 					<div class="grey-bg col-lg-6 col-md-6 hidden-sm hidden-xs no-padding">
 						<img src="<?php echo get_field('contact_image') ?>">
 					</div>
+					<?php } ?>
 				</div>
 			</div>
 
